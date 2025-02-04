@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.0] - 2024-02-03
+### Added
+- Added HTML skeleton for overview page
+- Added favicon
+
 ## [0.0.1] - 2024-02-03
 ### Added
 - Created project board
