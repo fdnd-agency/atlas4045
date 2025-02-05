@@ -1,15 +1,14 @@
 <script>
   import PosterCard from '../molecules/PosterCard.svelte';
+
+  let { posters } = $props();
 </script>
 
-<main>
-  <nav>
-    <h2>Overzicht</h2>
-    <a href="./">Kaart</a>
-  </nav>
-  <ul>
-    <!-- ForEach -->
-    <PosterCard />
-    <!-- /Foreach -->
-  </ul>
-</main>
+<ul>
+  <!-- ForEach -->
+  <PosterCard />
+  <!-- /Foreach -->
+</ul>
+
+<style>
+</style>
