@@ -30,7 +30,7 @@
 		flex-direction: column;
 		gap: 1rem;
 		width: 100%;
-		max-width: 400px;
+		max-width: var(--max-width-mobile);
 		padding: 1rem;
 		margin: 1rem auto;
 	}
@@ -56,7 +56,7 @@
 			grid-template-columns: 1fr 1.2fr;
 			grid-template-rows: auto auto auto;
 			gap: 2rem;
-			max-width: 800px;
+			max-width: var(--max-width-mobile);
 			margin: 2rem auto;
 		}
 
