@@ -4,7 +4,7 @@
 
 <li>
 	{#if active}
-		<h2>{@render children()}</h2>
+		<span aria-current="page">{@render children()}</span>
 	{:else if href}
 		<a {href}>{@render children()}</a>
 	{:else}
@@ -18,7 +18,7 @@
     display: inline-block;
   }
 
-  h2 {
+  span[aria-current="page"] {
     font-size: 1rem;
     color: var(--color-brown);
   }
