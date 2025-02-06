@@ -1,9 +1,9 @@
 :root {
+  /*-----------------
+        Colours
+    -----------------*/
   --color-brown-light-fallback: #c29f9d;
   --color-brown-light: hsl(3 23.3% 68.8%);
-
-  /* --color-brown-fallback: #6d3116;
-  --color-brown: hsl(19 66.4% 25.7%); */
 
   --color-brown-fallback: #a34a21;
   --color-brown: hsl(19 66.3% 38.4%);
