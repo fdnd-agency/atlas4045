@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0] - 2024-02-03
+## [0.1.0] - 2024-02-05
+### Added
+- Added responsive layout for header
+- Added responsive layout for introduction
+- Added debug component for when placeholder is needed
+- Created reusable nav components
+
+
+## [0.1.0] - 2024-02-04
 ### Added
 - Added HTML skeleton for overview page
 - Added favicon
