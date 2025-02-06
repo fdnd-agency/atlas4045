@@ -1,2 +1,35 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+  import PosterIntroductie from "$lib/organisms/PosterIntroductie.svelte";
+
+  import Nav from "$lib/molecules/Nav.svelte";
+  import NavItem from "$lib/atoms/NavItem.svelte";
+  import PostersOverview from "$lib/organisms/PostersOverview.svelte";
+
+  import { testPosters } from '$lib/TestPosters';
+</script>
+
+<PosterIntroductie />
+
+<!-- Overview section -->
+<main>
+  <Nav>
+    <NavItem active={true}>Overzicht</NavItem>
+    <NavItem href="/">Kaart</NavItem>
+  </Nav>
+
+  <PostersOverview posters={testPosters} />
+</main>
+
+<style>
+  main {
+    max-width: var(--max-width-mobile);
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    main {
+      max-width: var(--max-width-desktop);
+    }
+  }
+</style>

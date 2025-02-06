@@ -1,0 +1,13 @@
+:root {
+  --max-width-mobile: 400px;
+  --max-width-desktop: 800px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.query-container {
+  container-type: inline-size;
+}

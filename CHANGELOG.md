@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0] - 2024-02-05
+## [0.2.0] - 2024-02-05
 ### Added
 - Added responsive layout for header
 - Added responsive layout for introduction
