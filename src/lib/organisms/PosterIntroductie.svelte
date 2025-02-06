@@ -50,13 +50,13 @@
 		text-align: justify;
 	}
 
-	@container (min-width: 757px) {
+  @container (min-width: 500px) {
 		section {
 			display: grid;
 			grid-template-columns: 1fr 1.2fr;
 			grid-template-rows: auto auto auto;
 			gap: 2rem;
-			max-width: var(--max-width-mobile);
+			max-width: var(--max-width-desktop);
 			margin: 2rem auto;
 		}
 
@@ -68,12 +68,18 @@
 		h2 {
 			grid-column: 2 / 3;
 			align-self: end;
-			font-size: 3rem;
+			font-size: 2rem;
       text-align: start;
 		}
 
 		p {
 			grid-column: 2 / 3;
+		}
+	}
+
+	@container (min-width: 780px) {
+		h2 {
+			font-size: 3rem;
 		}
 	}
 </style>

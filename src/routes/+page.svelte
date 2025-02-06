@@ -14,6 +14,20 @@
     <NavItem active={true}>Overzicht</NavItem>
     <NavItem href="/">Kaart</NavItem>
   </Nav>
-  
+
   <PostersOverview posters={{}} />
 </main>
+
+<style>
+  main {
+    max-width: var(--max-width-mobile);
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    main {
+      max-width: var(--max-width-desktop);
+    }
+  }
+</style>
