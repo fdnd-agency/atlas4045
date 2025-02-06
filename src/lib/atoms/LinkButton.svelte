@@ -12,10 +12,10 @@
     text-align: center;
     padding: 0.25rem 0.8rem;
     border-radius: 3rem;
-    border: 2px solid black;
+    border: 2px solid var(--color-brown-dark);
     height: fit-content;
     text-decoration: none;
-    color: black;
+    color: var(--color-brown-dark);
     font-weight: bold;
     width: fit-content;
   }
