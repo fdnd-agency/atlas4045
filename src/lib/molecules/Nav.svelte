@@ -1,23 +1,24 @@
 <script>
-  let { children } = $props();
+	let { children } = $props();
 </script>
 
 <nav>
-  <ul>
-    {@render children()}
-  </ul>
+	<ul>
+		{@render children()}
+	</ul>
 </nav>
 
 <style>
-  nav {
-    padding: 1rem 4rem;
-  }
+	nav {
+		padding: 1rem 3rem;
+	}
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+    gap: 20%;
+    justify-content: center;
+	}
 </style>
