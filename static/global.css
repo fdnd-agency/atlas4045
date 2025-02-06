@@ -62,3 +62,7 @@ body {
 div.query-container {
   container-type: inline-size;
 }
+
+.full-width {
+  width: 100%;
+}

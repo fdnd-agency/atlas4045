@@ -30,8 +30,4 @@
       border: 2px solid var(--color-brown);
     }
   }
-
-  .full-width {
-    width: 100%;
-  }
 </style>
