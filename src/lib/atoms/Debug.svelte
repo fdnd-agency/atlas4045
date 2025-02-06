@@ -2,8 +2,8 @@
 	let width = $state(0);
 	let height = $state(0);
 
-	let randomColor1 = Math.random() * 361;
-	let randomColor2 = Math.random() * 361;
+	let randomColor1 = Math.random() * (135 - 60) + 60;
+	let randomColor2 = Math.random() * (315 - 220) + 220;
 </script>
 
 <div
