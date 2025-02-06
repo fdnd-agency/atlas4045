@@ -66,6 +66,10 @@ div.query-container {
   container-type: inline-size;
 }
 
+  /*-----------------
+      Layout utils
+    -----------------*/
+
 .full-width {
   width: 100%;
 }
