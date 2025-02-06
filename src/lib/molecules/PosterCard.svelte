@@ -18,7 +18,7 @@
 <style>
   a {
     text-decoration: none;
-    color: black;
+    color: var(--color-brown-dark);
   }
 
   /* This will become img once images are there */
