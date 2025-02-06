@@ -24,7 +24,7 @@
     transition-timing-function: ease-in-out;
 
     &:hover, 
-    &:focus {
+    &:focus-visible {
       background-color: var(--color-brown);
       color: var(--color-white);
       border: 2px solid var(--color-brown);
