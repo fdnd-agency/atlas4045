@@ -10,8 +10,8 @@
   a {
     display: inline-block;
     text-align: center;
-    padding: 0.25rem 0.8rem;
-    border-radius: 3rem;
+    padding: var(--spacing-xxs) var(--spacing-sm);
+    border-radius: var(--border-radius-pill);
     border: 2px solid var(--color-brown-dark);
     height: fit-content;
     text-decoration: none;
