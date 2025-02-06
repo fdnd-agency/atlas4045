@@ -9,7 +9,6 @@
 <div
 	bind:clientWidth={width}
 	bind:clientHeight={height}
-	style="background: linear-gradient(150deg, hsl({randomColor1}, 100%, 50%), hsl({randomColor2}, 100%, 50%));"
 >
 	<p>W: {width}px</p>
 	<p>H: {height}px</p>
@@ -17,6 +16,8 @@
 
 <style>
 	div {
+    background: linear-gradient(150deg, var(--color-brown-light) 0%, var(--color-brown) 100%);
+    border: 1px var(--color-brown-dark) solid;
 		display: inline-block;
 		height: 100%;
 		width: 100%;
