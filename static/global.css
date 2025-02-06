@@ -2,6 +2,9 @@
   /*-----------------
         Colours
     -----------------*/
+  --color-white: #fff;
+  --color-black: #000;
+
   --color-brown-light-fallback: #c29f9d;
   --color-brown-light: hsl(3 23.3% 68.8%);
 
@@ -39,6 +42,7 @@
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.5rem;
   --border-radius-lg: 1rem;
+  --border-radius-xl: 2rem;
   --border-radius-pill: 9999px;
 }
 
