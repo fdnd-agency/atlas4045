@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<img src="/assets/logo.avif" alt="4 Mei Comité Oosterparkbuurt" width="404" height="178" />
+	<img src="/assets/logo.avif" alt="4 Mei Comité Oosterparkbuurt" width="404" height="178" loading="eager"/>
 	<div class="header-mail-buttons">
 		<LinkButton class="full-width" href="mailto:4meioosterparkbuurt@gmail.com">contact</LinkButton>
 		<LinkButton
