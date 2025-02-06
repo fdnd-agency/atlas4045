@@ -4,6 +4,7 @@
   import Nav from "../lib/molecules/Nav.svelte";
   import NavItem from "../lib/atoms/NavItem.svelte";
   import PostersOverview from "../lib/organisms/PostersOverview.svelte";
+  import { testPosters } from '$lib/TestPosters';
 </script>
 
 <PosterIntroductie />
@@ -15,7 +16,7 @@
     <NavItem href="/">Kaart</NavItem>
   </Nav>
 
-  <PostersOverview posters={{}} />
+  <PostersOverview posters={testPosters} />
 </main>
 
 <style>
