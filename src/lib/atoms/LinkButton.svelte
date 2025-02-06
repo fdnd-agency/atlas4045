@@ -9,18 +9,25 @@
 <style>
   a {
     display: inline-block;
-    text-align: center;
-    padding: 0.25rem 0.8rem;
-    border-radius: 3rem;
-    border: 2px solid var(--color-brown-dark);
-    height: fit-content;
-    text-decoration: none;
-    color: var(--color-brown-dark);
-    font-weight: bold;
     width: fit-content;
-  }
+    height: fit-content;
+    padding: var(--spacing-xxs) var(--spacing-sm);
+    border-radius: var(--border-radius-pill);
+    border: 2px solid var(--color-brown-dark);
+    text-align: center;
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brown-dark);
 
-  .full-width {
-    width: 100%;
+    transition-property: border, background-color, color;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+
+    &:hover, 
+    &:focus-visible {
+      background-color: var(--color-brown);
+      color: var(--color-white);
+      border: 2px solid var(--color-brown);
+    }
   }
 </style>
