@@ -20,12 +20,12 @@
 
   h2 {
     font-size: 1rem;
-    text-decoration: underline;
+    color: var(--color-brown);
   }
 
   a {
     text-decoration: none;
-    color: black;
+    color: var(--color-brown-dark);
   }
 
   a:hover {
