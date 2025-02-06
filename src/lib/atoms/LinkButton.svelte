@@ -9,15 +9,15 @@
 <style>
   a {
     display: inline-block;
-    text-align: center;
+    width: fit-content;
+    height: fit-content;
     padding: var(--spacing-xxs) var(--spacing-sm);
     border-radius: var(--border-radius-pill);
     border: 2px solid var(--color-brown-dark);
-    height: fit-content;
+    text-align: center;
     text-decoration: none;
-    color: var(--color-brown-dark);
     font-weight: var(--font-weight-bold);
-    width: fit-content;
+    color: var(--color-brown-dark);
 
     transition-property: border, background-color, color;
     transition-duration: 0.15s;
