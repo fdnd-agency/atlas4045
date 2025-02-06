@@ -1,4 +1,14 @@
 :root {
+  --color-brown-light-fallback: #c29f9d;
+  --color-brown-light: hsl(3 23.3% 68.8%);
+
+  --color-brown-fallback: #6d3116;
+  --color-brown: hsl(19 66.4% 25.7%);
+
+  --color-brown-dark-fallback: #3e2518;
+  --color-brown-dark: hsl(21 44.2% 16.9%);
+
+
   --max-width-mobile: 400px;
   --max-width-desktop: 800px;
 }
