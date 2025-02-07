@@ -1,6 +1,4 @@
 <script>
-	import Debug from '$lib/atoms/Debug.svelte';
-
 	let { name, street, house_number, image } = $props();
 </script>
 
