@@ -6,6 +6,8 @@
   import PostersOverview from "$lib/organisms/PostersOverview.svelte";
 
   import { testPosters } from '$lib/TestPosters';
+
+  let { data } = $props();
 </script>
 
 <PosterIntroductie />
