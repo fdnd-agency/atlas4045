@@ -9,6 +9,11 @@ export async function load({ fetch }) {
 					"id",
 					"street",
 					"house_number",
+          {
+            family: [
+              "family_name",
+            ]
+          },
 					{
 						poster: [
 							"id",
@@ -16,7 +21,7 @@ export async function load({ fetch }) {
 								covers: ["directus_files_id"]
 							}
 						]
-					}
+					},
 				]
 			})
 		)
