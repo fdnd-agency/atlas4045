@@ -3,7 +3,7 @@ import { readItems } from "@directus/sdk";
 export async function load({ fetch }) {
 	const directus = getDirectusInstance(fetch);
 	return {
-		atlas_person: await directus.request(
+		posters: await directus.request(
 			readItems("atlas_address", {
 				fields: [
 					"id",
