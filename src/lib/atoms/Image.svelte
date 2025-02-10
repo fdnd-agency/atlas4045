@@ -11,6 +11,7 @@
 </script>
 
 {#if src === ''}
+<!-- Use placehold.co API to generate a custom placeholder image -->
 	<img
 		src="https://placehold.co/{width}x{height}/c29f9d/3e2518?text=No+image+found"
 		{width}
@@ -20,6 +21,7 @@
 		style="--img-width: {width}; --img-height: {height};"
 	/>
 {:else}
+<!-- Use <picture> to optimise image format using Progressive Enhancement -->
 	<picture>
 		<source srcset="{src}?fit=cover&width={width}&height={height}&format=avif" />
 		<source srcset="{src}?fit=cover&width={width}&height={height}&format=webp" />
