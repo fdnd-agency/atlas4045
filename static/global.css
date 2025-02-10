@@ -75,3 +75,17 @@ div.query-container {
 .full-width {
   width: 100%;
 }
+
+  /*-----------------
+        A11y utils
+    -----------------*/
+
+.focus-ring {
+  transition: outline 0.15s ease-in-out;
+  outline: 0px solid var(--color-brown);
+  outline-offset: var(--spacing-xxs);
+
+  &:focus-visible, &:focus-within {
+    outline: 3px solid var(--color-brown);
+  }
+}
