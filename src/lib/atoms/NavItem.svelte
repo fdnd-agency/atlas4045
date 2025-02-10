@@ -26,9 +26,9 @@
   a {
     text-decoration: none;
     color: var(--color-brown-dark);
-  }
 
-  a:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 </style>
