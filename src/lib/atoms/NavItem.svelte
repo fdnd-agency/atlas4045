@@ -32,7 +32,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid var(--color-brown);
+      outline: 3px solid var(--color-brown);
       outline-offset: var(--spacing-xxs);
     }
   }
