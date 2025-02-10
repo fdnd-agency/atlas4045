@@ -1,5 +1,5 @@
 <script>
-	import PosterCard from '../molecules/PosterCard.svelte';
+	import PosterCard from "../molecules/PosterCard.svelte";
 
 	let { posters } = $props();
 </script>
@@ -10,10 +10,10 @@
 	<ul>
 		{#each posters as posterData}
 			<PosterCard
-				name={posterData.family.family_name ?? 'Onbekend'}
-				street={posterData.street ?? 'Onbekend'}
-				house_number={posterData.house_number ?? 'Onbekend'}
-				image={posterData.poster.covers[1].directus_files_id ?? ''}
+				name={posterData.family.family_name ?? "Onbekend"}
+				street={posterData.street ?? "Onbekend"}
+				house_number={posterData.house_number ?? "Onbekend"}
+				image={posterData.poster.covers[1].directus_files_id ?? ""}
 			/>
 		{/each}
 	</ul>
