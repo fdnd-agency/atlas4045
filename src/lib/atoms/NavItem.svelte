@@ -26,14 +26,16 @@
   a {
     text-decoration: none;
     color: var(--color-brown-dark);
+    transition: outline 0.15s ease-in-out;
+    outline: 0px solid var(--color-brown);
+    outline-offset: var(--spacing-xxs);
 
-    &:hover, &:focus-visible {
+    &:hover {
       text-decoration: underline;
     }
 
     &:focus-visible {
       outline: 3px solid var(--color-brown);
-      outline-offset: var(--spacing-xxs);
     }
   }
 </style>
