@@ -1,7 +1,7 @@
 <!-- This component should be used when rendering an image from the Directus backend to automatically optimise it -->
 
 <script>
-	let { src = '', alt = 'Placeholder', width = 400, height = 300 } = $props();
+	let { src = '', alt = 'Placeholder', width = 400, height = 300, loading = "eager" } = $props();
   
 </script>
 
@@ -11,6 +11,7 @@
     {width}
     {height}
 		{alt}
+    {loading}
 		style="--img-width: {width}; --img-height: {height};"
 	/>
 {:else}
@@ -22,6 +23,7 @@
 			{width}
 			{height}
 			{alt}
+      {loading}
 			style="--img-width: {width}; --img-height: {height}"
 		/>
 	</picture>
