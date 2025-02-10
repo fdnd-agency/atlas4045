@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0] - 2024-02-10
+### Added
+- Added focus style utility class
+- Added no-focus utility class for hiding default focus styling
+- Added focus styles on PosterCard
+- Added focus styles on NavItem
+- Added improved error handling to data fetch logic
+- Added error state to PostersOverview
+- Added capability for LinkButton to accept rel and title props
+- Added Google font Nunito
+- Added DirectusImage component which automatically optimises images
+- Added fallback image to DirectusImage for when no image is given
+- Added lazy loading on PosterCard images
+
+### Changed
+- LinkButton anchors in header now have rel and title property
+- Applied Google font Nunito on entire page
+- PosterCard now uses DirectusImage to render its img element
+
+## [0.4.0] - 2024-02-07
+### Added
+- Installed Directus SDK
+- Added fetch request to overview page
+- Used fetched data to display poster cards
+
+### Changed
+- Debug element on PosterCard replaced by img
+
+
 ## [0.3.0] - 2024-02-06
 ### Added
 - Added eager loading rule to logo for improved performance
