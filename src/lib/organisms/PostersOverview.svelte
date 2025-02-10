@@ -4,9 +4,7 @@
 	let { posters = "" } = $props();
 </script>
 
-{#if posters.length === 0}
-  <p>Geen posters gevonden</p>
-{:else}
+{#if posters == typeof Array && posters.length == 0}
 	<ul>
 		{#each posters as posterData}
 			<PosterCard
@@ -17,6 +15,8 @@
 			/>
 		{/each}
 	</ul>
+{:else}
+	<p>Geen posters gevonden</p>
 {/if}
 
 <style>
