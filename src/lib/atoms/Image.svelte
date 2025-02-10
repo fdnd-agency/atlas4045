@@ -1,17 +1,22 @@
 <!-- This component should be used when rendering an image from the Directus backend to automatically optimise it -->
 
 <script>
-	let { src = '', alt = 'Placeholder', width = 400, height = 300, loading = "eager" } = $props();
-  
+	let { 
+    src = "", 
+    alt = "Placeholder", 
+    width = 400, 
+    height = 300, 
+    loading = "eager", 
+  } = $props();
 </script>
 
 {#if src === ''}
 	<img
 		src="https://placehold.co/{width}x{height}/c29f9d/3e2518?text=No+image+found"
-    {width}
-    {height}
+		{width}
+		{height}
 		{alt}
-    {loading}
+		{loading}
 		style="--img-width: {width}; --img-height: {height};"
 	/>
 {:else}
@@ -23,7 +28,7 @@
 			{width}
 			{height}
 			{alt}
-      {loading}
+			{loading}
 			style="--img-width: {width}; --img-height: {height}"
 		/>
 	</picture>
