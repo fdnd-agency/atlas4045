@@ -56,7 +56,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Nunito", "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 16px;
   line-height: 1.2;
   color: var(--color-brown-dark);
