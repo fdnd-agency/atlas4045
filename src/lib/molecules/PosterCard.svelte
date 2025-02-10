@@ -18,13 +18,6 @@
 		color: var(--color-brown-dark);
 	}
 
-	/* This will become img once images are there */
-	img {
-		width: 100%;
-		height: auto;
-		aspect-ratio: 3/2;
-	}
-
 	li {
 		list-style-type: none;
 		display: block;
