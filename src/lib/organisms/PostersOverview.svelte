@@ -1,10 +1,10 @@
 <script>
 	import PosterCard from "../molecules/PosterCard.svelte";
 
-	let { posters = "" } = $props();
+	let { posters = [] } = $props();
 </script>
 
-{#if posters != typeof String && posters.length > 0}
+{#if posters.length > 0}
 	<ul>
 		{#each posters as posterData}
 			<PosterCard
