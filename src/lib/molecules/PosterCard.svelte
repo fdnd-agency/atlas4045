@@ -4,8 +4,9 @@
 	let { name, street, house_number, image } = $props();
 </script>
 
-<li>
-	<a href="/">
+<li class="focus-ring">
+  <!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style-->
+	<a href="/" class="no-focus">
     <Image imageId={image} alt="Gedenkposter van {name}" loading="lazy"/>
 		<p class="name">{name}</p>
 		<p>{street} {house_number}</p>
