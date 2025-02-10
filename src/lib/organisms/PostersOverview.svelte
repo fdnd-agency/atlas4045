@@ -1,19 +1,23 @@
 <script>
-	import PosterCard from '../molecules/PosterCard.svelte';
+	import PosterCard from "../molecules/PosterCard.svelte";
 
-	let { posters } = $props();
+	let { posters = [] } = $props();
 </script>
 
-<ul>
-	{#each posters as posterData}
-		<PosterCard
-			name={posterData.family.family_name ?? "Onbekend"}
-			street={posterData.street ?? "Onbekend"}
-			house_number={posterData.house_number ?? "Onbekend"}
-			image={posterData.poster.covers[1].directus_files_id ?? ""}
-		/>
-	{/each}
-</ul>
+{#if posters.length > 0}
+	<ul>
+		{#each posters as posterData}
+			<PosterCard
+				name={posterData.family.family_name ?? "Onbekend"}
+				street={posterData.street ?? "Onbekend"}
+				house_number={posterData.house_number ?? "Onbekend"}
+				image={posterData.poster.covers[1].directus_files_id ?? ""}
+			/>
+		{/each}
+	</ul>
+{:else}
+	<p>Er zijn momenteel geen posters beschikbaar. Kom later terug of neem contact met ons op via de knop bovenin de pagina als dit probleem aanhoudt.</p>
+{/if}
 
 <style>
 	ul {
