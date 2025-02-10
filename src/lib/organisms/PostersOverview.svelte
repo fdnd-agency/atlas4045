@@ -16,7 +16,7 @@
 		{/each}
 	</ul>
 {:else}
-	<p>Geen posters gevonden</p>
+	<p>Er zijn momenteel geen posters beschikbaar. Kom later terug of neem contact met ons op via de knop bovenin de pagina als dit probleem aanhoudt.</p>
 {/if}
 
 <style>
