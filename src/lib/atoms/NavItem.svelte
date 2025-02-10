@@ -27,8 +27,13 @@
     text-decoration: none;
     color: var(--color-brown-dark);
 
-    &:hover {
+    &:hover, &:focus-visible {
       text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brown);
+      outline-offset: var(--spacing-xxs);
     }
   }
 </style>
