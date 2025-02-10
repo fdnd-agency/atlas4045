@@ -1,7 +1,7 @@
 <script>
 	import PosterCard from "../molecules/PosterCard.svelte";
 
-	let { posters } = $props();
+	let { posters = "" } = $props();
 </script>
 
 {#if posters.length === 0}
