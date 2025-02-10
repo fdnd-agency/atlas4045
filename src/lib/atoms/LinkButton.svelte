@@ -1,8 +1,8 @@
 <script>
-  let { children, href, class: classList = "" } = $props();
+  let { children, href, class: classList = "", rel = "", title ="" } = $props();
 </script>
 
-<a {href} class={classList}>
+<a {href} class={classList} {rel} {title}>
   {@render children()}
 </a>
 
