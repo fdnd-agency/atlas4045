@@ -6,7 +6,7 @@
 
 <li>
 	<a href="/">
-    <Image imageId="{image}" alt="Gedenkposter van {name}" loading="lazy"/>
+    <Image imageId={image} alt="Gedenkposter van {name}" loading="lazy"/>
 		<p class="name">{name}</p>
 		<p>{street} {house_number}</p>
 	</a>
