@@ -25,8 +25,8 @@
 {:else}
 <!-- Use <picture> to optimise image format using Progressive Enhancement -->
 	<picture>
-		<source srcset="{URL}{imageId}?fit=cover&width={width}&height={height}&format=avif" />
-		<source srcset="{URL}{imageId}?fit=cover&width={width}&height={height}&format=webp" />
+		<source type="image/avif" srcset="{URL}{imageId}?fit=cover&width={width}&height={height}&format=avif" />
+		<source type="image/webp" srcset="{URL}{imageId}?fit=cover&width={width}&height={height}&format=webp" />
 		<img
 			src="{URL}{imageId}?fit=cover&width={width}&height={height}&format=png"
 			{width}
