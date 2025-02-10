@@ -4,7 +4,7 @@
 	let { posters = "" } = $props();
 </script>
 
-{#if posters == typeof Array && posters.length == 0}
+{#if posters != typeof String && posters.length > 0}
 	<ul>
 		{#each posters as posterData}
 			<PosterCard
