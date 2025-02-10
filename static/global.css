@@ -89,3 +89,7 @@ div.query-container {
     outline: 3px solid var(--color-brown);
   }
 }
+
+.no-focus:focus-visible {
+  outline: none;
+}
