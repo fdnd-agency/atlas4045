@@ -8,7 +8,9 @@
 {#if src === ''}
 	<img
 		src="https://placehold.co/{width}x{height}/c29f9d/3e2518?text=No+image+found"
-		alt="Placeholder"
+    {width}
+    {height}
+		{alt}
 		style="--img-width: {width}; --img-height: {height};"
 	/>
 {:else}
