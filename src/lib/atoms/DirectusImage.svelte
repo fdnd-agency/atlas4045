@@ -15,7 +15,7 @@
 {#if imageId === ""}
 <!-- Use placehold.co API to generate a custom placeholder image -->
 	<img
-		src="https://placehold.co/{width}x{height}/c29f9d/3e2518?text=No+image+found"
+		src="https://placehold.co/{width}x{height}/c29f9d/3e2518?text=Geen+foto+beschikbaar"
 		{width}
 		{height}
 		{alt}
