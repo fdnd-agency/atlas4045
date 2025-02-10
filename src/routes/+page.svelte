@@ -5,7 +5,8 @@
   import NavItem from "$lib/atoms/NavItem.svelte";
   import PostersOverview from "$lib/organisms/PostersOverview.svelte";
 
-  import { testPosters } from '$lib/TestPosters';
+  let { data } = $props();
+  let { posters } = data;
 </script>
 
 <PosterIntroductie />
@@ -17,7 +18,7 @@
     <NavItem href="/">Kaart</NavItem>
   </Nav>
 
-  <PostersOverview posters={testPosters} />
+  <PostersOverview {posters} />
 </main>
 
 <style>
