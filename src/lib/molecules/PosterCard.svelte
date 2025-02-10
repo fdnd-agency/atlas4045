@@ -1,13 +1,12 @@
 <script>
+	import Image from "$lib/atoms/DirectusImage.svelte";
+
 	let { name, street, house_number, image } = $props();
 </script>
 
 <li>
 	<a href="/">
-		<img
-			src="https://fdnd-agency.directus.app/assets/{image}?fit=cover&width=400&height=300"
-			alt="Gedenkposter van {name}"
-		/>
+    <Image imageId="{image}" alt="Gedenkposter van {name}" />
 		<p class="name">{name}</p>
 		<p>{street} {house_number}</p>
 	</a>
