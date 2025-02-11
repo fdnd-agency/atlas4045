@@ -20,15 +20,19 @@
 
   span[aria-current="page"] {
     font-size: 1rem;
-    color: var(--color-brown);
+    color: var(--orange-neutral);
   }
 
   a {
     text-decoration: none;
-    color: var(--color-brown-dark);
+    color: var(--brown-dark);
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:focus-visible {
+      border-radius: var(--border-radius-pill);
     }
   }
 </style>

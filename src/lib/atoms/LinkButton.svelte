@@ -1,8 +1,8 @@
 <script>
-  let { children, href, class: classList = "", rel = "", title ="" } = $props();
+  let { children, href, class: classList = "" } = $props();
 </script>
 
-<a {href} class={classList} {rel} {title}>
+<a {href} class="no-focus {classList}">
   {@render children()}
 </a>
 
@@ -13,11 +13,11 @@
     height: fit-content;
     padding: var(--spacing-xxs) var(--spacing-sm);
     border-radius: var(--border-radius-pill);
-    border: 2px solid var(--color-brown-dark);
+    border: 2px solid var(--brown-dark);
     text-align: center;
     text-decoration: none;
     font-weight: var(--font-weight-bold);
-    color: var(--color-brown-dark);
+    color: var(--brown-dark);
 
     transition-property: border, background-color, color;
     transition-duration: 0.15s;
@@ -25,9 +25,9 @@
 
     &:hover, 
     &:focus-visible {
-      background-color: var(--color-brown);
-      color: var(--color-white);
-      border: 2px solid var(--color-brown);
+      background-color: var(--brown-neutral);
+      color: var(--white);
+      border: 2px solid var(--brown-neutral);
     }
   }
 </style>

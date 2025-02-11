@@ -7,6 +7,6 @@
 <style>
 	hr {
 		border-top: 0;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid var(--brown-dark);
 	}
 </style>
