@@ -11,7 +11,10 @@ export async function load({ fetch }) {
 						'street',
 						'house_number',
 						{
-							family: ['family_name']
+							person: [
+                'first_name',
+                'last_name'
+              ]
 						},
 						{
 							poster: [
