@@ -13,8 +13,8 @@
 
 <style>
 	div {
-    background: linear-gradient(150deg, var(--color-brown-light) 0%, var(--color-brown) 100%);
-    border: 1px var(--color-brown-dark) solid;
+    background: linear-gradient(150deg, var(--brown-light) 0%, var(--brown-neutral) 100%);
+    border: 1px var(--brown-dark) solid;
 		height: 100%;
 		width: 100%;
 		overflow: hidden;

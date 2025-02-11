@@ -16,7 +16,7 @@
 <style>
 	a {
 		text-decoration: none;
-		color: var(--color-brown-dark);
+		color: var(--brown-dark);
 	}
 
 	li {
