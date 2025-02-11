@@ -8,7 +8,7 @@
 	<ul>
 		{#each posters as posterData}
 			<PosterCard
-				name={posterData.person[0].last_name ?? "Onbekend"}
+				name={posterData.person?.[0]?.last_name ?? "Onbekend"}
 				street={posterData.street ?? "Onbekend"}
 				house_number={posterData.house_number ?? "Onbekend"}
 				image={posterData.poster.covers[1].directus_files_id ?? ""}
