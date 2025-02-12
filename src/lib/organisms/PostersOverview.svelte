@@ -1,8 +1,12 @@
 <script>
-	import PosterCard from "../molecules/PosterCard.svelte";
+  import PosterCard from "../molecules/PosterCard.svelte";
+  import PostersFilter from "$lib/molecules/PostersFilter.svelte";
 
 	let { posters = [] } = $props();
 </script>
+
+
+<PostersFilter />
 
 {#if posters.length > 0}
 	<ul>
