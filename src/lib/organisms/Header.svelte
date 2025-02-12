@@ -1,18 +1,18 @@
 <script>
 	import Divider from '$lib/atoms/Divider.svelte';
-	import LinkButton from '$lib/atoms/LinkButton.svelte';
+	import Button from '$lib/atoms/Button.svelte';
 </script>
 
 <header>
 	<img src="/assets/logo.avif" alt="4 Mei Comité Oosterparkbuurt" width="404" height="178" loading="eager"/>
 	<div class="header-mail-buttons">
-		<LinkButton class="full-width" href="mailto:4meioosterparkbuurt@gmail.com" rel="noopener" title="Contact via email">contact</LinkButton>
-		<LinkButton
+		<Button class="full-width" href="mailto:4meioosterparkbuurt@gmail.com" rel="noopener" title="Contact via email">contact</Button>
+		<Button
 			class="full-width"
 			href="mailto:4meioosterparkbuurt@gmail.com?subject=Ik wil me abonneren op de nieuwsbrief"
       rel="noopener"
       title="Abonneer op nieuwsbrief"
-			>nieuwsbrief</LinkButton
+			>nieuwsbrief</Button
 		>
 	</div>
 	<h1>Gedenkposters</h1>

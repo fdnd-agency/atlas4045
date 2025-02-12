@@ -1,6 +1,6 @@
 <script>
 	import Divider from '$lib/atoms/Divider.svelte';
-	import LinkButton from '$lib/atoms/LinkButton.svelte';
+	import Button from '$lib/atoms/Button.svelte';
 </script>
 
 <div class="query-container">
@@ -19,7 +19,7 @@
 			verhalen opgeschreven. De gedenkposters hangen in april en mei door de hele buurt voor de ramen.
 			Ook worden er wandelingen langs de posters georganiseerd.
 		</p>
-		<LinkButton href="./">Zelf een gedenkposter maken</LinkButton>
+		<Button href="./">Zelf een gedenkposter maken</Button>
 	</section>
 </div>
 <Divider margin="0 4rem" />
