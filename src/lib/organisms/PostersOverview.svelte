@@ -11,7 +11,7 @@
 				name={posterData.person?.[0]?.last_name ?? "Onbekend"}
 				street={posterData.street ?? "Onbekend"}
 				house_number={posterData.house_number ?? "Onbekend"}
-				image={posterData.poster.covers[1].directus_files_id ?? ""}
+				image={posterData.poster.covers ? posterData.poster.covers[0].directus_files_id : ""}
 			/>
 		{/each}
 	</ul>
