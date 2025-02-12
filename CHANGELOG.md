@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.0] - 2024-02-12
+### Added
+- Added reusable TextInput component
+- Added new functionality to Button component, can now also render `<button>` instead of `<a>`
+- Added type checking on Button onclick to better prevent errors
+- Added functionality for Button to accept rest props, i.e. to add a type attribute
+- Added Search component
+- Added Filter component (wip)
+- Added Screenreader-only utility class
+
+### Changed
+- Renamed LinkButton to Button
+- Slightly changed the text on PosterCard
+
+### Fixed
+- Fixed broken error handling on missing poster covers
+
+## [0.6.0] - 2024-02-11
+### Added
+- Added another layer of error handling to PostersOverview
+- Created more consistent colour palette
+
+### Changed
+- Refactored HSL colour palette to OKLCH
+- Refactored components to use new colour palette names
+
+## Fixed
+- Fixed broken fetch request due to API changes
+
 ## [0.5.0] - 2024-02-10
 ### Added
 - Added focus style utility class
