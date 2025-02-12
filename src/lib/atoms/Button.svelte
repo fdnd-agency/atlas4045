@@ -20,7 +20,7 @@
 {/if}
 
 <style>
-	a {
+	a, button {
 		display: inline-block;
 		width: fit-content;
 		height: fit-content;
