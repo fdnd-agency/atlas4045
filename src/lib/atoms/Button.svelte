@@ -1,20 +1,20 @@
 <script>
-	let { children, href = null,  onclick = null, class: classList = "", type = "button" } = $props();
+	let { children, href = null,  onclick = null, class: classList = "", ...rest} = $props();
 </script>
 
 <!-- Renders <a> styled as button if a href is given -->
 {#if href}
-	<a {href} class="no-focus {classList}">
+	<a {...rest} {href} class="no-focus {classList}">
 		{@render children()}
 	</a>
 <!-- Renders <button> with onclick event if onclick function is given -->
 {:else if typeof onclick === "function"}
-	<button {type} {onclick} class="no-focus {classList}">
+	<button {...rest} {onclick} class="no-focus {classList}">
 		{@render children()}
 	</button>
 <!-- Renders dummy <button> without onclick if neither is given -->
 {:else}
-  <button {type} class="no-focus {classList}">
+  <button {...rest} class="no-focus {classList}">
     {@render children()}
   </button>
 {/if}
