@@ -31,6 +31,7 @@
 		text-decoration: none;
 		font-weight: var(--font-weight-bold);
 		color: var(--brown-dark);
+    background-color: transparent;
 
 		transition-property: border, background-color, color;
 		transition-duration: 0.15s;
