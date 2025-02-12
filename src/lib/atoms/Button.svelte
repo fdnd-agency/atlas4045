@@ -2,14 +2,17 @@
 	let { children, href = null,  onclick = null, class: classList = '' } = $props();
 </script>
 
+<!-- Renders <a> styled as button if a href is given -->
 {#if href}
 	<a {href} class="no-focus {classList}">
 		{@render children()}
 	</a>
+<!-- Renders <button> with onclick event if onclick is given -->
 {:else if onclick}
 	<button {onclick} class="no-focus {classList}">
 		{@render children()}
 	</button>
+<!-- Renders dummy <button> without onclick if neither is given -->
 {:else}
   <button class="no-focus {classList}">
     {@render children()}
