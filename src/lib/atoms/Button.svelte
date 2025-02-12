@@ -7,8 +7,8 @@
 	<a {href} class="no-focus {classList}">
 		{@render children()}
 	</a>
-<!-- Renders <button> with onclick event if onclick is given -->
-{:else if onclick}
+<!-- Renders <button> with onclick event if onclick function is given -->
+{:else if typeof onclick === 'function'}
 	<button {onclick} class="no-focus {classList}">
 		{@render children()}
 	</button>
