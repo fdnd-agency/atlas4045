@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2024-02-13
+### Added
+- Added svelte-css-rune as dev dependency & preprocessor
+- Added $css rune to Search
+- Added $css runes to TextInput
+- Added reusable, accessible custom checkbox component
+- Added "Bewoners" section to Filters
+
+
 ## [0.7.0] - 2024-02-12
 ### Added
 - Added reusable TextInput component
