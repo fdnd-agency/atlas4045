@@ -9,7 +9,19 @@ All notable changes to this project will be documented in this file.
 - Added $css runes to TextInput
 - Added reusable, accessible custom checkbox component
 - Added "Bewoners" section to Filters
+- Added change event handler to Filters
+- Added Loader component
+- Added reusable FilterCard component for filter subsections
 
+### Changed
+- Lowered chroma on brown colour
+- Filters is now a collapsible `<details>` element (progressive disclosure)
+- Moved PostersFilter to `/organisms`
+
+### Fixed
+- Fixed missing pointer styles for Button
+- Fixed font styling in Button
+- Fixed vertical alignment on Search
 
 ## [0.7.0] - 2024-02-12
 ### Added
