@@ -14,7 +14,7 @@
 	div {
 		display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 		gap: var(--spacing-xs);
 	}
 </style>
