@@ -4,7 +4,7 @@
 </script>
 
 <div>
-  <TextInput type="text" placeholder="Zoeken..." sronly="true" id="search" />
+  <TextInput type="text" placeholder="Zoeken..." sronly="true" id="search">Zoeken</TextInput>
 	<Button type="submit">Zoeken</Button>
 </div>
 

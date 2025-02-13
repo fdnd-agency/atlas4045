@@ -1,10 +1,10 @@
 <script>
-	let { placeholder = 'Input', sronly = false, id, type = "text"} = $props();
+	let { placeholder = 'Input', sronly = false, id, type = "text", children, ...rest} = $props();
 </script>
 
 <!-- Give label a sr-only class if (sronly) is truthy -->
-<label for={id} class={[sronly && 'sr-only']}>Zoeken</label>
-<input {id} {type} {placeholder} class="no-focus" />
+<label for={id} class={[sronly && 'sr-only']}>{@render children()}</label>
+<input {id} {type} {placeholder} class="no-focus" {...rest} />
 
 <style>
 	input {
