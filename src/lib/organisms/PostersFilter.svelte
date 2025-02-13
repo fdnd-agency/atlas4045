@@ -1,41 +1,18 @@
 <script>
 	import TextInput from '$lib/atoms/TextInput.svelte';
 	import Search from '$lib/molecules/Search.svelte';
+	import FilterBewoners from '$lib/molecules/FilterBewoners.svelte';
 </script>
 
 <form>
 	<details>
-		<summary>Filters</summary>
+		<summary class="no-focus">Filters</summary>
 		<div class="filters">
-			<TextInput
-				id="birth-date"
-				type="number"
-				placeholder="Geboortedatum"
-				sronly="true"
-				style="max-width: 6rem;"
-				min="1900"
-				max="2021"
-				step="1"
-        inputClass={$css("year-input")}
-			>
-				Geboortedatum
-			</TextInput>
-			<TextInput
-				id="inhabitants"
-				type="number"
-				placeholder="Bewoners"
-				style="max-width: 6rem;"
-				min="0"
-				max="6"
-				step="1"
-        labelClass={$css("test")}
-			>
-				Bewoners
-			</TextInput>
+			<FilterBewoners />
 		</div>
 	</details>
 
-	<Search searchClass={$css("search")} />
+	<Search searchClass={$css('search')} />
 </form>
 
 <style>
@@ -61,7 +38,7 @@
 		color: var(--brown-dark);
 		background-color: transparent;
 		cursor: pointer;
-    font-size: 1rem;
+		font-size: 1rem;
 
 		transition-property: border, background-color, color;
 		transition-duration: 0.15s;
@@ -78,6 +55,19 @@
 	details {
 		grid-column: 1 / 3;
 		grid-row: 1 / 3;
+
+		&[open] > summary {
+			color: var(--white);
+			background-color: var(--brown-dark);
+			border: 2px solid var(--brown-dark);
+
+			&:hover,
+			&:focus-visible {
+				background-color: var(--brown-neutral);
+				color: var(--white);
+				border: 2px solid var(--brown-neutral);
+			}
+		}
 	}
 
 	.search {
@@ -85,11 +75,11 @@
 		grid-row: 1 / 2;
 	}
 
-  .year-input {
-    max-width: 6rem;
-  }
+	.year-input {
+		max-width: 6rem;
+	}
 
-  .filters{
-    margin-top: 1rem;
-  }
+	.filters {
+		margin-top: 1rem;
+	}
 </style>
