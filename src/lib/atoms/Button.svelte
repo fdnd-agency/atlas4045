@@ -21,6 +21,7 @@
 
 <style>
 	a, button {
+    font-family:inherit;
 		display: inline-block;
 		width: fit-content;
 		height: fit-content;
@@ -33,6 +34,7 @@
 		color: var(--brown-dark);
     background-color: transparent;
     cursor: pointer;
+    font-size: 1rem;
 
 		transition-property: border, background-color, color;
 		transition-duration: 0.15s;
