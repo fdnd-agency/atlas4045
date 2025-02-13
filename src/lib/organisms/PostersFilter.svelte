@@ -6,7 +6,7 @@
 <form>
 	<details>
 		<summary>Filters</summary>
-		<div>
+		<div class="filters">
 			<TextInput
 				id="birth-date"
 				type="number"
@@ -24,18 +24,18 @@
 				id="inhabitants"
 				type="number"
 				placeholder="Bewoners"
-				sronly="true"
 				style="max-width: 6rem;"
 				min="0"
 				max="6"
 				step="1"
+        labelClass={$css("test")}
 			>
 				Bewoners
 			</TextInput>
 		</div>
 	</details>
 
-	<Search searchClass={$css('search')} />
+	<Search searchClass={$css("search")} />
 </form>
 
 <style>
@@ -87,5 +87,9 @@
 
   .year-input {
     max-width: 6rem;
+  }
+
+  .filters{
+    margin-top: 1rem;
   }
 </style>

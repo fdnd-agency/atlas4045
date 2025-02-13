@@ -1,6 +1,6 @@
 <script>
   import PosterCard from "../molecules/PosterCard.svelte";
-  import PostersFilter from "$lib/molecules/PostersFilter.svelte";
+  import PostersFilter from "$lib/organisms/PostersFilter.svelte";
 
 	let { posters = [] } = $props();
 </script>
