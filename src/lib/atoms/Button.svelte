@@ -32,6 +32,7 @@
 		font-weight: var(--font-weight-bold);
 		color: var(--brown-dark);
     background-color: transparent;
+    cursor: pointer;
 
 		transition-property: border, background-color, color;
 		transition-duration: 0.15s;
