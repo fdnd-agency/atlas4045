@@ -35,7 +35,7 @@
 		</div>
 	</details>
 
-	<Search />
+	<Search searchClass={$css('search')} />
 </form>
 
 <style>
