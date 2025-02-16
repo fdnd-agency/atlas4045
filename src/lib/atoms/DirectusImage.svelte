@@ -4,12 +4,12 @@
 	let { 
     imageId = "", 
     alt = "Placeholder", 
-    width = 400, 
-    height = 300, 
-    loading = "eager", 
-  } = $props();
+    width, 
+    height, 
+    loading = "eager"
+  } = $props()
 
-  const URL = "https://fdnd-agency.directus.app/assets/";
+  const URL = "https://fdnd-agency.directus.app/assets/"
 </script>
 
 {#if imageId === ""}

@@ -1,8 +1,20 @@
 <script>
 	import Image from "$lib/atoms/DirectusImage.svelte";
 
-	let { name, street, house_number, floor, addition, image } = $props();
+	let { name, street, house_number, floor, addition, image, width, height } = $props();
 
+	let orientation = ''
+
+	if (width > height) {
+		width = 585;
+		height = 419;
+		orientation = 'landscape';
+
+	} else {
+		width = 419;
+		height = 585;
+	}
+	
 	floor = floor ? toRoman(floor) : '';
 
 	function toRoman(floor) {
@@ -19,10 +31,10 @@
 	}
 </script>
 
-<li class="focus-ring">
+<li class="focus-ring {orientation}">
   <!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style-->
 	<a href="/" class="no-focus">
-    <Image imageId={image} alt="Gedenkposter van {name}" loading="lazy"/>
+    <Image imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy"/>
 		<p class="name">Familie {name}</p>
 		<p>{street} {house_number} {floor} {addition}</p>
 	</a>
@@ -39,6 +51,18 @@
 		display: block;
 		width: 100%;
 	}
+
+	@media screen and (min-width: 800px) {
+		li.landscape {
+			grid-column: span 2;
+		}
+
+		:global(li.landscape img) {
+			width:95%;
+		}
+  }
+
+	
 
 	p.name {
 		margin-top: 0.25rem;
