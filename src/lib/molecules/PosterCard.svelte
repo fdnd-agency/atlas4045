@@ -52,13 +52,17 @@
 		width: 100%;
 	}
 
-	li.landscape {
-		grid-column: span 2;
-	}
+	@media screen and (min-width: 800px) {
+		li.landscape {
+			grid-column: span 2;
+		}
 
-	:global(li.landscape img) {
-		width:95%;
-	}
+		:global(li.landscape img) {
+			width:95%;
+		}
+  }
+
+	
 
 	p.name {
 		margin-top: 0.25rem;
