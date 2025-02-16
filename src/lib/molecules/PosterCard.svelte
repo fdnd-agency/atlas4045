@@ -1,7 +1,22 @@
 <script>
 	import Image from "$lib/atoms/DirectusImage.svelte";
 
-	let { name, street, house_number, image } = $props();
+	let { name, street, house_number, floor, addition, image } = $props();
+
+	floor = floor ? toRoman(floor) : '';
+
+	function toRoman(floor) {
+		switch (floor) {
+			case 1:
+				return 'I';
+			case 2:
+				return 'II';
+			case 3:
+				return 'III';
+			default:
+				return '';
+		}
+	}
 </script>
 
 <li class="focus-ring">
@@ -9,7 +24,7 @@
 	<a href="/" class="no-focus">
     <Image imageId={image} alt="Gedenkposter van {name}" loading="lazy"/>
 		<p class="name">Familie {name}</p>
-		<p>{street} {house_number}</p>
+		<p>{street} {house_number} {floor} {addition}</p>
 	</a>
 </li>
 
