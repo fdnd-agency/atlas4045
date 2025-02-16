@@ -1,7 +1,7 @@
 <script>
-	import PosterCard from "../molecules/PosterCard.svelte";
+	import PosterCard from "../molecules/PosterCard.svelte"
 
-	let { posters = [] } = $props();
+	let { posters = [] } = $props()
 </script>
 
 {#if posters.length > 0}
@@ -13,7 +13,9 @@
 				house_number={posterData.house_number ?? "Onbekend"}
 				floor={posterData?.floor}
 				addition={posterData?.addition}
-				image={posterData.poster ? posterData.poster.covers[0].directus_files_id : ""}
+				image={posterData.poster ? posterData.poster.covers[0].directus_files_id.id : ""}
+				width={posterData.poster ? posterData.poster.covers[0].directus_files_id.width: 419}
+				height={posterData.poster ? posterData.poster.covers[0].directus_files_id.height : 585}
 			/>
 		{/each}
 	</ul>

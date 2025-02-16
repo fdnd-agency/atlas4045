@@ -22,7 +22,11 @@ export async function load({ fetch }) {
 							poster: [
 								'id',
 								{
-									covers: ['directus_files_id']
+									covers: [
+										'directus_files_id.id',
+										'directus_files_id.width',
+										'directus_files_id.height'
+									]
 								}
 							]
 						}
