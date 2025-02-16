@@ -10,6 +10,8 @@ export async function load({ fetch }) {
 						'id',
 						'street',
 						'house_number',
+						'floor',
+						'addition',
 						{
 							person: [
                 'first_name',

@@ -11,6 +11,8 @@
 				name={posterData.person?.[0]?.last_name ?? "Onbekend"}
 				street={posterData.street ?? "Onbekend"}
 				house_number={posterData.house_number ?? "Onbekend"}
+				floor={posterData?.floor}
+				addition={posterData?.addition}
 				image={posterData.poster ? posterData.poster.covers[0].directus_files_id : ""}
 			/>
 		{/each}
