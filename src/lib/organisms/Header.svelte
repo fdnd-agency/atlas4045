@@ -1,6 +1,5 @@
 <script>
-	import Divider from '$lib/atoms/Divider.svelte';
-	import Button from '$lib/atoms/Button.svelte';
+	import Button from '$lib/atoms/Button.svelte'
 </script>
 
 <header>
@@ -17,7 +16,6 @@
 	</div>
 	<h1>Gedenkposters</h1>
 </header>
-<Divider margin="0 4rem" />
 
 <style>
 	header {

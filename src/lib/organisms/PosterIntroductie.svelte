@@ -1,6 +1,5 @@
 <script>
-	import Divider from '$lib/atoms/Divider.svelte';
-	import Button from '$lib/atoms/Button.svelte';
+	import Button from '$lib/atoms/Button.svelte'
 </script>
 
 <div class="query-container">
@@ -22,7 +21,6 @@
 		<Button href="./">Zelf een gedenkposter maken</Button>
 	</section>
 </div>
-<Divider margin="0 4rem" />
 
 <style>
 	section {

@@ -1,8 +1,8 @@
-import getDirectusInstance from '$lib/directus';
-import { readItems } from '@directus/sdk';
+import getDirectusInstance from '$lib/directus'
+import { readItems } from '@directus/sdk'
 export async function load({ fetch }) {
 	try {
-		const directus = getDirectusInstance(fetch);
+		const directus = getDirectusInstance(fetch)
 		return {
 			posters: await directus.request(
 				readItems('atlas_address', {
@@ -33,9 +33,9 @@ export async function load({ fetch }) {
 					]
 				})
 			)
-		};
+		}
 	} catch (error) {
-		console.error(error);
-		return {}; // Return empty object if error;
+		console.error(error)
+		return {} // Return empty object if error
 	}
 }
