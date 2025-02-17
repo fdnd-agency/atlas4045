@@ -56,10 +56,6 @@
 		li.landscape {
 			grid-column: span 3;
 		}
-
-		:global(li.landscape img) {
-			width:95%;
-		}
   }
 
 	
