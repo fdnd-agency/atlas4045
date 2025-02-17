@@ -30,7 +30,8 @@ export async function load({ fetch }) {
 								}
 							]
 						}
-					]
+					],
+					sort: ['street', 'house_number','addition', 'floor' ]
 				})
 			)
 		}
