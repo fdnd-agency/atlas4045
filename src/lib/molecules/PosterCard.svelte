@@ -1,32 +1,32 @@
 <script>
-	import Image from "$lib/atoms/DirectusImage.svelte";
+	import Image from "$lib/atoms/DirectusImage.svelte"
 
-	let { name, street, house_number, floor, addition, image, width, height } = $props();
+	let { name, street, house_number, floor, addition, image, width, height } = $props()
 
 	let orientation = ''
 
 	if (width > height) {
-		width = 585;
-		height = 419;
-		orientation = 'landscape';
+		width = 585
+		height = 419
+		orientation = 'landscape'
 
 	} else {
-		width = 419;
-		height = 585;
+		width = 419
+		height = 585
 	}
 	
-	floor = floor ? toRoman(floor) : '';
+	floor = floor ? toRoman(floor) : ''
 
 	function toRoman(floor) {
 		switch (floor) {
 			case 1:
-				return 'I';
+				return 'I'
 			case 2:
-				return 'II';
+				return 'II'
 			case 3:
-				return 'III';
+				return 'III'
 			default:
-				return '';
+				return ''
 		}
 	}
 </script>

@@ -1,5 +1,5 @@
 <script>
-	let { children, active = false, href = '' } = $props();
+	let { children, active = false, href = '' } = $props()
 </script>
 
 <li>

@@ -1,5 +1,5 @@
 <script>
-	let { children, href = null,  onclick = null, class: classList = "", type = "button" } = $props();
+	let { children, href = null,  onclick = null, class: classList = "", type = "button" } = $props()
 </script>
 
 <!-- Renders <a> styled as button if a href is given -->

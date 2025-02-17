@@ -1,6 +1,6 @@
 <script>
-	let width = $state(0);
-	let height = $state(0);
+	let width = $state(0)
+	let height = $state(0)
 </script>
 
 <div
