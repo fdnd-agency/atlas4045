@@ -54,7 +54,7 @@
 
 	@media screen and (min-width: 800px) {
 		li.landscape {
-			grid-column: span 2;
+			grid-column: span 3;
 		}
 
 		:global(li.landscape img) {
