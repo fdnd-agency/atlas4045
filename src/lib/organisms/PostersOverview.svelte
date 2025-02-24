@@ -13,9 +13,9 @@
 				house_number={posterData.house_number ?? "Onbekend"}
 				floor={posterData?.floor}
 				addition={posterData?.addition}
-				image={posterData.poster ? posterData.poster.covers[0].directus_files_id.id : ""}
-				width={posterData.poster ? posterData.poster.covers[0].directus_files_id.width: 419}
-				height={posterData.poster ? posterData.poster.covers[0].directus_files_id.height : 585}
+				image={posterData.poster?.covers?.[0]?.directus_files_id?.id ?? ""}
+				width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
+				height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 			/>
 		{/each}
 	</ul>
