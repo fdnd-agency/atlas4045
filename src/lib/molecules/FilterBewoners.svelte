@@ -23,4 +23,8 @@
 		flex-direction: row;
     gap: var(--spacing-xxs);
 	}
+
+  span {
+    margin: auto;
+  }
 </style>
