@@ -2,6 +2,7 @@
 	import TextInput from '$lib/atoms/TextInput.svelte';
 	import Search from '$lib/molecules/Search.svelte';
 	import FilterBewoners from '$lib/molecules/FilterBewoners.svelte';
+  import FilterStraat from '$lib/molecules/FilterStraat.svelte';
 	import Loader from '$lib/atoms/Loader.svelte';
 
 	let testpromise = null;
@@ -16,6 +17,7 @@
 		<summary class="no-focus">Filters</summary>
 		<div class="filters">
 			<FilterBewoners onchange={filterHandler} />
+			<FilterStraat onchange={filterHandler} />
 			{#await testpromise}
 				<Loader />
 			{:catch error}
@@ -86,11 +88,6 @@
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
 	}
-
-	.year-input {
-		max-width: 6rem;
-	}
-
 	.filters {
 		margin-top: 1rem;
 		display: flex;
