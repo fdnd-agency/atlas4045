@@ -1,5 +1,5 @@
 <script>
-	import Image from "$lib/atoms/DirectusImage.svelte"
+	import DirectusImage from "$lib/atoms/DirectusImage.svelte"
 
 	let { name, street, house_number, floor, addition, image, width, height } = $props()
 
@@ -34,7 +34,7 @@
 <li class="focus-ring {orientation}">
   <!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style-->
 	<a href="/" class="no-focus">
-    <Image imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy"/>
+    <DirectusImage imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy"/>
 		<p class="name">Familie {name}</p>
 		<p>{street} {house_number} {floor} {addition}</p>
 	</a>
