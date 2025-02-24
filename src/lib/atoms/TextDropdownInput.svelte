@@ -13,7 +13,7 @@
 	} = $props();
 </script>
 
-<TextInput type="text" {placeholder} {id} list={`${id}-list`}>{@render children()} {inputClass} {labelClass}</TextInput>
+<TextInput type="text" {placeholder} {id} list={`${id}-list`} {inputClass} {labelClass}>{@render children()}</TextInput>
 <datalist id={`${id}-list`}>
 	{#each list as option}
 		<option>{option}</option>
