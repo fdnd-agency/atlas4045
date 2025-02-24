@@ -3,7 +3,7 @@
 
 	let { name, street, house_number, floor, addition, image, width, height } = $props()
 
-	let orientation = ''
+	let orientation = $state('portrait')
 
 	if (width > height) {
 		width = 585
@@ -54,14 +54,30 @@
 
 	@media screen and (min-width: 800px) {
 		li.landscape {
-			grid-column: span 3;
+			grid-column: span 2;
 		}
   }
-
-	
 
 	p.name {
 		margin-top: 0.25rem;
     font-weight: var(--font-weight-bold);
+	}
+
+	.focus-ring {
+		transition: 0.15s ease-in-out;
+		outline: 0px solid var(--brown-neutral);
+		outline-offset: var(--spacing-xxs);
+
+		&:hover,&:focus-visible, &:focus-within {
+			outline: none;
+			background:var(--brown-neutral);
+			padding:.5rem;
+			border-radius:var(--border-radius-md);
+
+			p {
+				color:var(--white);
+			}
+		}
+
 	}
 </style>

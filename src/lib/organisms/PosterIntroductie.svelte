@@ -39,8 +39,9 @@
 	}
 
 	img {
-		width: 100%;
+		max-width: 100%;
 		height: auto;
+		border-radius:var(--border-radius-md)
 	}
 
 	p {
@@ -51,7 +52,7 @@
   @container (min-width: 500px) {
 		section {
 			display: grid;
-			grid-template-columns: 1fr 1.2fr;
+			grid-template-columns: max-content minmax(auto, 30rem);
 			grid-template-rows: auto auto auto;
 			gap: 2rem;
 			max-width: var(--max-width-desktop);
