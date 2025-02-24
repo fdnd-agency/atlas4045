@@ -6,13 +6,14 @@
     type = "text", 
     children, 
     inputClass = "", 
-    labelClass = ""
+    labelClass = "",
+    ...rest
   } = $props();
 </script>
 
 <!-- Give label a sr-only class if (sronly) is truthy -->
 <label for={id} class={[sronly && "sr-only", labelClass]}>{@render children()}</label>
-<input {id} {type} {placeholder} class="no-focus {inputClass}" />
+<input {id} {type} {placeholder} class="no-focus {inputClass}" {...rest} />
 
 <style>
 	input {
