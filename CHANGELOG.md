@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.8.0] - 2024-02-13
+## [0.9.0] - 2025-02-24
+### Added
+- Added basic setup for detail page
+- Added FilterStraat component
+- Bubbled onchange event from FilterStraat and FilterBewoners to parent
+- Added TextDropdownInput component for text input with dropdown list
+
+## Changed
+- Changed import name of image component in PosterCard
+- Label text inside filter cards is now centered
+
+## Fixed
+- Fixed error handling on missing poster covers
+
+## [0.8.0] - 2025-02-13
 ### Added
 - Added svelte-css-rune as dev dependency & preprocessor
 - Added $css rune to Search
@@ -23,7 +37,7 @@ All notable changes to this project will be documented in this file.
 - Fixed font styling in Button
 - Fixed vertical alignment on Search
 
-## [0.7.0] - 2024-02-12
+## [0.7.0] - 2025-02-12
 ### Added
 - Added reusable TextInput component
 - Added new functionality to Button component, can now also render `<button>` instead of `<a>`
@@ -40,7 +54,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Fixed broken error handling on missing poster covers
 
-## [0.6.0] - 2024-02-11
+## [0.6.0] - 2025-02-11
 ### Added
 - Added another layer of error handling to PostersOverview
 - Created more consistent colour palette
@@ -52,7 +66,7 @@ All notable changes to this project will be documented in this file.
 ## Fixed
 - Fixed broken fetch request due to API changes
 
-## [0.5.0] - 2024-02-10
+## [0.5.0] - 2025-02-10
 ### Added
 - Added focus style utility class
 - Added no-focus utility class for hiding default focus styling
@@ -71,7 +85,7 @@ All notable changes to this project will be documented in this file.
 - Applied Google font Nunito on entire page
 - PosterCard now uses DirectusImage to render its img element
 
-## [0.4.0] - 2024-02-07
+## [0.4.0] - 2025-02-07
 ### Added
 - Installed Directus SDK
 - Added fetch request to overview page
@@ -81,7 +95,7 @@ All notable changes to this project will be documented in this file.
 - Debug element on PosterCard replaced by img
 
 
-## [0.3.0] - 2024-02-06
+## [0.3.0] - 2025-02-06
 ### Added
 - Added eager loading rule to logo for improved performance
 - Added hover styling to LinkButton component
@@ -107,7 +121,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Fixed imports in +page.svelte not using the right path
 
-## [0.2.0] - 2024-02-05
+## [0.2.0] - 2025-02-05
 ### Added
 - Added responsive layout for header
 - Added responsive layout for introduction
@@ -115,12 +129,12 @@ All notable changes to this project will be documented in this file.
 - Created reusable nav components
 
 
-## [0.1.0] - 2024-02-04
+## [0.1.0] - 2025-02-04
 ### Added
 - Added HTML skeleton for overview page
 - Added favicon
 
-## [0.0.1] - 2024-02-03
+## [0.0.1] - 2025-02-03
 ### Added
 - Created project board
   - Added MoSCoW tags
