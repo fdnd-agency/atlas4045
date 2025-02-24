@@ -7,14 +7,15 @@
 		labelClass = '',
 		checked = '',
 		value = 'on',
-		symbol = ''
+		symbol = '',
+    onchange,
 	} = $props();
 </script>
 
 <div style="--symbol: '{symbol}'">
 	<!-- Give label a sr-only class if (sronly) is truthy -->
 	<label for={id} class={[sronly && 'sr-only', labelClass]}>{@render children()}</label>
-	<input {id} type="checkbox" class="no-focus {inputClass}" />
+	<input {id} type="checkbox" class="no-focus {inputClass}" {onchange} />
 </div>
 
 <style>
@@ -25,7 +26,9 @@
     height: 2rem;
 
 		&::before {
-			border: 2px solid var(--brown-dark);
+			border: 2px solid var(--white);
+      color: var(--black);
+      background-color: var(--white);
 			border-radius: var(--border-radius-pill);
 			text-align: center;
 			padding: 0.4rem 0.65rem;
@@ -43,7 +46,7 @@
 		}
 
     &:has(input:checked)::before {
-			border: 2px solid var(--brown-dark);
+			border: 2px solid var(--white);
 			color: var(--white);
       background-color: var(--brown-dark);
 		}

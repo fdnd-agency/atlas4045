@@ -2,13 +2,25 @@
 	import TextInput from '$lib/atoms/TextInput.svelte';
 	import Search from '$lib/molecules/Search.svelte';
 	import FilterBewoners from '$lib/molecules/FilterBewoners.svelte';
+	import Loader from '$lib/atoms/Loader.svelte';
+
+	let testpromise = null;
+
+	function filterHandler() {
+		testpromise = new Promise((res) => setTimeout(() => res(), 1000));
+	}
 </script>
 
 <form>
 	<details>
 		<summary class="no-focus">Filters</summary>
 		<div class="filters">
-			<FilterBewoners />
+			<FilterBewoners onchange={filterHandler} />
+			{#await testpromise}
+				<Loader />
+			{:catch error}
+				<p>Something went wrong: {error.message}</p>
+			{/await}
 		</div>
 	</details>
 
@@ -81,5 +93,7 @@
 
 	.filters {
 		margin-top: 1rem;
+		display: flex;
+		gap: 1rem;
 	}
 </style>
