@@ -14,9 +14,15 @@
   form {
     position: fixed;
     right:1rem;
-    top:1rem;
+    bottom:1rem;
     z-index:999;
+
+    @media (min-width:800px) {
+      top:1rem;
+      bottom:auto;
+    }
   }
+
 </style>
 
 
