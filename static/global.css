@@ -35,7 +35,7 @@
   --brown-lightest: oklch(var(--lightest) var(--brown-c) var(--brown-h));
 
   --max-width-mobile: 400px;
-  --max-width-desktop: 800px;
+  --max-width-desktop: 1600px;
 
   /*-----------------
       Design tokens

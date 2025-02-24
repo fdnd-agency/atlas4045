@@ -1,6 +1,5 @@
 <script>
-	import Divider from '$lib/atoms/Divider.svelte';
-	import Button from '$lib/atoms/Button.svelte';
+	import Button from '$lib/atoms/Button.svelte'
 </script>
 
 <div class="query-container">
@@ -22,7 +21,6 @@
 		<Button href="./">Zelf een gedenkposter maken</Button>
 	</section>
 </div>
-<Divider margin="0 4rem" />
 
 <style>
 	section {
@@ -41,8 +39,9 @@
 	}
 
 	img {
-		width: 100%;
+		max-width: 100%;
 		height: auto;
+		border-radius:var(--border-radius-md)
 	}
 
 	p {
@@ -53,7 +52,7 @@
   @container (min-width: 500px) {
 		section {
 			display: grid;
-			grid-template-columns: 1fr 1.2fr;
+			grid-template-columns: max-content minmax(auto, 30rem);
 			grid-template-rows: auto auto auto;
 			gap: 2rem;
 			max-width: var(--max-width-desktop);

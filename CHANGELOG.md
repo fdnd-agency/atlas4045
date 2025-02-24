@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2024-02-13
+### Added
+- Added svelte-css-rune as dev dependency & preprocessor
+- Added $css rune to Search
+- Added $css runes to TextInput
+- Added reusable, accessible custom checkbox component
+- Added "Bewoners" section to Filters
+- Added change event handler to Filters
+- Added Loader component
+- Added reusable FilterCard component for filter subsections
+
+### Changed
+- Lowered chroma on brown colour
+- Filters is now a collapsible `<details>` element (progressive disclosure)
+- Moved PostersFilter to `/organisms`
+
+### Fixed
+- Fixed missing pointer styles for Button
+- Fixed font styling in Button
+- Fixed vertical alignment on Search
+
+## [0.7.0] - 2024-02-12
+### Added
+- Added reusable TextInput component
+- Added new functionality to Button component, can now also render `<button>` instead of `<a>`
+- Added type checking on Button onclick to better prevent errors
+- Added functionality for Button to accept rest props, i.e. to add a type attribute
+- Added Search component
+- Added Filter component (wip)
+- Added Screenreader-only utility class
+
+### Changed
+- Renamed LinkButton to Button
+- Slightly changed the text on PosterCard
+
+### Fixed
+- Fixed broken error handling on missing poster covers
+
+## [0.6.0] - 2024-02-11
+### Added
+- Added another layer of error handling to PostersOverview
+- Created more consistent colour palette
+
+### Changed
+- Refactored HSL colour palette to OKLCH
+- Refactored components to use new colour palette names
+
+## Fixed
+- Fixed broken fetch request due to API changes
+
 ## [0.5.0] - 2024-02-10
 ### Added
 - Added focus style utility class

@@ -2,7 +2,7 @@
   import PosterCard from "../molecules/PosterCard.svelte";
   import PostersFilter from "$lib/organisms/PostersFilter.svelte";
 
-	let { posters = [] } = $props();
+	let { posters = [] } = $props()
 </script>
 
 
@@ -15,7 +15,11 @@
 				name={posterData.person?.[0]?.last_name ?? "Onbekend"}
 				street={posterData.street ?? "Onbekend"}
 				house_number={posterData.house_number ?? "Onbekend"}
-				image={posterData.poster ? posterData.poster.covers[0].directus_files_id : ""}
+				floor={posterData?.floor}
+				addition={posterData?.addition}
+				image={posterData.poster?.covers?.[0]?.directus_files_id?.id ?? ""}
+				width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
+				height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 			/>
 		{/each}
 	</ul>
@@ -26,8 +30,8 @@
 <style>
 	ul {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		gap: 1rem;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 2rem;
 		padding-top: 3rem;
 	}
 </style>
