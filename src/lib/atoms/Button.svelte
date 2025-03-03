@@ -1,5 +1,5 @@
 <script>
-	let { children, href = null,  onclick = null, class: classList = "", ...rest} = $props();
+	let { children, href = null, type = null, onclick = null, class: classList = "", ...rest} = $props();
 </script>
 
 <!-- Renders <a> styled as button if a href is given -->
@@ -8,7 +8,7 @@
 		{@render children()}
 	</a>
 <!-- Renders <button> with onclick event if onclick function is given -->
-{:else if typeof onclick === "function"}
+{:else if typeof onclick === "function" || type === "submit"}
 	<button {...rest} {onclick} class="no-focus {classList}">
 		{@render children()}
 	</button>
