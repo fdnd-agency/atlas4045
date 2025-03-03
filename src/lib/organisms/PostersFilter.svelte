@@ -3,21 +3,24 @@
 	import Search from '$lib/molecules/Search.svelte';
 	import FilterBewoners from '$lib/molecules/FilterBewoners.svelte';
   import FilterStraat from '$lib/molecules/FilterStraat.svelte';
+  import Button from '$lib/atoms/Button.svelte';
 	import Loader from '$lib/atoms/Loader.svelte';
 
 	let testpromise = null;
+  let form;
 
-	function filterHandler() {
-		testpromise = new Promise((res) => setTimeout(() => res(), 1000));
+	function filterHandler(event) {
+    form.requestSubmit();
 	}
 </script>
 
-<form>
+<form bind:this={form} action="/" data-sveltekit-noscroll>
 	<details>
 		<summary class="no-focus">Filters</summary>
 		<div class="filters">
 			<FilterBewoners onchange={filterHandler} />
 			<FilterStraat onchange={filterHandler} />
+      <Button type="submit">Toepassen</Button>
 			{#await testpromise}
 				<Loader />
 			{:catch error}
