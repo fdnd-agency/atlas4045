@@ -12,8 +12,8 @@
 </script>
 
 <!-- Give label a sr-only class if (sronly) is truthy -->
-<label for={id} class={[sronly && "sr-only", labelClass]}>{@render children()}</label>
-<input {id} {type} {placeholder} class="no-focus {inputClass}" {...rest} />
+<label for={id} class={[sronly && "sr-only", labelClass]} >{@render children()}</label>
+<input {id} {type} {placeholder} class="no-focus {inputClass}" name={id} {...rest} />
 
 <style>
 	input {
