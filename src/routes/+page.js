@@ -3,7 +3,6 @@ import { readItems } from '@directus/sdk';
 
 export async function load({ fetch, url }) {
   let filters = {};
-  console.log("load function called");
   
   if (url.searchParams.get('straat')) {
     filters.street = {
