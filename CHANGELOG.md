@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.10.0] - 2025-03-03
+### Added
+- Added functionality to filter component
+- Progressively enhanced filter component for when JS is enabled
+- Added suspense boundary to PostersOverview (WIP)
+- Made submit button on filter hidden when JS is enabled
+- Added filter options to fetch query using search params in URL
+- Added opaque background to logout button
+- Button component can now render submit buttons without needing an onclick prop
+
+## Changed
+- Changed +page.server.js to +page.js to allow clientside navigation to refire load function
+- Refactored query fields to be seperate const variable
+- Moved Loader out of PostersFilter
+- Removed some dead code from PostersFilter
+
+## Fixed
+- Fixed page data not being reactive
+- Fixed hooks.server.js no longer serialising headers
+
 ## [0.9.0] - 2025-02-24
 ### Added
 - Added basic setup for detail page
