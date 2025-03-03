@@ -8,7 +8,7 @@
 <PostersFilter />
 
 {#await posters}
-	Loading posters...
+	<p>Loading posters...</p>
 {:then posters}
 	{#if posters.length > 0}
 		<ul>
