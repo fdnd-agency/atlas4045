@@ -6,7 +6,6 @@
   import Button from '$lib/atoms/Button.svelte';
 	import Loader from '$lib/atoms/Loader.svelte';
 
-	let testpromise = null;
   let form;
 
 	function filterHandler(event) {
