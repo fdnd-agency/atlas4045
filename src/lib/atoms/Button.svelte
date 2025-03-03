@@ -1,26 +1,27 @@
 <script>
-	let { children, href = null,  onclick = null, class: classList = "", type = "button" } = $props()
+	let { children, href = null, type = null, onclick = null, class: classList = "", ...rest} = $props();
 </script>
 
 <!-- Renders <a> styled as button if a href is given -->
 {#if href}
-	<a {href} class="no-focus {classList}">
+	<a {...rest} {href} class="no-focus {classList}">
 		{@render children()}
 	</a>
 <!-- Renders <button> with onclick event if onclick function is given -->
-{:else if typeof onclick === "function"}
-	<button {type} {onclick} class="no-focus {classList}">
+{:else if typeof onclick === "function" || type === "submit"}
+	<button {...rest} {onclick} class="no-focus {classList}">
 		{@render children()}
 	</button>
 <!-- Renders dummy <button> without onclick if neither is given -->
 {:else}
-  <button {type} class="no-focus {classList}">
+  <button {...rest} class="no-focus {classList}">
     {@render children()}
   </button>
 {/if}
 
 <style>
 	a, button {
+    font-family:inherit;
 		display: inline-block;
 		width: fit-content;
 		height: fit-content;
@@ -31,7 +32,9 @@
 		text-decoration: none;
 		font-weight: var(--font-weight-bold);
 		color: var(--brown-dark);
-    background-color: var(--white);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
 
 		transition-property: border, background-color, color;
 		transition-duration: 0.15s;
