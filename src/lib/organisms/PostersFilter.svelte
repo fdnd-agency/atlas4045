@@ -2,29 +2,24 @@
 	import TextInput from '$lib/atoms/TextInput.svelte';
 	import Search from '$lib/molecules/Search.svelte';
 	import FilterBewoners from '$lib/molecules/FilterBewoners.svelte';
-  import FilterStraat from '$lib/molecules/FilterStraat.svelte';
-  import Button from '$lib/atoms/Button.svelte';
+	import FilterStraat from '$lib/molecules/FilterStraat.svelte';
+	import Button from '$lib/atoms/Button.svelte';
 	import Loader from '$lib/atoms/Loader.svelte';
 
-  let form;
+	let form;
 
 	function filterHandler(event) {
-    form.requestSubmit();
+		form.requestSubmit();
 	}
 </script>
 
-<form bind:this={form} action="/" data-sveltekit-noscroll>
+<form bind:this={form} action=".." data-sveltekit-noscroll>
 	<details>
 		<summary class="no-focus">Filters</summary>
 		<div class="filters">
 			<FilterBewoners onchange={filterHandler} />
 			<FilterStraat onchange={filterHandler} />
-      <Button type="submit">Toepassen</Button>
-			{#await testpromise}
-				<Loader />
-			{:catch error}
-				<p>Something went wrong: {error.message}</p>
-			{/await}
+			<Button type="submit">Toepassen</Button>
 		</div>
 	</details>
 
