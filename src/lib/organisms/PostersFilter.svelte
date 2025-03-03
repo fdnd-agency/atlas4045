@@ -5,12 +5,18 @@
 	import FilterStraat from '$lib/molecules/FilterStraat.svelte';
 	import Button from '$lib/atoms/Button.svelte';
 	import Loader from '$lib/atoms/Loader.svelte';
+  import { onMount } from 'svelte';
 
 	let form;
+  let javascriptEnabled;
 
 	function filterHandler(event) {
 		form.requestSubmit();
 	}
+
+  onMount(() => {
+    javascriptEnabled = true;
+  });
 </script>
 
 <form bind:this={form} action=".." data-sveltekit-noscroll>
@@ -19,7 +25,7 @@
 		<div class="filters">
 			<FilterBewoners onchange={filterHandler} />
 			<FilterStraat onchange={filterHandler} />
-			<Button type="submit">Toepassen</Button>
+			<Button class={(javascriptEnabled ? "sr-only" : '')} type="submit">Toepassen</Button>
 		</div>
 	</details>
 
