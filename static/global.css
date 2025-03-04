@@ -129,7 +129,7 @@ div.query-container {
   outline: none;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 500px) {
   body {
     padding-left: var(--page-padding-desktop);
     padding-right: var(--page-padding-desktop);
