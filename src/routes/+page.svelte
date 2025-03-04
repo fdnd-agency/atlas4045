@@ -8,8 +8,6 @@
   let { data } = $props();
 </script>
 
-<PosterIntroductie />
-
 <!-- Overview section -->
 <main>
   <Nav>
@@ -19,6 +17,8 @@
 
   <PostersOverview posters={data.posters} />
 </main>
+
+<PosterIntroductie />
 
 <style>
   main {
