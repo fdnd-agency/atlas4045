@@ -46,6 +46,9 @@
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
 
+  --page-padding-mobile: 1rem;
+  --page-padding-desktop: 2rem;
+
   /* 1.200 - Minor Third scale */
   --font-size-xs: 0.694rem;
   --font-size-sm: 0.833rem;
@@ -79,6 +82,8 @@ body {
   font-size: 16px;
   line-height: 1.2;
   color: var(--brown-dark);
+  padding-left: var(--page-padding-mobile);
+  padding-right: var(--page-padding-mobile);
 }
 
 div.query-container {
@@ -122,4 +127,11 @@ div.query-container {
 /* Should only really be used alongside .focus-ring to hide default style when it would clash with the custom ring */
 .no-focus:focus-visible {
   outline: none;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    padding-left: var(--page-padding-desktop);
+    padding-right: var(--page-padding-desktop);
+  }
 }
