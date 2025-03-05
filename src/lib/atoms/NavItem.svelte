@@ -4,7 +4,7 @@
 
 <li>
 	{#if active}
-		<span aria-current="page">{@render children()}</span>
+		<h1>{@render children()}</h1>
 	{:else if href}
 		<a {href} class="focus-ring">{@render children()}</a>
 	{:else}
@@ -18,14 +18,19 @@
     display: inline-block;
   }
 
-  span[aria-current="page"] {
+  h1 {
     font-size: 1rem;
-    color: var(--orange-neutral);
+    color: var(--brown-700);
+    font-family: var(--font-family-nunito);
+    font-weight: var(--font-weight-regular);
+    cursor: default;
   }
 
-  a {
+  a, span {
+    display: inline-block;
     text-decoration: none;
-    color: var(--brown-dark);
+    color: var(--neutral-900);
+    font-weight: var(--font-weight-regular);
 
     &:hover {
       text-decoration: underline;
@@ -34,5 +39,10 @@
     &:focus-visible {
       border-radius: var(--border-radius-pill);
     }
+  }
+
+  /* This is a hack to make the text stay in the same place when the link is active */
+  a {
+    transform: translateY(0.5px);
   }
 </style>
