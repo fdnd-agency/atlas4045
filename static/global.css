@@ -137,8 +137,6 @@ body {
   line-height: 1.2;
   font-weight: var(--font-weight-light);
   color: var(--brown-dark);
-  padding-left: var(--page-padding-mobile);
-  padding-right: var(--page-padding-mobile);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -191,11 +189,4 @@ div.query-container {
 /* Should only really be used alongside .focus-ring to hide default style when it would clash with the custom ring */
 .no-focus:focus-visible {
   outline: none;
-}
-
-@media screen and (min-width: 500px) {
-  body {
-    padding-left: var(--page-padding-desktop);
-    padding-right: var(--page-padding-desktop);
-  }
 }
