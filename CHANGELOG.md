@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.11.0] - 2025-03-05
+### Added
+- Added new Fruances serif font for titles and large text
+- Added new ColourTester devtool to quickly see all colours in the palette. Useful for picking colours when developing
+- Added redesigned Header component
+- Added (placeholder) landing page
+- Added functional navigation
+- Added extra design tokens for spacing and font families
+
+
+## Changed
+- Colour palette has been replaced by a more structured palette with more colours
+- Nav is now inside Header rather than below
+- Overview page is now at `/posters` route.
+- `/poster` route has been renamed to `/posters`
+- Index page is now a (placeholder) landing page
+- Span in Nav is now an H1
+
 ## [0.10.0] - 2025-03-03
 ### Added
 - Added functionality to filter component
