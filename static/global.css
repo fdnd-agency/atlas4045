@@ -94,6 +94,8 @@
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  --spacing-xxl: 16rem;
 
   /* Page padding */
   --page-padding-mobile: 1rem;
