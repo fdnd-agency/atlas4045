@@ -4,7 +4,7 @@
 
 <li>
 	{#if active}
-		<span aria-current="page">{@render children()}</span>
+		<h1>{@render children()}</h1>
 	{:else if href}
 		<a {href} class="focus-ring">{@render children()}</a>
 	{:else}
@@ -18,9 +18,11 @@
     display: inline-block;
   }
 
-  span[aria-current="page"] {
+  h1 {
     font-size: 1rem;
     color: var(--orange-neutral);
+    font-family: var(--font-family-nunito);
+    font-weight: var(--font-weight-light);
   }
 
   a {
