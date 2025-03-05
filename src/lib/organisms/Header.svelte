@@ -2,6 +2,11 @@
 	import Button from '$lib/atoms/Button.svelte';
 	import Nav from '$lib/molecules/Nav.svelte';
 	import NavItem from '$lib/atoms/NavItem.svelte';
+	import { getCurrentPage } from '$lib/utils/getCurrentPage';
+
+  import { page } from '$app/state';
+
+  let currentPage = $derived(getCurrentPage(page.url.pathname));
 </script>
 
 <header>
@@ -14,9 +19,9 @@
 	/>
 
 	<Nav>
-		<NavItem active={true}>Gedenkposters</NavItem>
-		<NavItem href="/">Overzicht</NavItem>
-		<NavItem href="/">Kaart</NavItem>
+		<NavItem active={currentPage === 'home'} href="/">Gedenkposters</NavItem>
+		<NavItem active={currentPage === 'overview'} href="/posters">Overzicht</NavItem>
+		<NavItem>Kaart</NavItem>
 	</Nav>
 </header>
 
