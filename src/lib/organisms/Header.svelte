@@ -12,7 +12,11 @@
 		height="178"
 		loading="eager"
 	/>
-	<h1>Gedenkposters</h1>
+  <h1>Gedenkposters</h1>
+  <Nav>
+    <NavItem active={true}>Overzicht</NavItem>
+    <NavItem href="/">Kaart</NavItem>
+  </Nav>
 </header>
 
 <style>
@@ -35,8 +39,9 @@
 
 	h1 {
 		grid-column: 1 / 3;
-		font-size: 1.33rem;
+		font-size: var(--font-size-md);
 		text-align: center;
+    color: var(--brown-700);
 	}
 
 	@media screen and (min-width: 500px) {

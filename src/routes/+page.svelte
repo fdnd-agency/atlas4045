@@ -10,11 +10,6 @@
 
 <!-- Overview section -->
 <main>
-  <Nav>
-    <NavItem active={true}>Overzicht</NavItem>
-    <NavItem href="/">Kaart</NavItem>
-  </Nav>
-
   <PostersOverview posters={data.posters} />
 </main>
 
@@ -24,7 +19,6 @@
   main {
     max-width: var(--max-width-mobile);
     margin: 0 auto;
-    padding: 1rem;
   }
 
   @media screen and (min-width: 800px) {
