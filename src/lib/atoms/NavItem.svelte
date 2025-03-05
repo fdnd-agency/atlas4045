@@ -22,13 +22,13 @@
     font-size: 1rem;
     color: var(--brown-700);
     font-family: var(--font-family-nunito);
-    /* Using regular instead of light because the lighter colour makes it appear thinner to the eye */
     font-weight: var(--font-weight-regular);
   }
 
-  a {
+  a, span {
     text-decoration: none;
     color: var(--neutral-900);
+    font-weight: var(--font-weight-regular);
 
     &:hover {
       text-decoration: underline;
