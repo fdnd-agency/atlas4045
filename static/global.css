@@ -77,6 +77,13 @@
   --max-width-mobile: 400px;
   --max-width-desktop: 1600px;
 
+    /*-----------------
+          Fonts
+    -----------------*/
+
+  --font-family-fraunces: "Fraunces", serif;
+  --font-family-nunito: "Nunito", "Trebuchet MS", Helvetica, sans-serif;
+
   /*-----------------
       Design tokens
     -----------------*/
@@ -121,18 +128,19 @@
 }
 
 body {
-  font-family: "Nunito", "Roboto", sans-serif;
+  font-family: var(--font-family-nunito);
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 16px;
   line-height: 1.2;
+  font-weight: var(--font-weight-light);
   color: var(--brown-dark);
   padding-left: var(--page-padding-mobile);
   padding-right: var(--page-padding-mobile);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fraunces", "Roboto", sans-serif;
+  font-family: var(--font-family-fraunces);
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 700;
