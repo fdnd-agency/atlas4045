@@ -23,6 +23,7 @@
     color: var(--brown-700);
     font-family: var(--font-family-nunito);
     font-weight: var(--font-weight-regular);
+    cursor: default;
   }
 
   a, span {
