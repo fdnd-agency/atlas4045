@@ -22,7 +22,8 @@
     font-size: 1rem;
     color: var(--brown-700);
     font-family: var(--font-family-nunito);
-    font-weight: var(--font-weight-light);
+    /* Using regular instead of light because the lighter colour makes it appear thinner to the eye */
+    font-weight: var(--font-weight-regular);
   }
 
   a {
