@@ -1,7 +1,7 @@
 <script>
 	import Button from '$lib/atoms/Button.svelte';
-  import Nav from '$lib/molecules/Nav.svelte';
-  import NavItem from '$lib/atoms/NavItem.svelte';
+	import Nav from '$lib/molecules/Nav.svelte';
+	import NavItem from '$lib/atoms/NavItem.svelte';
 </script>
 
 <header>
@@ -12,47 +12,33 @@
 		height="178"
 		loading="eager"
 	/>
-  <h1>Gedenkposters</h1>
-  <Nav>
-    <NavItem active={true}>Overzicht</NavItem>
-    <NavItem href="/">Kaart</NavItem>
-  </Nav>
+
+	<Nav>
+		<NavItem active={true}>Gedenkposters</NavItem>
+		<NavItem href="/">Overzicht</NavItem>
+		<NavItem href="/">Kaart</NavItem>
+	</Nav>
 </header>
 
 <style>
 	header {
-		display: grid;
-		grid-template-columns: 1fr auto;
-		grid-template-rows: auto auto;
-		width: fit-content;
-		padding-top: 1rem;
-		margin: auto;
+		display: flex;
+		width: 100%;
+		padding: var(--spacing-sm) var(--page-padding-mobile);
+    margin-bottom: var(--spacing-sm);
+		box-shadow: 0 -20px 10px 20px rgba(0, 0, 0, 0.303);
+    align-items: center;
 	}
 
 	img {
-		grid-column: 1 / 1;
-		grid-row: 1 / 2;
 		width: 100%;
 		max-width: 151px;
 		height: auto;
 	}
 
-	h1 {
-		grid-column: 1 / 3;
-		font-size: var(--font-size-md);
-		text-align: center;
-    color: var(--brown-700);
-	}
-
 	@media screen and (min-width: 500px) {
-    header {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: var(--max-width-desktop);
-    }
+		header {
+			padding: var(--spacing-sm) var(--page-padding-desktop);
+		}
 	}
 </style>
