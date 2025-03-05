@@ -20,14 +20,14 @@
 
   h1 {
     font-size: 1rem;
-    color: var(--orange-neutral);
+    color: var(--brown-700);
     font-family: var(--font-family-nunito);
     font-weight: var(--font-weight-light);
   }
 
   a {
     text-decoration: none;
-    color: var(--brown-dark);
+    color: var(--neutral-900);
 
     &:hover {
       text-decoration: underline;
