@@ -9,7 +9,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
@@ -21,7 +21,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
@@ -33,7 +33,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
@@ -44,7 +44,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
@@ -56,7 +56,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
@@ -67,7 +67,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
@@ -79,7 +79,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
@@ -90,7 +90,7 @@
 			<div class="colour c300"></div>
 			<div class="colour c400"></div>
 			<div class="colour c500"></div>
-			<div class="colour c700"></div>
+			<div class="colour c600"></div>
 			<div class="colour c700"></div>
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
