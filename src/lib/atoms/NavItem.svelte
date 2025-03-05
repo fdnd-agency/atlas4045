@@ -26,6 +26,7 @@
   }
 
   a, span {
+    display: inline-block;
     text-decoration: none;
     color: var(--neutral-900);
     font-weight: var(--font-weight-regular);
@@ -37,5 +38,10 @@
     &:focus-visible {
       border-radius: var(--border-radius-pill);
     }
+  }
+
+  /* This is a hack to make the text stay in the same place when the link is active */
+  a {
+    transform: translateY(0.5px);
   }
 </style>
