@@ -8,8 +8,8 @@
   let { isAuthenticated } = data
 </script>
 
-<!-- Devtool. Remove before deployment -->
-<ColourTester />
+<!-- Devtool. Remove before actual site goes live -->
+<!-- <ColourTester /> -->
 
 <Logout {isAuthenticated} />
 
