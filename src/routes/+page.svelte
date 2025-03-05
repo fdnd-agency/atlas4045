@@ -8,12 +8,10 @@
   let { data } = $props();
 </script>
 
-<!-- Overview section -->
 <main>
-  <PostersOverview posters={data.posters} />
+  <h1>Gedenkposters</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
 </main>
-
-<PosterIntroductie />
 
 <style>
   main {
