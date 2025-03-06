@@ -24,6 +24,7 @@
     font-family: var(--font-family-nunito);
     font-weight: var(--font-weight-regular);
     cursor: default;
+    text-decoration: underline;
   }
 
   a, span {
