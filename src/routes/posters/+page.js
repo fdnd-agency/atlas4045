@@ -10,6 +10,23 @@ export async function load({ fetch, url }) {
     }
   }
 
+  if (url.searchParams.get('naam')) {
+    queryFilters.person = {
+      '_or': [
+        {
+          'first_name': {
+            '_icontains': url.searchParams.get('naam')
+          }
+        },
+        {
+          'last_name': {
+            '_icontains': url.searchParams.get('naam')
+          }
+        }
+      ]
+    }
+  }
+
   const queryFields = [
     'id',
     'street',
