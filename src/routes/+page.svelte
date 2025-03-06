@@ -1,6 +1,4 @@
 <script>
-  import PosterIntroductie from "$lib/organisms/PosterIntroductie.svelte"
-
   import Nav from "$lib/molecules/Nav.svelte"
   import NavItem from "$lib/atoms/NavItem.svelte"
   import PostersOverview from "$lib/organisms/PostersOverview.svelte"
