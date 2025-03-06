@@ -20,33 +20,27 @@
     font-family: inherit;
     font-size: 1rem;
 
-		color: var(--brown-dark);
+		color: var(--neutral-900);
 		padding: var(--spacing-xxs) var(--spacing-sm);
 		border: none;
 		border-radius: var(--border-radius-pill);
-		border: 2px solid var(--brown-neutral);
+		border: 2px solid var(--brown-100);
 		text-overflow: ellipsis;
 
-		transition-property: border, background-color, color;
+		transition-property: border;
 		transition-duration: 0.15s;
 		transition-timing-function: ease-in-out;
 
 		&:not(:placeholder-shown) {
-			border: 2px solid var(--brown-dark);
+			border: 2px solid var(--brown-300);
 		}
 
 		&:focus {
-			border: 2px solid var(--brown-neutral);
-			background-color: var(--brown-neutral);
-			color: white;
-
-			&::placeholder {
-				color: var(--white);
-			}
+			border: 2px solid var(--brown-600);
 		}
 
 		&::placeholder {
-			color: var(--brown-light);
+			color: var(--brown-200);
 		}
 	}
 
