@@ -21,17 +21,17 @@
 
 <style>
 	a, button {
-    font-family:inherit;
+    font-family: inherit;
 		display: inline-block;
 		width: fit-content;
 		height: fit-content;
 		padding: var(--spacing-xxs) var(--spacing-sm);
 		border-radius: var(--border-radius-pill);
-		border: 2px solid var(--brown-dark);
+		border: 2px solid var(--neutral-400);
 		text-align: center;
 		text-decoration: none;
-		font-weight: var(--font-weight-bold);
-		color: var(--brown-dark);
+		/* font-weight: var(--font-weight-bold); */
+		color: var(--neutral-900);
     background-color: transparent;
     cursor: pointer;
     font-size: 1rem;
@@ -42,9 +42,9 @@
 
 		&:hover,
 		&:focus-visible {
-			background-color: var(--brown-neutral);
+			background-color: var(--brown-600);
 			color: var(--white);
-			border: 2px solid var(--brown-neutral);
+			border: 2px solid var(--brown-600);
 		}
 	}
 </style>
