@@ -5,13 +5,7 @@
 </script>
 
 <FilterCard>
-	<TextInput id="naam" placeholder="Naam" labelClass={$css('label')} {onchange}>
+	<TextInput id="naam" placeholder="Vries..." {onchange}>
 		Naam
 	</TextInput>
 </FilterCard>
-
-<style>
-	.label {
-		margin: auto;
-	}
-</style>

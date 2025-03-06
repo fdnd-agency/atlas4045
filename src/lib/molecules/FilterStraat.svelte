@@ -1,8 +1,9 @@
 <script>
-	import FilterCard from '$lib/atoms/FilterCard.svelte';
 	import TextDropdownInput from '$lib/atoms/TextDropdownInput.svelte';
-	import { page } from '$app/state';
-
+	import FilterCard from "$lib/atoms/FilterCard.svelte";
+	
+  import { page } from '$app/state';
+  
 	let { onchange } = $props();
 
 	let streetsList = $derived(
@@ -19,17 +20,10 @@
 <FilterCard>
 	<TextDropdownInput
 		id="straat"
-		placeholder="Straat"
-		labelClass={$css('label')}
+		placeholder="Oosterpark..."
 		list={streetsList}
-    {onchange}
+		{onchange}
 	>
-		Straatnaam
+		Straat
 	</TextDropdownInput>
 </FilterCard>
-
-<style>
-	.label {
-		margin: auto;
-	}
-</style>
