@@ -1,6 +1,6 @@
 <script>
 	import TextInput from '$lib/atoms/TextInput.svelte';
-	import Search from '$lib/molecules/Search.svelte';
+	import Search from '$lib/molecules/FilterNaam.svelte';
 	import FilterBewoners from '$lib/molecules/FilterBewoners.svelte';
 	import FilterStraat from '$lib/molecules/FilterStraat.svelte';
 	import Button from '$lib/atoms/Button.svelte';
