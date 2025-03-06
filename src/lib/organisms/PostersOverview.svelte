@@ -5,7 +5,10 @@
 	let { posters = [] } = $props();
 </script>
 
-<PostersFilter />
+<header>
+	<h2>Alle gedenkposters ({posters.length})</h2>
+  <PostersFilter />
+</header>
 
 {#await posters}
 	<p>Loading posters...</p>
@@ -41,5 +44,11 @@
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		gap: 2rem;
 		padding-top: 3rem;
+	}
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 </style>
