@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.12.0] - 2025-03-05
+### Added
+- Clearer styling on active NavItem
+- New title h2 on overview page
+- Redesigned FilterCard to be more compact and take up only one line
+- Added functionality for searching by name along with street
+
+## Changed
+- Renamed Search to FilterNaam
+- Tweaked saturation on brown colour
+- Removed PosterIntroductie
+- Made the placeholders in the search bars more descriptive
+
+## Fixed
+- Fixed missing padding on pages
+- Removed old dead imports
+- Fixed search form redirecting to index rather than overview
+- Fixed button styling using old variable names
+- Fixed text input styling using old variable names
+
 ## [0.11.0] - 2025-03-05
 ### Added
 - Added new Fruances serif font for titles and large text
