@@ -1,7 +1,6 @@
 <script>
 	import FilterCard from '$lib/atoms/FilterCard.svelte';
 	import TextDropdownInput from '$lib/atoms/TextDropdownInput.svelte';
-	import Checkbox from '$lib/atoms/Checkbox.svelte';
 	import { page } from '$app/state';
 
 	let { onchange } = $props();
