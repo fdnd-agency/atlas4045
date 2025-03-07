@@ -1,6 +1,8 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
 	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
+	import { flip } from "svelte/animate";
+  import { fade } from "svelte/transition";
 
 	let { posters = [] } = $props();
 </script>
@@ -15,7 +17,8 @@
 {:then posters}
 	{#if posters.length > 0}
 		<ul>
-			{#each posters as posterData}
+			{#each posters as posterData (posterData.id)}
+      <div transition:fade={{duration: 200}} animate:flip={{duration: 200}}>
 				<PosterCard
 					name={posterData.person?.[0]?.last_name ?? 'Onbekend'}
 					street={posterData.street ?? 'Onbekend'}
@@ -26,6 +29,7 @@
 					width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
 					height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 				/>
+      </div>
 			{/each}
 		</ul>
 	{:else}
