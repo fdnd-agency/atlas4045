@@ -35,8 +35,7 @@
 		</ul>
 	{:else}
 		<p>
-			Er zijn momenteel geen posters beschikbaar. Kom later terug of neem contact met ons op via de
-			knop bovenin de pagina als dit probleem aanhoudt.
+		  Geen posters gevonden. Probeer de filters te wijzigen, of probeer het later opnieuw.
 		</p>
 	{/if}
 {:catch error}
@@ -50,6 +49,10 @@
 		gap: var(--spacing-sm);
 		padding-top: var(--spacing-sm);
 	}
+
+  p {
+    padding-top: var(--spacing-lg);
+  }
 
 	header {
 		display: flex;
