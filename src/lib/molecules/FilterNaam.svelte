@@ -5,7 +5,7 @@
 </script>
 
 <FilterCard>
-	<TextInput id="naam" placeholder="Vries..." {onchange}>
+	<TextInput id="naam" placeholder="Jacob..." {onchange}>
 		Naam
 	</TextInput>
 </FilterCard>
