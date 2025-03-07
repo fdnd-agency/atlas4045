@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.13.0] - 2025-03-05
+### Added
+- Transition animations when filtering
+- Improved focus state on NavItem
+- Filter button now shows on focus, to avoid focus seemingly disappearing when it's focused while hidden
+- Improved zero state on overview grid
+- Search terms now persist in searchbars through refresh
+
+## Changed
+- Naam search placeholder is more intuitive
+- Font is changed on PosterCard name
+- getCurrentPage is now a default export
+- toRoman is now a utils import
+- Gap on overview grid tweaked slightly
+- Hover state on PosterCard made more subtle
+
+## Fixed
+- Fixed logout button styling
+- Fixed landscape posters in overview
+- Fixed focus-ring using deprecated variable names
+
+
 ## [0.12.0] - 2025-03-05
 ### Added
 - Clearer styling on active NavItem
