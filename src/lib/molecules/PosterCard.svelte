@@ -31,13 +31,15 @@
 <style>
 	a {
 		text-decoration: none;
-		color: var(--brown-dark);
+		color: var(--neutral-900);
 	}
 
 	li {
 		list-style-type: none;
 		display: block;
 		width: 100%;
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-md);
 	}
 
 	@media screen and (min-width: 800px) {
@@ -54,19 +56,15 @@
 	}
   
 	.focus-ring {
-		transition: 0.15s ease-in-out;
-		outline: 0px solid var(--brown-neutral);
-		outline-offset: var(--spacing-xxs);
+		transition: 0.15s ease-in;
+		outline: 0px solid var(--brown-400);
+		outline-offset: 0px;
 
-		&:hover,&:focus-visible, &:focus-within {
-			outline: none;
-			background:var(--brown-neutral);
-			padding:.5rem;
-			border-radius:var(--border-radius-md);
-
-			p {
-				color:var(--white);
-			}
+		&:hover, 
+    &:focus-visible,
+    &:focus-within {
+			outline: 2px solid var(--brown-400);
+			background: var(--brown-100);
 		}
 	}
 </style>
