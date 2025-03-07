@@ -33,12 +33,9 @@
     color: var(--neutral-900);
     font-weight: var(--font-weight-regular);
 
-    &:hover {
-      text-decoration: underline;
-    }
-
+    &:hover,
     &:focus-visible {
-      border-radius: var(--border-radius-pill);
+      text-decoration: underline;
     }
   }
 
