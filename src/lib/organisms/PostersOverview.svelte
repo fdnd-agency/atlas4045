@@ -56,4 +56,10 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
+  @media screen and (min-width: 800px) {
+		div:global(:has(.landscape)) {
+			grid-column: span 2;
+		}
+  }
 </style>

@@ -41,12 +41,6 @@
     padding: var(--spacing-xs);
     border-radius: var(--border-radius-md);
 	}
-
-	@media screen and (min-width: 800px) {
-		li.landscape {
-			grid-column: span 2;
-		}
-  }
   
 	p.name {
     margin-top: 0.25rem;
