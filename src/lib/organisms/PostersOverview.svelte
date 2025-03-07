@@ -1,6 +1,9 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
 	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
+	import { flip } from "svelte/animate";
+  import { fade } from "svelte/transition";
+	import { cubicOut } from "svelte/easing";
 
 	let { posters = [] } = $props();
 </script>
@@ -15,7 +18,8 @@
 {:then posters}
 	{#if posters.length > 0}
 		<ul>
-			{#each posters as posterData}
+			{#each posters as posterData (posterData.id)}
+      <div transition:fade={{duration: 300, easing: cubicOut}} animate:flip={{duration: 300, easing: cubicOut}}>
 				<PosterCard
 					name={posterData.person?.[0]?.last_name ?? 'Onbekend'}
 					street={posterData.street ?? 'Onbekend'}
@@ -26,12 +30,12 @@
 					width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
 					height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 				/>
+      </div>
 			{/each}
 		</ul>
 	{:else}
 		<p>
-			Er zijn momenteel geen posters beschikbaar. Kom later terug of neem contact met ons op via de
-			knop bovenin de pagina als dit probleem aanhoudt.
+		  Geen posters gevonden. Probeer de filters te wijzigen, of probeer het later opnieuw.
 		</p>
 	{/if}
 {:catch error}
@@ -42,13 +46,35 @@
 	ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		gap: 2rem;
-		padding-top: 3rem;
+		gap: var(--spacing-sm);
+		padding-top: var(--spacing-sm);
 	}
+
+  p {
+    padding-top: var(--spacing-lg);
+  }
 
 	header {
 		display: flex;
-		justify-content: space-between;
+    gap: var(--spacing-md);
+		flex-direction: column;
 		align-items: center;
 	}
+  
+  @media screen and (min-width: 800px) {
+    div:global(:has(.landscape)) {
+      grid-column: span 2;
+		}
+  }
+  
+  @media screen and (min-width: 940px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    ul {
+      padding-top: var(--spacing-lg);
+    }
+  }
 </style>

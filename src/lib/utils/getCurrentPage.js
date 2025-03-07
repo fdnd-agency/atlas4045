@@ -1,4 +1,4 @@
-export function getCurrentPage(pageURL) {
+export default function getCurrentPage(pageURL) {
   switch (pageURL) {
     case '/':
       console.log("home");

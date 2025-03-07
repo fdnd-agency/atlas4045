@@ -32,7 +32,7 @@
 		text-decoration: none;
 		/* font-weight: var(--font-weight-bold); */
 		color: var(--neutral-900);
-    background-color: transparent;
+    background-color: var(--white);
     cursor: pointer;
     font-size: 1rem;
 
