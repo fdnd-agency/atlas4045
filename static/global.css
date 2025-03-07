@@ -178,11 +178,11 @@ div.query-container {
 
 .focus-ring {
   transition: outline 0.15s ease-in-out;
-  outline: 0px solid var(--brown-neutral);
+  outline: 0px solid var(--brown-400);
   outline-offset: var(--spacing-xxs);
 
   &:focus-visible, &:focus-within {
-    outline: 3px solid var(--brown-neutral);
+    outline: 3px solid var(--brown-400);
   }
 }
 
