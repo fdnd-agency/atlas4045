@@ -25,8 +25,16 @@
 <style>
 	form {
 		display: flex;
+		flex-direction: column;
 		gap: var(--spacing-xs);
 	}
+
+  @media screen and (min-width: 800px) {
+    form {
+      flex-direction: row;
+      gap: var(--spacing-md);
+    }
+  }
 
 	.show-on-focus:focus-visible {
 		position: static;

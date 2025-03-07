@@ -48,18 +48,30 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		gap: var(--spacing-sm);
-		padding-top: 3rem;
+		padding-top: var(--spacing-sm);
 	}
 
 	header {
 		display: flex;
-		justify-content: space-between;
+    gap: var(--spacing-md);
+		flex-direction: column;
 		align-items: center;
 	}
-
+  
   @media screen and (min-width: 800px) {
-		div:global(:has(.landscape)) {
-			grid-column: span 2;
+    div:global(:has(.landscape)) {
+      grid-column: span 2;
 		}
+  }
+  
+  @media screen and (min-width: 940px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    ul {
+      padding-top: var(--spacing-lg);
+    }
   }
 </style>
