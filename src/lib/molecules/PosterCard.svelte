@@ -32,7 +32,7 @@
 </script>
 
 <li class="focus-ring {orientation}">
-  <!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style-->
+  <!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style -->
 	<a href="/" class="no-focus">
     <DirectusImage imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy"/>
 		<p class="name">Familie {name}</p>
@@ -57,10 +57,12 @@
 			grid-column: span 2;
 		}
   }
-
+  
 	p.name {
-		margin-top: 0.25rem;
-    font-weight: var(--font-weight-bold);
+    margin-top: 0.25rem;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-family-fraunces);
+    font-weight: var(--font-weight-medium);
 	}
 
 	.focus-ring {
