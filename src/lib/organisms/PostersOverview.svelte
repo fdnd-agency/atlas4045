@@ -3,6 +3,7 @@
 	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
 	import { flip } from "svelte/animate";
   import { fade } from "svelte/transition";
+	import { cubicOut } from "svelte/easing";
 
 	let { posters = [] } = $props();
 </script>
@@ -18,7 +19,7 @@
 	{#if posters.length > 0}
 		<ul>
 			{#each posters as posterData (posterData.id)}
-      <div transition:fade={{duration: 200}} animate:flip={{duration: 200}}>
+      <div transition:fade={{duration: 300, easing: cubicOut}} animate:flip={{duration: 300, easing: cubicOut}}>
 				<PosterCard
 					name={posterData.person?.[0]?.last_name ?? 'Onbekend'}
 					street={posterData.street ?? 'Onbekend'}
