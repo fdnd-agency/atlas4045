@@ -1,5 +1,6 @@
 <script>
 	import DirectusImage from "$lib/atoms/DirectusImage.svelte"
+  import toRomanNumerals from "$lib/utils/toRomanNumerals"
 
 	let { name, street, house_number, floor, addition, image, width, height } = $props()
 
@@ -15,20 +16,7 @@
 		height = 585
 	}
 	
-	floor = floor ? toRoman(floor) : ''
-
-	function toRoman(floor) {
-		switch (floor) {
-			case 1:
-				return 'I'
-			case 2:
-				return 'II'
-			case 3:
-				return 'III'
-			default:
-				return ''
-		}
-	}
+	floor = floor ? toRomanNumerals(floor) : ''
 </script>
 
 <li class="focus-ring {orientation}">
@@ -64,7 +52,7 @@
     font-family: var(--font-family-fraunces);
     font-weight: var(--font-weight-medium);
 	}
-
+  
 	.focus-ring {
 		transition: 0.15s ease-in-out;
 		outline: 0px solid var(--brown-neutral);
@@ -80,6 +68,5 @@
 				color:var(--white);
 			}
 		}
-
 	}
 </style>
