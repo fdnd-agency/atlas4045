@@ -37,6 +37,7 @@ export async function load({ fetch, url }) {
 					filter: queryFilters,
 					fields: queryFields,
 					sort: ['street', 'house_number', 'addition', 'floor'],
+          limit: 5
 				})
 			)
 		};
