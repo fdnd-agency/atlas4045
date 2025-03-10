@@ -2,8 +2,10 @@
 	import Nav from '$lib/molecules/Nav.svelte';
 	import NavItem from '$lib/atoms/NavItem.svelte';
 	import PostersCarousel from '$lib/organisms/PostersCarousel.svelte';
+	import Button from "$lib/atoms/Button.svelte";
 
 	let { data } = $props();
+  let { posters } = data;
 </script>
 
 <main>
@@ -34,11 +36,21 @@
 	</p>
 
   <section>
-    <h3>
+    <h3 class="title-highlighted">
       Uitgelichte gedenkposters:
     </h3>
 
-    <PostersCarousel />
+    <PostersCarousel {posters} />
+  </section>
+
+  <section>
+    <h3>
+      Alle posters zien?
+    </h3>
+
+    <Button href="/posters" buttonClass={$css("button-CTA")}>
+      Door naar overzicht
+    </Button>
   </section>
 </main>
 
@@ -57,7 +69,7 @@
 		margin-bottom: var(--spacing-md);
 	}
 
-  h3 {
+  .title-highlighted {
     font-size: var(--font-size-lg);
   }
 
@@ -78,6 +90,15 @@
 		margin-bottom: var(--spacing-md);
 		width: 80%;
 	}
+
+  section {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+  }
+
+  .button-CTA {
+    margin: auto;
+  }
 
 	@media screen and (min-width: 800px) {
 		main {
