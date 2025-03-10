@@ -109,6 +109,10 @@
   --font-size-xl: 1.44rem;
   --font-size-xxl: 1.728rem;
 
+  --font-size-title-sm: 2.074rem;
+  --font-size-title-md: 2.488rem;
+  --font-size-title-lg: 2.986rem;
+
   /* Font weights */
   --font-weight-light: 300;
   --font-weight-regular: 400;
