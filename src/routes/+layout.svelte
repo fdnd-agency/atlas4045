@@ -3,8 +3,7 @@
   import Header from "$lib/organisms/Header.svelte"
   import ColourTester from "$lib/utils/ColourTester.svelte"
 
-  let { children, data } = $props()  
-
+  let { children, data } = $props()
   let { isAuthenticated } = data
 </script>
 
