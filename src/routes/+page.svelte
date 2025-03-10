@@ -43,12 +43,12 @@
     <PostersCarousel {posters} />
   </section>
 
-  <section>
+  <section class="section-CTA">
     <h3>
       Alle posters zien?
     </h3>
 
-    <Button href="/posters" buttonClass={$css("button-CTA")}>
+    <Button href="/posters">
       Door naar overzicht
     </Button>
   </section>
@@ -62,7 +62,7 @@
 	}
 
 	h2, h3 {
-		font-size: var(--font-size-xxl);
+		font-size: var(--font-size-title-md);
 		font-weight: var(--font-weight-bold);
 		color: var(--neutral-900);
 		text-align: center;
@@ -96,8 +96,10 @@
     padding: var(--spacing-md) 0;
   }
 
-  .button-CTA {
-    margin: auto;
+  .section-CTA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 	@media screen and (min-width: 800px) {
