@@ -7,8 +7,8 @@
 </script>
 
 <main>
-  <h1>Gedenkposters</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+  <h2>Herdenken door te vertellen.</h2>
+  <enhanced:img src="/static/assets/gedenkposter.png" alt="Gedenkposter van Hijman Nol" class="hero-image"/>
 </main>
 
 <style>
@@ -16,6 +16,22 @@
     max-width: var(--max-width-mobile);
     margin: 0 auto;
     padding: var(--spacing-sm) var(--page-padding-mobile);
+  }
+
+  h2 {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+    color: var(--neutral-900);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-image {
+    width: 80%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    margin: auto;
+    display: block;
   }
 
   @media screen and (min-width: 800px) {
