@@ -44,5 +44,13 @@ p {
     max-width: var(--max-width-desktop);
     padding: var(--spacing-sm) var(--page-padding-desktop);
   }
+
+  h2 {
+    width: 100%;
+  }
+
+  p {
+    width: 100%;
+  }
 }
 </style>
