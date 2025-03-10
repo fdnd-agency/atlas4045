@@ -27,7 +27,6 @@
 		gap: var(--spacing-sm);
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
-    height: 28rem;
 	}
 
 	.carousel-item {
