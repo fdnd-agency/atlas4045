@@ -74,7 +74,7 @@
   }
 
   .hero-image {
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: var(--border-radius-md);
     margin: auto;
@@ -88,7 +88,7 @@
 		text-align: justify;
 		margin: auto;
 		margin-bottom: var(--spacing-md);
-		width: 80%;
+		width: 100%;
 	}
 
   section {
