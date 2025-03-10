@@ -31,7 +31,7 @@
 <style>
 	a {
 		text-decoration: none;
-		color: var(--neutral-900);
+		color: inherit;
 	}
 
 	li {
@@ -50,15 +50,13 @@
 	}
   
 	.focus-ring {
-		transition: 0.15s ease-in;
-		outline: 0px solid var(--brown-400);
-		outline-offset: 0px;
+		transition: 0.25s ease-out;
 
 		&:hover, 
     &:focus-visible,
     &:focus-within {
-			outline: 2px solid var(--brown-400);
-			background: var(--brown-100);
+			background-color: var(--brown-800);
+      color: var(--neutral-100);
 		}
 	}
 </style>
