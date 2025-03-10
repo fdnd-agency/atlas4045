@@ -36,7 +36,7 @@ export async function load({ fetch, url }) {
 				readItems('atlas_address', {
 					filter: queryFilters,
 					fields: queryFields,
-					sort: ['street', 'house_number', 'addition', 'floor']
+					sort: ['street', 'house_number', 'addition', 'floor'],
 				})
 			)
 		};
