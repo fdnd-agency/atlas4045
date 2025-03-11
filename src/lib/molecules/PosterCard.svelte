@@ -60,7 +60,7 @@
 
 	.focus-ring {
 		transition: 0.25s ease-out;
-
+    
 		&:hover,
 		&:focus-visible,
 		&:focus-within {
