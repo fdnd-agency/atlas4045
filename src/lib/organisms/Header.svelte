@@ -4,9 +4,9 @@
 	import NavItem from '$lib/atoms/NavItem.svelte';
 	import getCurrentPage from '$lib/utils/getCurrentPage';
 
-  import { page } from '$app/state';
+	import { page } from '$app/state';
 
-  let currentPage = $derived(getCurrentPage(page.url.pathname));
+	let currentPage = $derived(getCurrentPage(page.url.pathname));
 </script>
 
 <header>
@@ -29,21 +29,15 @@
 	header {
 		display: flex;
 		width: 100%;
-		padding: var(--spacing-sm) var(--page-padding-mobile);
-    margin-bottom: var(--spacing-sm);
+		padding: var(--spacing-sm) var(--page-padding);
+		margin-bottom: var(--spacing-sm);
 		box-shadow: 0 -20px 10px 20px rgba(0, 0, 0, 0.303);
-    align-items: center;
+		align-items: center;
 	}
 
 	img {
 		width: 100%;
 		max-width: 151px;
 		height: auto;
-	}
-
-	@media screen and (min-width: 500px) {
-		header {
-			padding: var(--spacing-sm) var(--page-padding-desktop);
-		}
 	}
 </style>

@@ -28,16 +28,9 @@
 		flex-direction: column;
 		gap: var(--spacing-xs);
 	}
-
-  @media screen and (min-width: 800px) {
-    form {
-      flex-direction: row;
-      gap: var(--spacing-md);
-    }
-  }
-
+  
 	.show-on-focus:focus-visible {
-		position: static;
+    position: static;
 		display: inline-block;
 		width: fit-content;
 		height: fit-content;
@@ -47,4 +40,11 @@
 		white-space: normal;
 		border-width: 0;
 	}
+
+  @media screen and (min-width: 800px) {
+    form {
+      flex-direction: row;
+      gap: var(--spacing-md);
+    }
+  }
 </style>

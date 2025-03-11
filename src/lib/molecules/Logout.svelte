@@ -13,13 +13,12 @@
 <style>
   form {
     position: fixed;
-    right: var(--page-padding-mobile);
+    right: var(--page-padding);
     bottom: 2rem;
     z-index: 999;
 
     @media (min-width: 500px) {
       top: 2rem;
-      right: var(--page-padding-desktop);
       bottom: auto;
     }
   }
