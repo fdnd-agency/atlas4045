@@ -29,7 +29,7 @@
 	header {
 		display: flex;
 		width: 100%;
-		padding: var(--spacing-sm) var(--page-padding-mobile);
+		padding: var(--spacing-sm) var(--page-padding);
 		margin-bottom: var(--spacing-sm);
 		box-shadow: 0 -20px 10px 20px rgba(0, 0, 0, 0.303);
 		align-items: center;
@@ -39,11 +39,5 @@
 		width: 100%;
 		max-width: 151px;
 		height: auto;
-	}
-
-	@media screen and (min-width: 500px) {
-		header {
-			padding: var(--spacing-sm) var(--page-padding-desktop);
-		}
 	}
 </style>

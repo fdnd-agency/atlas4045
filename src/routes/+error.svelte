@@ -10,9 +10,8 @@
 
 <style>
   main {
-    max-width: var(--max-width-mobile);
     margin: 0 auto;
-    padding: var(--spacing-sm) var(--page-padding-mobile);
+    padding: var(--spacing-sm) var(--page-padding);
   }
 
 h2 {
@@ -42,7 +41,6 @@ p {
 @media screen and (min-width: 800px) {
   main {
     max-width: var(--max-width-desktop);
-    padding: var(--spacing-sm) var(--page-padding-desktop);
   }
 
   h2 {
