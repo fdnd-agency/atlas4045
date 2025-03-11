@@ -1,0 +1,218 @@
+:root {
+	/*-----------------
+        Colours
+    -----------------*/
+
+	/* Base colours */
+	--white: #fff;
+	--black: #000;
+
+	/* Lightness scale */
+	--lightness-900: 10%;
+	--lightness-800: 20%;
+	--lightness-700: 30%;
+	--lightness-600: 40%;
+	--lightness-500: 50%;
+	--lightness-400: 60%;
+	--lightness-300: 70%;
+	--lightness-200: 80%;
+	--lightness-100: 90%;
+
+	/* Primary colours */
+	--brown-saturation: 43%;
+	--brown-hue: 20;
+
+	/* Complimentary colours */
+	--cyan-saturation: 50.2%;
+	--cyan-hue: 167.3;
+
+	--blue-saturation: 50.2%;
+	--blue-hue: 227.8;
+
+	/* Neutral (Grey tones) */
+	--neutral-saturation: 12%;
+	--neutral-hue: 12;
+
+	/* Colour scales */
+	--brown-900: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-900));
+	--brown-800: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-800));
+	--brown-700: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-700));
+	--brown-600: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-600));
+	--brown-500: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-500));
+	--brown-400: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-400));
+	--brown-300: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-300));
+	--brown-200: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-200));
+	--brown-100: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-100));
+
+	--cyan-900: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-900));
+	--cyan-800: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-800));
+	--cyan-700: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-700));
+	--cyan-600: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-600));
+	--cyan-500: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-500));
+	--cyan-400: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-400));
+	--cyan-300: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-300));
+	--cyan-200: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-200));
+	--cyan-100: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-100));
+
+	--blue-900: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-900));
+	--blue-800: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-800));
+	--blue-700: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-700));
+	--blue-600: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-600));
+	--blue-500: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-500));
+	--blue-400: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-400));
+	--blue-300: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-300));
+	--blue-200: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-200));
+	--blue-100: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-100));
+
+	--neutral-900: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-900));
+	--neutral-800: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-800));
+	--neutral-700: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-700));
+	--neutral-600: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-600));
+	--neutral-500: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-500));
+	--neutral-400: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-400));
+	--neutral-300: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-300));
+	--neutral-200: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-200));
+	--neutral-100: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-100));
+
+	--max-width-desktop: 1600px;
+
+	/*-----------------
+          Fonts
+    -----------------*/
+
+	--font-family-fraunces: 'Fraunces', serif;
+	--font-family-nunito: 'Nunito', 'Trebuchet MS', Helvetica, sans-serif;
+
+	/*-----------------
+      Design tokens
+    -----------------*/
+
+	/* Spacings */
+	--spacing-xxs: 0.25rem;
+	--spacing-xs: 0.5rem;
+	--spacing-sm: 1rem;
+	--spacing-md: 2rem;
+	--spacing-lg: 4rem;
+	--spacing-xl: 8rem;
+	--spacing-xxl: 16rem;
+
+	/* Page padding (changes in queries at bottom of file) */
+	--page-padding: 2rem;
+
+	/* Font scale - 1.200 Minor Third */
+	--font-size-xs: 0.694rem;
+	--font-size-sm: 0.833rem;
+	--font-size-md: 1rem;
+	--font-size-lg: 1.2rem;
+	--font-size-xl: 1.44rem;
+	--font-size-xxl: 1.728rem;
+
+	--font-size-title-sm: 2.074rem;
+	--font-size-title-md: 2.488rem;
+	--font-size-title-lg: 2.986rem;
+	--font-size-title-xl: 3.583rem;
+	--font-size-title-xxl: 4.299rem;
+
+	/* Font weights */
+	--font-weight-light: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+
+	/* Border radius */
+	--border-radius-sm: 0.25rem;
+	--border-radius-md: 0.5rem;
+	--border-radius-lg: 1rem;
+	--border-radius-xl: 2rem;
+	--border-radius-pill: 9999px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-family-nunito);
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: var(--font-weight-light);
+	color: var(--neutral-900);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-fraunces);
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1;
+	color: var(--neutral-900);
+}
+
+div.query-container {
+	container-type: inline-size;
+}
+
+/*-----------------
+      Layout utils
+    -----------------*/
+
+.full-width {
+	width: 100%;
+}
+
+/*-----------------
+        A11y utils
+    -----------------*/
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.focus-ring {
+	transition: outline 0.15s ease-in-out;
+	outline: 0px solid var(--brown-400);
+	outline-offset: var(--spacing-xxs);
+
+	&:focus-visible,
+	&:focus-within {
+		outline: 3px solid var(--brown-400);
+	}
+}
+
+/* Should only really be used alongside .focus-ring to hide default style when it would clash with the custom ring */
+.no-focus:focus-visible {
+	outline: none;
+}
+
+/*-----------------
+        Queries
+    -----------------*/
+
+@media screen and (min-width: 400px) {
+	:root {
+		--page-padding: 3rem;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	:root {
+		--page-padding: 4rem;
+	}
+}
