@@ -16,6 +16,7 @@
 			width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
 			height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 			cardClass={$css('carousel-item')}
+      id={posterData.poster?.id ?? ''}
 		/>
 	{/each}
 </ul>

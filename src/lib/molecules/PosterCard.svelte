@@ -11,6 +11,7 @@
 		image,
 		width,
 		height,
+    id,
 		cardClass = ''
 	} = $props();
 
@@ -30,7 +31,7 @@
 
 <li class="focus-ring {orientation} {cardClass}">
 	<!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style -->
-	<a href="/" class="no-focus">
+	<a href={`/posters/${id}`} class="no-focus">
 		<DirectusImage imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy" />
 		<p class="name">Familie {name}</p>
 		<p>{street} {house_number} {floor} {addition}</p>
