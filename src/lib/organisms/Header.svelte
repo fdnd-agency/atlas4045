@@ -33,11 +33,18 @@
 		margin-bottom: var(--spacing-sm);
 		box-shadow: 0 -20px 10px 20px rgba(0, 0, 0, 0.303);
 		align-items: center;
+    justify-content: space-between;
 	}
 
 	img {
 		width: 100%;
 		max-width: 151px;
 		height: auto;
+	}
+
+	@media (min-width: 700px) {
+		header {
+			justify-content: flex-start;
+		}
 	}
 </style>
