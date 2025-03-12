@@ -8,18 +8,10 @@
   onMount(() => {
     jsEnabled = true;
   });
-
-  let isMobile = $state(false);
-
-  $effect(() => {
-    if (jsEnabled) {
-      isMobile = window.innerWidth < 800;
-    }
-  });
 </script>
 
-  <nav style={isMobile ? 'display: none;' : ''}>
-    <ul>
+<nav>
+  <ul>
 		{@render children()}
 	</ul>
 </nav>
@@ -30,12 +22,31 @@
     height: 100%;
     width: 100%;
   }
+
+  nav {
+    width: fit-content;
+    position: absolute;
+    top: var(--spacing-xs);
+    right: var(--page-padding);
+  }
 	ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		display: flex;
-    gap: var(--spacing-lg);
+    flex-direction: column;
+    gap: var(--spacing-xs);
     align-items: center;
 	}
+
+  @media (min-width: 700px) {
+    nav {
+      position: static;
+    }
+
+    ul {
+      flex-direction: row;
+      gap: var(--spacing-lg);
+    }
+  }
 </style>
