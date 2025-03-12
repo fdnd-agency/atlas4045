@@ -1,9 +1,25 @@
 <script>
+  import { onMount } from 'svelte';
+
 	let { children } = $props()
+
+  let jsEnabled = false;
+
+  onMount(() => {
+    jsEnabled = true;
+  });
+
+  let isMobile = $state(false);
+
+  $effect(() => {
+    if (jsEnabled) {
+      isMobile = window.innerWidth < 800;
+    }
+  });
 </script>
 
-<nav>
-	<ul>
+  <nav style={isMobile ? 'display: none;' : ''}>
+    <ul>
 		{@render children()}
 	</ul>
 </nav>
