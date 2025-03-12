@@ -17,7 +17,7 @@
     bottom: 2rem;
     z-index: 999;
 
-    @media (min-width: 500px) {
+    @media (min-width: 760px) {
       top: 2rem;
       bottom: auto;
     }
