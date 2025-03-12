@@ -6,11 +6,11 @@ export async function load({ fetch, params }) {
 		return {
 			poster: await directus.request(
 				readItems('atlas_address', {
-          filter: {
-            slug: {
-              _eq: params.slug
-            },
-          },
+					filter: {
+						id: {
+							_eq: params.id
+						}
+					},
 					fields: [
 						'id',
 						'street',
