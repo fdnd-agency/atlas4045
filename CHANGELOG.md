@@ -2,7 +2,39 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.13.0] - 2025-03-05
+## [0.16.0] - 2025-03-12
+### Added
+- Linked PosterCard to detail pages
+- Created non-js version of mobile nav
+- Started on mobile nav menu (WIP)
+
+### Changed
+- Changed route for details page to use id
+
+## [0.15.0] - 2025-03-11
+### Added
+- Added some more font sizes to global.css
+- Finished desktop layout on landing page
+
+## Changed
+- Changed system for padding on pages
+
+## [0.14.0] - 2025-03-10
+### Added
+- Installed svelte/enhanced-image
+- Created first iteration of mobile landing page
+- Added simple error page
+- Button can now accept CSS rune
+- Added highlighted stories to landing page
+- Added some more font sizes to global.css
+
+## Changed
+- Changed PosterCard hover
+
+## Fixed
+- Fixed viewport scaling in chrome devtools
+
+## [0.13.0] - 2025-03-07
 ### Added
 - Transition animations when filtering
 - Improved focus state on NavItem
@@ -24,7 +56,7 @@ All notable changes to this project will be documented in this file.
 - Fixed focus-ring using deprecated variable names
 
 
-## [0.12.0] - 2025-03-05
+## [0.12.0] - 2025-03-06
 ### Added
 - Clearer styling on active NavItem
 - New title h2 on overview page
