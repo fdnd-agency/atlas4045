@@ -3,18 +3,18 @@
 </script>
 
 <!-- Renders <a> styled as button if a href is given -->
-{#if href}
-	<a {...rest} {href} class="no-focus {classList} {buttonClass}">
+  {#if href}
+	<a {...rest} {href} class={["no-focus", classList, buttonClass]}>
 		{@render children()}
 	</a>
 <!-- Renders <button> with onclick event if onclick function is given -->
 {:else if typeof onclick === "function" || type === "submit"}
-	<button {...rest} {onclick} class="no-focus {classList} {buttonClass}">
+	<button {...rest} {onclick} class={["no-focus", classList, buttonClass]}>
 		{@render children()}
 	</button>
 <!-- Renders dummy <button> without onclick if neither is given -->
 {:else}
-  <button {...rest} class="no-focus {classList} {buttonClass}">
+  <button {...rest} class={["no-focus", classList, buttonClass]}>
     {@render children()}
   </button>
 {/if}
