@@ -19,7 +19,7 @@
 <form bind:this={form} action="/posters" data-sveltekit-noscroll>
 	<FilterNaam onchange={filterHandler} />
 	<FilterStraat onchange={filterHandler} />
-	<Button class={javascriptEnabled ? 'sr-only' : ''} buttonClass={$css("show-on-focus")} type="submit">Toepassen</Button>
+	<Button class={{'sr-only': javascriptEnabled}} buttonClass={$css("show-on-focus")} type="submit">Toepassen</Button>
 </form>
 
 <style>
