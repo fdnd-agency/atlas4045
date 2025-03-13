@@ -21,7 +21,7 @@
 	<FilterStraat onchange={filterHandler} />
 	<Button 
     class={{ 'sr-only': javascriptEnabled }}
-    buttonClass={$css('show-on-focus')} 
+    buttonClass={$css('show-on-focus')}  
     type="submit"
   >
     Toepassen
