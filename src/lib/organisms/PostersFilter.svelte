@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 
 	let form;
-	let javascriptEnabled = $state(false);
+	let javascriptEnabled;
 
 	onMount(() => {
 		javascriptEnabled = true;
@@ -17,11 +17,15 @@
 </script>
 
 <form bind:this={form} action="/posters" data-sveltekit-noscroll>
-	<FilterNaam onchange={filterHandler} />
+	<FilterNaam onchange={filterHandler} />3
 	<FilterStraat onchange={filterHandler} />
-	<Button class={{ 'sr-only': javascriptEnabled }} buttonClass={$css('show-on-focus')} type="submit"
-		>Toepassen</Button
-	>
+	<Button 
+    class={{ 'sr-only': javascriptEnabled }}
+    buttonClass={$css('show-on-focus')} 
+    type="submit"
+  >
+    Toepassen
+  </Button>
 </form>
 
 <style>
