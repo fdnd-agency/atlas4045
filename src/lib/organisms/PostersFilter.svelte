@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 
 	let form;
-	let javascriptEnabled;
+	let javascriptEnabled = $state(false);
 
 	function filterHandler(event) {
 		form.requestSubmit();
