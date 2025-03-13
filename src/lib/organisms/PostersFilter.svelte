@@ -7,10 +7,12 @@
 	let form;
 	let javascriptEnabled;
 
+  // Check if javascript is enabled using onMount so that we only hide the submit button if JS is enabled
 	onMount(() => {
 		javascriptEnabled = true;
 	});
 
+  // Submit the form on change so that svelte handles the rest
 	function filterHandler(event) {
 		form.requestSubmit();
 	}
