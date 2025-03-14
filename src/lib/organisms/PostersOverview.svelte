@@ -1,43 +1,17 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
+  import PostersTitle from '$lib/atoms/PostersTitle.svelte';
 	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
-
-  import { page } from '$app/state';
 
 	import { flip } from "svelte/animate";
   import { fade } from "svelte/transition";
 	import { cubicOut } from "svelte/easing";
 
 	let { posters = [] } = $props();
-
-  let name = $state('');
-  let street = $state('');
-
-	if (page.url.searchParams.get('naam')) {
-		$effect(() => {
-			name = page.url.searchParams.get('naam');
-		});
-	}
-
-  if (page.url.searchParams.get('straat')) {
-		$effect(() => {
-			street = page.url.searchParams.get('straat');
-		});
-	}
 </script>
 
 <header>
-  {#if name && street}
-    <h2>
-      Gedenkposters met naam <span class="highlight">{name}</span> en straat <span class="highlight">{street}</span>
-    </h2>
-  {:else if name}
-    <h2>Gedenkposters met naam <span class="highlight">{name}</span></h2>
-  {:else if street}
-    <h2>Gedenkposters met straat <span class="highlight">{street}</span></h2>
-  {:else}
-    <h2>Alle gedenkposters ({posters.length})</h2>
-  {/if}
+  <PostersTitle length={posters.length} />
   <PostersFilter />
 </header>
 
@@ -88,10 +62,6 @@
 		flex-direction: column;
 		align-items: center;
 	}
-
-  .highlight {
-    color: var(--brown-600);
-  }
   
   @media screen and (min-width: 800px) {
     div:global(:has(.landscape)) {
