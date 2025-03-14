@@ -1,11 +1,29 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
 	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
+
+  import { page } from '$app/state';
+
 	import { flip } from "svelte/animate";
   import { fade } from "svelte/transition";
 	import { cubicOut } from "svelte/easing";
 
 	let { posters = [] } = $props();
+
+  let name = $state('');
+  let street = $state('');
+
+	if (page.url.searchParams.get('naam')) {
+		$effect(() => {
+			name = page.url.searchParams.get('naam');
+		});
+	}
+
+  if (page.url.searchParams.get('straat')) {
+		$effect(() => {
+			street = page.url.searchParams.get('straat');
+		});
+	}
 </script>
 
 <header>
