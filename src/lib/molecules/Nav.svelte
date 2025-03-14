@@ -92,6 +92,7 @@
       background-color: transparent;
       padding: 0;
       border: none;
+      gap: var(--spacing-lg);
     }
 
     nav.js-enabled .menu-button {
