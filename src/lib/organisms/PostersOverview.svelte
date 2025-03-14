@@ -1,6 +1,8 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
+  import PostersTitle from '$lib/atoms/PostersTitle.svelte';
 	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
+
 	import { flip } from "svelte/animate";
   import { fade } from "svelte/transition";
 	import { cubicOut } from "svelte/easing";
@@ -9,7 +11,7 @@
 </script>
 
 <header>
-	<h2>Alle gedenkposters ({posters.length})</h2>
+  <PostersTitle length={posters.length} />
   <PostersFilter />
 </header>
 
