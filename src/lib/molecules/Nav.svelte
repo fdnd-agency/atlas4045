@@ -55,19 +55,12 @@
     left: 0;
     width: 100%;
     background-color: var(--white);
-    padding: var(--spacing-xs);
+    padding: 0 0 var(--spacing-sm) 0;
+    gap: var(--spacing-sm);
     z-index: 100;
-  }
-
-  nav.js-enabled ul {
-    width: 100%;
     text-align: center;
-    padding: var(--spacing-xxs) 0;
     border-bottom: 1px solid var(--neutral-400);
     font-weight: var(--font-weight-bold);
-    color: var(--neutral-900);
-    background-color: var(--white);
-    border: 2px solid var(--neutral-400);
   }
 
   nav.js-enabled ul.is-open {
@@ -98,6 +91,7 @@
       width: fit-content;
       background-color: transparent;
       padding: 0;
+      border: none;
     }
 
     nav.js-enabled .menu-button {
