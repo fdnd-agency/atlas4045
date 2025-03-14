@@ -19,7 +19,7 @@
 </script>
 
 <form bind:this={form} action="/posters" data-sveltekit-noscroll>
-	<FilterNaam onchange={filterHandler} />3
+	<FilterNaam onchange={filterHandler} />
 	<FilterStraat onchange={filterHandler} />
 	<Button 
     class={{ 'sr-only': javascriptEnabled }}
