@@ -27,7 +27,17 @@
 </script>
 
 <header>
-	<h2>Alle gedenkposters ({posters.length})</h2>
+  {#if name && street}
+    <h2>
+      Gedenkposters met naam <span class="highlight">{name}</span> en straat <span class="highlight">{street}</span>
+    </h2>
+  {:else if name}
+    <h2>Gedenkposters met naam <span class="highlight">{name}</span></h2>
+  {:else if street}
+    <h2>Gedenkposters met straat <span class="highlight">{street}</span></h2>
+  {:else}
+    <h2>Alle gedenkposters ({posters.length})</h2>
+  {/if}
   <PostersFilter />
 </header>
 
@@ -78,6 +88,10 @@
 		flex-direction: column;
 		align-items: center;
 	}
+
+  .highlight {
+    color: var(--brown-600);
+  }
   
   @media screen and (min-width: 800px) {
     div:global(:has(.landscape)) {
