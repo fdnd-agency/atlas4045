@@ -50,7 +50,7 @@
 			<div class="colour c900"></div>
 		</div>
 
-		<div class="row cyan white">
+		<div class="row red white">
 			<div class="colour c100"></div>
 			<div class="colour c200"></div>
 			<div class="colour c300"></div>
@@ -61,7 +61,7 @@
 			<div class="colour c800"></div>
 			<div class="colour c900"></div>
 		</div>
-		<div class="row cyan black">
+		<div class="row red black">
 			<div class="colour c100"></div>
 			<div class="colour c200"></div>
 			<div class="colour c300"></div>
@@ -200,33 +200,33 @@
 		}
 	} 
 
-	.cyan {
+	.red {
 		.c100 {
-			background-color: var(--cyan-100);
+			background-color: var(--red-100);
 		}
 		.c200 {
-			background-color: var(--cyan-200);
+			background-color: var(--red-200);
 		}
 		.c300 {
-			background-color: var(--cyan-300);
+			background-color: var(--red-300);
 		}
 		.c400 {
-			background-color: var(--cyan-400);
+			background-color: var(--red-400);
 		}
 		.c500 {
-			background-color: var(--cyan-500);
+			background-color: var(--red-500);
 		}
 		.c600 {
-			background-color: var(--cyan-600);
+			background-color: var(--red-600);
 		}
 		.c700 {
-			background-color: var(--cyan-700);
+			background-color: var(--red-700);
 		}
 		.c800 {
-			background-color: var(--cyan-800);
+			background-color: var(--red-800);
 		}
 		.c900 {
-			background-color: var(--cyan-900);
+			background-color: var(--red-900);
 		}
 	}
 
