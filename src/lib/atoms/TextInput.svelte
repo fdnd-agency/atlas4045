@@ -24,23 +24,24 @@
 		padding: var(--spacing-xxs) var(--spacing-sm);
 		border: none;
 		border-radius: var(--border-radius-pill);
-		border: 2px solid var(--brown-100);
+		border: 2px solid var(--blue-100);
 		text-overflow: ellipsis;
 
-		transition-property: border;
+		transition-property: border, background-color;
 		transition-duration: 0.15s;
 		transition-timing-function: ease-in-out;
 
 		&:not(:placeholder-shown) {
-			border: 2px solid var(--brown-300);
-		}
+			border: 2px solid var(--blue-200);		}
 
 		&:focus {
-			border: 2px solid var(--brown-600);
+			border: 2px solid var(--blue-600);
+      background-color: var(--blue-100);
 		}
 
 		&::placeholder {
-			color: var(--brown-200);
+			color: var(--blue-400);
+      font-weight: var(--font-weight-light);
 		}
 	}
 
