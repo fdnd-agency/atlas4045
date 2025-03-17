@@ -3,13 +3,8 @@
 
   let { length } = $props();
 
-	if (page.url.searchParams.get('naam')) {
-		let name = $derived(page.url.searchParams.get('naam'));
-	}
-
-  if (page.url.searchParams.get('straat')) {
-		let street = $derived(page.url.searchParams.get('straat'));
-	}
+  let name = $derived(page.url.searchParams.get('naam'));
+  let street = $derived(page.url.searchParams.get('straat'));
 </script>
 
 {#if name && street}
