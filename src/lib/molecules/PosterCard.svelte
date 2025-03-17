@@ -61,14 +61,12 @@
 
 	.focus-ring {
 		transition: 0.25s ease-out;
-    border: transparent 2px solid;
     
 		&:hover,
 		&:focus-visible,
 		&:focus-within {
-			border: 2px solid var(--blue-500);
-			background-color: var(--blue-100);
-			/* color: var(--white); */
+			background-color: var(--blue-700);
+			color: var(--white);
 		}
 	}
 </style>
