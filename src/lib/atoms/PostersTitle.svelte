@@ -27,6 +27,6 @@
 
 <style>
 	.highlight {
-		color: var(--brown-600);
+		color: var(--red-600);
 	}
 </style>
