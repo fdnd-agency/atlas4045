@@ -5,12 +5,14 @@
 
 	let name = $state('');
 
+  // Repopulate the name filter from the URL on refresh
 	if (page.url.searchParams.get('naam')) {
 		$effect(() => {
 			name = page.url.searchParams.get('naam');
 		});
 	}
 
+  // Take onchange as a prop to bubble it up from the TextInput
 	let { onchange } = $props();
 </script>
 

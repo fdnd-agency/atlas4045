@@ -31,6 +31,7 @@
 					image={posterData.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
 					width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
 					height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
+					id={posterData.poster?.id ?? ''}
 				/>
       </div>
 			{/each}
