@@ -3,19 +3,12 @@
 
   let { length } = $props();
 
-  let name = $state('');
-  let street = $state('');
-
 	if (page.url.searchParams.get('naam')) {
-		$effect(() => {
-			name = page.url.searchParams.get('naam');
-		});
+		let name = $derived(page.url.searchParams.get('naam'));
 	}
 
   if (page.url.searchParams.get('straat')) {
-		$effect(() => {
-			street = page.url.searchParams.get('straat');
-		});
+		let street = $derived(page.url.searchParams.get('straat'));
 	}
 </script>
 
