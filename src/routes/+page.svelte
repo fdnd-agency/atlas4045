@@ -36,7 +36,7 @@
 
 	<div class="page-content">
 		<section>
-			<h3 class="title-highlighted">Uitgelichte gedenkposters:</h3>
+			<h3 class="title-highlighted">Uitgelichte gedenkposters</h3>
 	
 			<PostersCarousel {posters} />
 		</section>
@@ -53,7 +53,7 @@
 <style>
 	main {
 		margin: 0 auto;
-		padding: var(--spacing-sm) var(--page-padding);
+		padding: var(--spacing-sm) var(--page-padding) 0;
 	}
 
 	header {
