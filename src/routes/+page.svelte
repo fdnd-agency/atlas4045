@@ -57,13 +57,16 @@
 	}
 
 	header {
+		--_page-padding: var(--spacing-md);
+		--_padding: var(--spacing-md);
+		--_margin: var(--spacing-md);
 		background-image: url("../assets/gedenkposter.avif");
 		background-color: black;
 		background-size:cover;
 		background-repeat: no-repeat;
-		padding:var(--spacing-xl);
-		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
-		width:calc(100% + 2* var(--page-padding)) ;
+		padding:var(--_padding);
+		margin:calc(-1 * var(--_margin)) calc(-1 * var(--_page-padding));
+		width:calc(100% + 2* var(--_page-padding));
 	}
 
 	header > * {
@@ -71,7 +74,6 @@
 		padding:var(--spacing-sm);
 		
 	}
-
 
 	h2,
 	h3 {
@@ -95,6 +97,10 @@
 		width: 100%;
 	}
 
+	.content-container {
+		margin-bottom: var(--spacing-md);
+	}
+
 	section {
 		margin-bottom: var(--spacing-md);
 		padding: var(--spacing-md) 0;
@@ -113,23 +119,23 @@
 		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
 		width:calc(100% + 2* var(--page-padding));
 		padding:var(--spacing-md);
-		height:100vh;
 	}
 
 	@media screen and (min-width: 800px) {
 
 		header {
+			--_page-padding: var(--page-padding);
+			--_padding: var(--spacing-xl);
+			--_margin: var(--spacing-md);
 			height: fit-content;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			flex-wrap:wrap;
 			gap: var(--spacing-md);
-
 			position:sticky;
-			top:6rem;
 			z-index:-1;
-
+			top:6rem;
 		}
 			
 
@@ -141,6 +147,7 @@
 			column-count: 2;
 			column-gap: var(--spacing-md);
 			width:800px;
+			margin-bottom: 0;
 		}
 
 		h2 {
