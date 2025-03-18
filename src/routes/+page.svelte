@@ -60,7 +60,7 @@
 		--_page-padding: var(--spacing-md);
 		--_padding: var(--spacing-md);
 		--_margin: var(--spacing-md);
-		background-image: url("../assets/gedenkposter.avif");
+		background-image: url("/assets/gedenkposter.avif");
 		background-color: black;
 		background-size:cover;
 		background-repeat: no-repeat;
