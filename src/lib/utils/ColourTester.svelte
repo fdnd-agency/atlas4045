@@ -4,96 +4,96 @@
 	</summary>
 	<div class="container">
 		<div class="row brown white">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
 
 		<div class="row brown black">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
 
 		<div class="row blue white">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
 		<div class="row blue black">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
 
-		<div class="row cyan white">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+		<div class="row red white">
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
-		<div class="row cyan black">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+		<div class="row red black">
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
 
 		<div class="row neutral white">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
 		<div class="row neutral black">
-			<div class="colour c100"></div>
-			<div class="colour c200"></div>
-			<div class="colour c300"></div>
-			<div class="colour c400"></div>
-			<div class="colour c500"></div>
-			<div class="colour c600"></div>
-			<div class="colour c700"></div>
-			<div class="colour c800"></div>
-			<div class="colour c900"></div>
+			<div class="colour c100">100</div>
+			<div class="colour c200">200</div>
+			<div class="colour c300">300</div>
+			<div class="colour c400">400</div>
+			<div class="colour c500">500</div>
+			<div class="colour c600">600</div>
+			<div class="colour c700">700</div>
+			<div class="colour c800">800</div>
+			<div class="colour c900">900</div>
 		</div>
 	</div>
 </details>
@@ -200,33 +200,33 @@
 		}
 	} 
 
-	.cyan {
+	.red {
 		.c100 {
-			background-color: var(--cyan-100);
+			background-color: var(--red-100);
 		}
 		.c200 {
-			background-color: var(--cyan-200);
+			background-color: var(--red-200);
 		}
 		.c300 {
-			background-color: var(--cyan-300);
+			background-color: var(--red-300);
 		}
 		.c400 {
-			background-color: var(--cyan-400);
+			background-color: var(--red-400);
 		}
 		.c500 {
-			background-color: var(--cyan-500);
+			background-color: var(--red-500);
 		}
 		.c600 {
-			background-color: var(--cyan-600);
+			background-color: var(--red-600);
 		}
 		.c700 {
-			background-color: var(--cyan-700);
+			background-color: var(--red-700);
 		}
 		.c800 {
-			background-color: var(--cyan-800);
+			background-color: var(--red-800);
 		}
 		.c900 {
-			background-color: var(--cyan-900);
+			background-color: var(--red-900);
 		}
 	}
 

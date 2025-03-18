@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
-    background-color: var(--brown-100);
+    background-color: var(--blue-100);
     border-radius: var(--border-radius-pill);
 
     transition-property: background-color, color;
@@ -21,11 +21,11 @@
 		transition-timing-function: ease-in-out;
 
     &:global(:has(input:not(:placeholder-shown))) {
-      background-color: var(--brown-300);
+      background-color: var(--blue-200);
     }
     &:focus-within {
       color: white;
-      background-color: var(--brown-600) !important;
+      background-color: var(--blue-600) !important;
     }
   }
 </style>

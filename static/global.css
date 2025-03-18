@@ -19,15 +19,15 @@
 	--lightness-100: 90%;
 
 	/* Primary colours */
-	--brown-saturation: 43%;
-	--brown-hue: 20;
+	--brown-saturation: 45%;
+	--brown-hue: 26;
 
 	/* Complimentary colours */
-	--cyan-saturation: 50.2%;
-	--cyan-hue: 167.3;
+	--red-saturation: 64%;
+	--red-hue: 355;
 
-	--blue-saturation: 50.2%;
-	--blue-hue: 227.8;
+	--blue-saturation: 36%;
+	--blue-hue: 222;
 
 	/* Neutral (Grey tones) */
 	--neutral-saturation: 12%;
@@ -44,15 +44,15 @@
 	--brown-200: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-200));
 	--brown-100: hsl(var(--brown-hue) var(--brown-saturation) var(--lightness-100));
 
-	--cyan-900: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-900));
-	--cyan-800: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-800));
-	--cyan-700: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-700));
-	--cyan-600: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-600));
-	--cyan-500: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-500));
-	--cyan-400: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-400));
-	--cyan-300: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-300));
-	--cyan-200: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-200));
-	--cyan-100: hsl(var(--cyan-hue) var(--cyan-saturation) var(--lightness-100));
+	--red-900: hsl(var(--red-hue) var(--red-saturation) var(--lightness-900));
+	--red-800: hsl(var(--red-hue) var(--red-saturation) var(--lightness-800));
+	--red-700: hsl(var(--red-hue) var(--red-saturation) var(--lightness-700));
+	--red-600: hsl(var(--red-hue) var(--red-saturation) var(--lightness-600));
+	--red-500: hsl(var(--red-hue) var(--red-saturation) var(--lightness-500));
+	--red-400: hsl(var(--red-hue) var(--red-saturation) var(--lightness-400));
+	--red-300: hsl(var(--red-hue) var(--red-saturation) var(--lightness-300));
+	--red-200: hsl(var(--red-hue) var(--red-saturation) var(--lightness-200));
+	--red-100: hsl(var(--red-hue) var(--red-saturation) var(--lightness-100));
 
 	--blue-900: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-900));
 	--blue-800: hsl(var(--blue-hue) var(--blue-saturation) var(--lightness-800));
@@ -141,6 +141,8 @@ body {
 	line-height: 1.2;
 	font-weight: var(--font-weight-light);
 	color: var(--neutral-900);
+	padding-top:6rem;
+	background-color: var(--brown-100);
 }
 
 h1,

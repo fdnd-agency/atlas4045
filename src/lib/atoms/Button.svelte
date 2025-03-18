@@ -3,7 +3,7 @@
 </script>
 
 <!-- Renders <a> styled as button if a href is given -->
-  {#if href}
+{#if href}
 	<a {...rest} {href} class={["no-focus", classList, buttonClass]}>
 		{@render children()}
 	</a>

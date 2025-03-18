@@ -20,7 +20,7 @@
 
   h1 {
     font-size: 1rem;
-    color: var(--brown-700);
+    color: var(--red-600);
     font-family: var(--font-family-nunito);
     font-weight: var(--font-weight-regular);
     cursor: default;
@@ -32,6 +32,7 @@
     text-decoration: none;
     color: var(--neutral-900);
     font-weight: var(--font-weight-regular);
+    border-radius: var(--border-radius-pill);
 
     &:hover,
     &:focus-visible {
