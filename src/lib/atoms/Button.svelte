@@ -53,7 +53,7 @@
 		padding: var(--spacing-xs) var(--spacing-sm);
 		box-shadow:1px 1px 5px rgb(0,0,0,.2);
 
-		&:hover
+		&:hover,
 		&:focus,
 		&:focus-visible  {
 			color:#fff;
