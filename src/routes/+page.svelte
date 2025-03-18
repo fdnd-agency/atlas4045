@@ -146,7 +146,7 @@
 		.content-container {
 			column-count: 2;
 			column-gap: var(--spacing-md);
-			width:800px;
+			width:810px;
 			margin-bottom: 0;
 		}
 
