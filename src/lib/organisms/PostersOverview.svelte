@@ -46,6 +46,13 @@
 {/await}
 
 <style>
+	header {
+		display: flex;
+    gap: var(--spacing-md);
+		flex-direction: column;
+		align-items: center;
+		padding: var(--spacing-md) var(--spacing-xs) 0;
+	}
 	ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -57,13 +64,7 @@
     padding-top: var(--spacing-lg);
   }
 
-	header {
-		display: flex;
-    gap: var(--spacing-md);
-		flex-direction: column;
-		align-items: center;
-		padding-top: var(--spacing-md);
-	}
+	
   
   @media screen and (min-width: 800px) {
     div:global(:has(.landscape)) {

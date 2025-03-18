@@ -22,11 +22,12 @@
 	<FilterNaam onchange={filterHandler} />
 	<FilterStraat onchange={filterHandler} />
 	<Button 
-    class={{ 'sr-only': javascriptEnabled }}
+    class={{ 'sr-only': javascriptEnabled, 'highlight':true}}
     buttonClass={$css('show-on-focus')}  
+		
     type="submit"
   >
-    Toepassen
+    Filter
   </Button>
 </form>
 
@@ -52,7 +53,6 @@
 	@media screen and (min-width: 800px) {
 		form {
 			flex-direction: row;
-			gap: var(--spacing-md);
 		}
 	}
 </style>

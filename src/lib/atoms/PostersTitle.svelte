@@ -3,25 +3,30 @@
 
   let { length } = $props();
 
+	let filterMessage = 'Gedenkposters gevonden met';
   let name = $derived(page.url.searchParams.get('naam'));
   let street = $derived(page.url.searchParams.get('straat'));
+
 </script>
 
+<h2>
 {#if name && street}
-	<h2>
-		Gedenkposters met naam <span class="highlight">{name}</span> en straat
-		<span class="highlight">{street}</span>
-	</h2>
+	{filterMessage} <strong>naam <span class="highlight">{name}</span></strong> <br>en <strong>straat
+	<span class="highlight">{street}</span></strong>
 {:else if name}
-	<h2>Gedenkposters met naam <span class="highlight">{name}</span></h2>
+	{filterMessage} <strong>naam <span class="highlight">{name}</span></strong>
 {:else if street}
-	<h2>Gedenkposters met straat <span class="highlight">{street}</span></h2>
+	{filterMessage} <strong>straat <span class="highlight">{street}</span></strong>
 {:else}
-	<h2>Alle gedenkposters ({length})</h2>
+	Alle gedenkposters 
 {/if}
-
+({length})
+</h2>
 <style>
+	h2 {
+		font-weight: var(--font-weight-light);
+	}
 	.highlight {
-		color: var(--red-600);
+		color: var(--blue-600);
 	}
 </style>

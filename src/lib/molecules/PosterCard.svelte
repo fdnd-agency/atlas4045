@@ -52,6 +52,9 @@
 		border-radius: var(--border-radius-md);
 	}
 
+	p {
+		padding: 0 
+	}
 	p.name {
 		margin-top: 0.25rem;
 		font-size: var(--font-size-lg);
@@ -65,8 +68,7 @@
 		&:hover,
 		&:focus-visible,
 		&:focus-within {
-			background-color: var(--blue-700);
-			color: var(--white);
+			background-color: var(--blue-200);
 		}
 	}
 </style>

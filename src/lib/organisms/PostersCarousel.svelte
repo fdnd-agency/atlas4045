@@ -25,6 +25,7 @@
 	ul {
 		display: flex;
 		flex-direction: row;
+		align-items:start;
 		gap: var(--spacing-sm);
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;

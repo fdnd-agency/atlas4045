@@ -36,7 +36,7 @@
 
 	<div class="page-content">
 		<section>
-			<h3 class="title-highlighted">Uitgelichte gedenkposters</h3>
+			<h3>Uitgelichte gedenkposters</h3>
 	
 			<PostersCarousel {posters} />
 		</section>
@@ -44,7 +44,7 @@
 		<section class="section-CTA">
 			<h3>Alle posters zien?</h3>
 	
-			<Button href="/posters">Door naar overzicht</Button>
+			<Button href="/posters" class="highlight">Door naar overzicht</Button>
 		</section>
 	</div>
 	
@@ -70,7 +70,7 @@
 	}
 
 	header > * {
-		background-color: rgba(255,255,255,0.85);
+		background-color: rgb(255,255,255,0.9);
 		padding:var(--spacing-sm);
 		
 	}
@@ -78,14 +78,13 @@
 	h2,
 	h3 {
 		font-size: var(--font-size-title-md);
-		font-weight: var(--font-weight-bold);
+		font-weight: var(--font-weight-light);
 		color: var(--neutral-900);
 		text-align: center;
 		margin-bottom: var(--spacing-md);
 	}
-
-	.title-highlighted {
-		font-size: var(--font-size-lg);
+	h2 {
+		font-weight:var(--font-weight-bold);
 	}
 
 	p {
@@ -110,6 +109,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		background-color: var(--blue-200);
+		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
+		width:calc(100% + 1.5 * var(--page-padding));
 	}
 	.page-content {
 		position: relative;
@@ -118,11 +120,10 @@
 		background-color: var(--blue-100);
 		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
 		width:calc(100% + 2* var(--page-padding));
-		padding:var(--spacing-md);
+		padding:var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
 	}
 
 	@media screen and (min-width: 800px) {
-
 		header {
 			--_page-padding: var(--page-padding);
 			--_padding: var(--spacing-xl);
@@ -159,11 +160,7 @@
 		}
 
 		h3 {
-			font-size: var(--font-size-title-lg);
-		}
-
-		.title-highlighted {
-			font-size: var(--font-size-title-sm);
+			font-size: var(--font-size-title-md);
 		}
 	}
 </style>
