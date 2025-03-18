@@ -9,47 +9,45 @@
 </script>
 
 <main>
-	<div class="hero-container">
+	<header>
 		<h2>Herdenken door te vertellen.</h2>
-		<enhanced:img
-			src="/static/assets/gedenkposter.png"
-			alt="Gedenkposter van Hijman Nol"
-			class="hero-image"
-		/>
+
+		<div class="content-container">
+			<p>
+				In de jaren tussen 1940 en 1945 zijn door de Duitse bezetter meer dan 2800 mensen uit de
+				Oosterparkbuurt gedeporteerd en vermoord in Oost-Europa. Het Joodse leven in de buurt, dat
+				voor de oorlog bloeiende was, verdween.
+			</p>
+
+			<p>
+				Wie waren deze mensen? Hoe zagen hun levens eruit? Wat hebben ze tijdens de oorlog meegemaakt?
+				Op deze vragen proberen we met de gedenkposters antwoord te geven. Zo'n veertig buurtbewoners
+				in wiens huizen Joodse mensen hebben gewoond hebben al onderzoek gedaan naar die oud-bewoners
+				en hun verhalen opgeschreven. De gedenkposters hangen in april en mei door de hele buurt voor
+				de ramen. Ook worden er wandelingen langs de posters georganiseerd.
+			</p>
+
+			<p>
+				De gedenkposters zijn geïnspireerd op het project Namen en Nummers van kunstenaar Ida van der
+				Lee. Ontdek hier meer over Namen en Nummers.
+			</p>
+		</div>
+	</header>
+
+	<div class="page-content">
+		<section>
+			<h3 class="title-highlighted">Uitgelichte gedenkposters:</h3>
+	
+			<PostersCarousel {posters} />
+		</section>
+	
+		<section class="section-CTA">
+			<h3>Alle posters zien?</h3>
+	
+			<Button href="/posters">Door naar overzicht</Button>
+		</section>
 	</div>
-
-	<div class="content-container">
-		<p>
-			In de jaren tussen 1940 en 1945 zijn door de Duitse bezetter meer dan 2800 mensen uit de
-			Oosterparkbuurt gedeporteerd en vermoord in Oost-Europa. Het Joodse leven in de buurt, dat
-			voor de oorlog bloeiende was, verdween.
-		</p>
-
-		<p>
-			Wie waren deze mensen? Hoe zagen hun levens eruit? Wat hebben ze tijdens de oorlog meegemaakt?
-			Op deze vragen proberen we met de gedenkposters antwoord te geven. Zo'n veertig buurtbewoners
-			in wiens huizen Joodse mensen hebben gewoond hebben al onderzoek gedaan naar die oud-bewoners
-			en hun verhalen opgeschreven. De gedenkposters hangen in april en mei door de hele buurt voor
-			de ramen. Ook worden er wandelingen langs de posters georganiseerd.
-		</p>
-
-		<p>
-			De gedenkposters zijn geïnspireerd op het project Namen en Nummers van kunstenaar Ida van der
-			Lee. Ontdek hier meer over Namen en Nummers.
-		</p>
-	</div>
-
-	<section>
-		<h3 class="title-highlighted">Uitgelichte gedenkposters:</h3>
-
-		<PostersCarousel {posters} />
-	</section>
-
-	<section class="section-CTA">
-		<h3>Alle posters zien?</h3>
-
-		<Button href="/posters">Door naar overzicht</Button>
-	</section>
+	
 </main>
 
 <style>
@@ -57,6 +55,23 @@
 		margin: 0 auto;
 		padding: var(--spacing-sm) var(--page-padding);
 	}
+
+	header {
+		background-image: url("../assets/gedenkposter.avif");
+		background-color: black;
+		background-size:cover;
+		background-repeat: no-repeat;
+		padding:var(--spacing-xl);
+		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
+		width:calc(100% + 2* var(--page-padding)) ;
+	}
+
+	header > * {
+		background-color: rgba(255,255,255,0.85);
+		padding:var(--spacing-sm);
+		
+	}
+
 
 	h2,
 	h3 {
@@ -69,15 +84,6 @@
 
 	.title-highlighted {
 		font-size: var(--font-size-lg);
-	}
-
-	.hero-image {
-		width: 100%;
-		height: auto;
-		border-radius: var(--border-radius-md);
-		margin: auto;
-		display: block;
-		margin-bottom: var(--spacing-md);
 	}
 
 	p {
@@ -99,31 +105,42 @@
 		flex-direction: column;
 		align-items: center;
 	}
+	.page-content {
+		position: relative;
+		z-index:1;
+		margin-top:100vh;
+		background-color: var(--brown-100);
+		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
+		width:calc(100% + 2* var(--page-padding));
+		padding:var(--spacing-md);
+		height:100vh;
+	}
 
 	@media screen and (min-width: 800px) {
-		main {
-			max-width: var(--max-width-desktop);
-		}
 
-		.hero-container {
-			width: 100%;
+		header {
 			height: fit-content;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex-direction: row-reverse;
+			flex-wrap:wrap;
 			gap: var(--spacing-md);
-			margin: var(--spacing-lg) 0;
-		}
 
-		.hero-image {
-			width: 40vw;
+			position:sticky;
+			top:6rem;
+			z-index:-1;
+
+		}
+			
+
+		header h2 {
+			flex-shrink:0;
 		}
 
 		.content-container {
 			column-count: 2;
-			column-gap: var(--spacing-lg);
-			margin-bottom: var(--spacing-lg);
+			column-gap: var(--spacing-md);
+			width:800px;
 		}
 
 		h2 {

@@ -62,6 +62,7 @@
     gap: var(--spacing-md);
 		flex-direction: column;
 		align-items: center;
+		padding-top: var(--spacing-md);
 	}
   
   @media screen and (min-width: 800px) {
