@@ -31,10 +31,13 @@
 		width: 100%;
 		padding: var(--spacing-sm) var(--page-padding);
 		margin-bottom: var(--spacing-sm);
+		background-color: #fff;
 		box-shadow: 0 -20px 10px 20px rgba(0, 0, 0, 0.303);
 		align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+		top:0;
+		z-index:100;
 	}
 
 	img {
@@ -46,7 +49,6 @@
 	@media (min-width: 700px) {
 		header {
 			justify-content: flex-start;
-      position: static;
 		}
 	}
 </style>

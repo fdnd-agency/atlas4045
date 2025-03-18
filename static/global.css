@@ -141,6 +141,8 @@ body {
 	line-height: 1.2;
 	font-weight: var(--font-weight-light);
 	color: var(--neutral-900);
+	padding-top:6rem;
+	background-color: var(--brown-100);
 }
 
 h1,
