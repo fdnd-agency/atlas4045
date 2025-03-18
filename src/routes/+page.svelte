@@ -61,7 +61,7 @@
 		--_padding: var(--spacing-md);
 		--_margin: var(--spacing-md);
 		background-image: url("/assets/gedenkposter.avif");
-		background-color: black;
+		background-color: var(--blue-900);
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
