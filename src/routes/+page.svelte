@@ -115,7 +115,7 @@
 		position: relative;
 		z-index:1;
 		margin-top:100vh;
-		background-color: var(--brown-100);
+		background-color: var(--blue-100);
 		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
 		width:calc(100% + 2* var(--page-padding));
 		padding:var(--spacing-md);
