@@ -3,20 +3,8 @@
 
   let { length } = $props();
 
-  let name = $state('');
-  let street = $state('');
-
-	if (page.url.searchParams.get('naam')) {
-		$effect(() => {
-			name = page.url.searchParams.get('naam');
-		});
-	}
-
-  if (page.url.searchParams.get('straat')) {
-		$effect(() => {
-			street = page.url.searchParams.get('straat');
-		});
-	}
+  let name = $derived(page.url.searchParams.get('naam'));
+  let street = $derived(page.url.searchParams.get('straat'));
 </script>
 
 {#if name && street}
@@ -34,6 +22,6 @@
 
 <style>
 	.highlight {
-		color: var(--brown-600);
+		color: var(--red-600);
 	}
 </style>

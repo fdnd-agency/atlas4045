@@ -65,7 +65,7 @@
 		&:hover,
 		&:focus-visible,
 		&:focus-within {
-			background-color: var(--brown-600);
+			background-color: var(--blue-700);
 			color: var(--white);
 		}
 	}
