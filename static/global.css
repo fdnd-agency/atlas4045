@@ -175,7 +175,9 @@ div.query-container {
         A11y utils
     -----------------*/
 
-.sr-only {
+.sr-only,
+.sr-only:focus-visible,
+.sr-only:focus {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -194,7 +196,7 @@ div.query-container {
 
 	&:focus-visible,
 	&:focus-within {
-		outline: 3px solid var(--brown-400);
+		/* outline: 3px solid var(--brown-400); */
 	}
 }
 
