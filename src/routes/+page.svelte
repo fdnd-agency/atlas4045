@@ -60,8 +60,8 @@
 		--_page-padding: var(--spacing-md);
 		--_padding: var(--spacing-md);
 		--_margin: var(--spacing-md);
-		background-image: url("../assets/gedenkposter.avif");
-		background-color: black;
+		background-image: url("/assets/gedenkposter.avif");
+		background-color: var(--blue-900);
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
@@ -146,7 +146,7 @@
 		.content-container {
 			column-count: 2;
 			column-gap: var(--spacing-md);
-			width:800px;
+			width:810px;
 			margin-bottom: 0;
 		}
 
