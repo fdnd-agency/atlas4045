@@ -20,7 +20,7 @@
 {:else}
 	Alle gedenkposters 
 {/if}
-({length})
+<span class="length">({length})</span>
 </h2>
 <style>
 	h2 {
@@ -28,5 +28,9 @@
 	}
 	.highlight {
 		color: var(--blue-600);
+	}
+
+	span.length {
+		font-size: 1rem;
 	}
 </style>
