@@ -32,7 +32,7 @@ export async function load({ fetch, url }) {
 	try {
 		const directus = getDirectusInstance(fetch);
 		return {
-			posters: await directus.request(
+			addresses: await directus.request(
 				readItems('atlas_address', {
 					filter: queryFilters,
 					fields: queryFields,

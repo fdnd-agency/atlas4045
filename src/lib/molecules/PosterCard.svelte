@@ -31,7 +31,7 @@
 
 <li class="focus-ring {orientation} {cardClass}">
 	<!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style -->
-	<a href={`/posters/${id}`} class="no-focus">
+	<a href={`/adressen/${id}`} class="no-focus">
 		<div>
 			<DirectusImage imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy" />
 		</div>

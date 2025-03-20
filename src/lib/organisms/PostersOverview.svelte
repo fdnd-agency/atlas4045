@@ -7,31 +7,31 @@
   import { fade } from "svelte/transition";
 	import { cubicOut } from "svelte/easing";
 
-	let { posters = [] } = $props();
+	let { addresses = [] } = $props();
 </script>
 
 <header>
-  <PostersTitle length={posters.length} />
+  <PostersTitle length={addresses.length} />
   <PostersFilter />
 </header>
 
-{#await posters}
+{#await addresses}
 	<p>Loading posters...</p>
-{:then posters}
-	{#if posters.length > 0}
+{:then addresses}
+	{#if addresses.length > 0}
 		<ul>
-			{#each posters as posterData (posterData.id)}
+			{#each addresses as address (address.id)}
       <div transition:fade={{duration: 300, easing: cubicOut}} animate:flip={{duration: 300, easing: cubicOut}}>
 				<PosterCard
-					name={posterData.person?.[0]?.last_name ?? 'Onbekend'}
-					street={posterData.street ?? 'Onbekend'}
-					house_number={posterData.house_number ?? 'Onbekend'}
-					floor={posterData?.floor}
-					addition={posterData?.addition}
-					image={posterData.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
-					width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
-					height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
-					id={posterData.poster?.id ?? ''}
+					name={address.person?.[0]?.last_name ?? 'Onbekend'}
+					street={address.street ?? 'Onbekend'}
+					house_number={address.house_number ?? 'Onbekend'}
+					floor={address?.floor}
+					addition={address?.addition}
+					image={address.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
+					width={address.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
+					height={address.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
+					id={address?.id ?? ''}
 				/>
       </div>
 			{/each}

@@ -21,7 +21,7 @@
 			// Remove duplicates
 			new Set(
 				// Get all streets from posters
-				page.data.posters.map((poster) => poster.street.trim())
+				page.data.addresses.map((address) => address.street.trim())
 			)
 		).sort() // Sort alphabetically
 	);

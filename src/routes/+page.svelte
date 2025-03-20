@@ -5,7 +5,7 @@
 	import Button from '$lib/atoms/Button.svelte';
 
 	let { data } = $props();
-	let { posters } = data;
+	let { addresses } = data;
 </script>
 
 <main>
@@ -38,13 +38,13 @@
 		<section>
 			<h3>Uitgelichte gedenkposters</h3>
 	
-			<PostersCarousel {posters} />
+			<PostersCarousel {addresses} />
 		</section>
 	
 		<section class="section-CTA">
 			<h3>Alle posters zien?</h3>
 	
-			<Button href="/posters" class="highlight">Door naar overzicht</Button>
+			<Button href="/adressen" class="highlight">Door naar overzicht</Button>
 		</section>
 	</div>
 	

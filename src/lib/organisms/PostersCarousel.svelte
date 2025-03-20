@@ -1,22 +1,24 @@
 <script>
 	import PosterCard from '$lib/molecules/PosterCard.svelte';
 
-	let { posters = [] } = $props();
+	let { addresses = [] } = $props();
+
+	console.log(1, addresses)
 </script>
 
 <ul>
-	{#each posters as posterData (posterData.id)}
+	{#each addresses as address (address.id)}
 		<PosterCard
-			name={posterData.person?.[0]?.last_name ?? 'Onbekend'}
-			street={posterData.street ?? 'Onbekend'}
-			house_number={posterData.house_number ?? 'Onbekend'}
-			floor={posterData?.floor}
-			addition={posterData?.addition}
-			image={posterData.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
-			width={posterData.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
-			height={posterData.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
+			name={address.person?.[0]?.last_name ?? 'Onbekend'}
+			street={address.street ?? 'Onbekend'}
+			house_number={address.house_number ?? 'Onbekend'}
+			floor={address?.floor}
+			addition={address?.addition}
+			image={address.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
+			width={address.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
+			height={address.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 			cardClass={$css('carousel-item')}
-      id={posterData.poster?.id ?? ''}
+      id={address?.id ?? ''}
 		/>
 	{/each}
 </ul>
