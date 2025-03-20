@@ -20,8 +20,8 @@
 
 	<Nav>
 		<NavItem active={currentPage === 'home'} href="/">Gedenkposters</NavItem>
-		<NavItem active={currentPage === 'overview'} href="/posters">Overzicht</NavItem>
-		<NavItem>Kaart</NavItem>
+		<NavItem active={currentPage === 'overview'} href="/posters">Adressen</NavItem>
+		<NavItem>Gebeurtenissen</NavItem>
 	</Nav>
 </header>
 
