@@ -44,7 +44,7 @@
 		<section class="section-CTA">
 			<h3>Alle posters zien?</h3>
 	
-			<Button href="/adressen" class="highlight">Door naar alle adressen met een poster</Button>
+			<Button href="/adressen" class="highlight">Bekijk alle adressen met een poster</Button>
 		</section>
 	</div>
 	
