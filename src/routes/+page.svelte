@@ -83,8 +83,13 @@
 		text-align: center;
 		margin-bottom: var(--spacing-md);
 	}
+
 	h2 {
 		font-weight:var(--font-weight-bold);
+	}
+
+	h3 {
+		margin:var(--spacing-md) 0 calc(1.5 * var(--spacing-lg));
 	}
 
 	p {
@@ -112,7 +117,13 @@
 		background-color: var(--blue-200);
 		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
 		width:calc(100% + 1.5 * var(--page-padding));
+		padding:var(--spacing-lg) 0;
 	}
+
+	.section-CTA h3 {
+		margin-bottom:var(--spacing-md)
+	}
+
 	.page-content {
 		position: relative;
 		z-index:1;

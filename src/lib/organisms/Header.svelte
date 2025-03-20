@@ -6,7 +6,7 @@
 
 	import { page } from '$app/state';
 
-	let currentPage = $derived(getCurrentPage(page.url.pathname));
+	let currentPage = $derived(getCurrentPage(page.url.pathname));	
 </script>
 
 <header>
