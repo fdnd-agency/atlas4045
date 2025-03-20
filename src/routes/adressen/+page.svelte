@@ -6,7 +6,7 @@
 
 <!-- Overview section -->
 <main>
-  <PostersOverview posters={data.posters} />
+  <PostersOverview addresses={data.addresses} />
 </main>
 
 <style>

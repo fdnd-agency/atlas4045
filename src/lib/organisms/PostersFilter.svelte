@@ -18,7 +18,7 @@
 	}
 </script>
 
-<form bind:this={form} action="/posters" data-sveltekit-noscroll>
+<form bind:this={form} action="/adressen" data-sveltekit-noscroll>
 	<FilterNaam onchange={filterHandler} />
 	<FilterStraat onchange={filterHandler} />
 	<Button 

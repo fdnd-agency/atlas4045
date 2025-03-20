@@ -2,7 +2,7 @@
 	import DirectusImage from '$lib/atoms/DirectusImage.svelte';
 
 	const { data } = $props();
-	const { street, house_number, floor, addition, person, poster } = data.poster[0];
+	const { street, house_number, floor, addition, person, poster } = data.address[0];
 </script>
 
 <main>
