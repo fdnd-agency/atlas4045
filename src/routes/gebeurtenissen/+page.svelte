@@ -7,7 +7,7 @@
   <header>
     <h2>Gebeurtenissen</h2>
 
-    <p>Op deze pagina komen gebeurtenissen te staan, die al dan niet gekoppeld kunnen zijn aan specifieke addressen, personen en/of posters.</p>
+    <p>Op deze pagina komen historische gebeurtenissen uit de Oosterparkbuurt te staan...</p>
   </header>
 </main>
 
