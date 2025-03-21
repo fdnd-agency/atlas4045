@@ -30,19 +30,26 @@ export async function load({ fetch, url }) {
   ];
 	
 	try {
-		const directus = getDirectusInstance(fetch);
-		return {
-			addresses: await directus.request(
-				readItems('atlas_address', {
-					filter: queryFilters,
-					fields: queryFields,
-					sort: ['street', 'house_number', 'addition', 'floor'],
-          limit: 5
-				})
-			)
-		};
-	} catch (error) {
-		console.error(error);
-		return {}; // Return empty object if error
-	}
+    const directus = getDirectusInstance(fetch);
+
+    const addresses = await directus.request(
+      readItems('atlas_address', {
+        filter: queryFilters,
+        fields: queryFields,
+        sort: ['street', 'house_number', 'addition', 'floor']
+      })
+    );
+
+    const getRandomItems = (items, count) => {
+      const shuffled = items.sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+    };
+
+    return {
+      addresses: getRandomItems(addresses, 5)
+    };
+  } catch (error) {
+    console.error(error);
+    return {}; // Return empty object if error
+  }
 }
