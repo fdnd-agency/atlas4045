@@ -2,8 +2,6 @@
 	import PosterCard from '$lib/molecules/PosterCard.svelte';
 
 	let { addresses = [] } = $props();
-
-	console.log(1, addresses)
 </script>
 
 <ul>

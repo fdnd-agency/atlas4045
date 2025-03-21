@@ -6,7 +6,7 @@
 
 {#if isAuthenticated}
 <form method="POST" action="/logout">
-  <Button type="submit" class="highlight">Logout</Button>
+  <Button type="submit" class="highlight logout">Logout</Button>
 </form>
 {/if}
 

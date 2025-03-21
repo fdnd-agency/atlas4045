@@ -61,4 +61,8 @@
 			text-decoration: none;
 		}
 	}
+
+	.logout {
+		font-size: .9rem;
+	}
 </style>
