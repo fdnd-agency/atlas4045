@@ -3,7 +3,7 @@
 
   let { length } = $props();
 
-	let filterMessage = 'Gedenkposters gevonden met';
+	let filterMessage = 'Adressen met een gedenkposter gevonden met';
   let name = $derived(page.url.searchParams.get('naam'));
   let street = $derived(page.url.searchParams.get('straat'));
 
@@ -18,7 +18,7 @@
 {:else if street}
 	{filterMessage} <strong>straat <span class="highlight">{street}</span></strong>
 {:else}
-	Alle gedenkposters 
+	Alle addressen met een gedenkposter 
 {/if}
 <span class="length">({length})</span>
 </h2>

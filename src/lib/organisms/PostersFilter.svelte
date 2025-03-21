@@ -1,6 +1,6 @@
 <script>
-	import FilterNaam from '$lib/molecules/FilterNaam.svelte';
-	import FilterStraat from '$lib/molecules/FilterStraat.svelte';
+	import FilterName from '$lib/molecules/FilterName.svelte';
+	import FilterStreet from '$lib/molecules/FilterStreet.svelte';
 	import Button from '$lib/atoms/Button.svelte';
 	import { onMount } from 'svelte';
 
@@ -19,8 +19,8 @@
 </script>
 
 <form bind:this={form} action="/adressen" data-sveltekit-noscroll>
-	<FilterNaam onchange={filterHandler} />
-	<FilterStraat onchange={filterHandler} />
+	<FilterName onchange={filterHandler} />
+	<FilterStreet onchange={filterHandler} />
 	<Button 
     class={{ 'sr-only': javascriptEnabled, 'highlight':true}}
     buttonClass={$css('show-on-focus')}  
