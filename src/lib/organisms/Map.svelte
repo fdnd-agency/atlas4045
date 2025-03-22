@@ -23,10 +23,15 @@
       }).addTo(map);
 
       mapAddresses.forEach((marker) => {
-        const popUpInfo = `<strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}`
+        const popUpInfo = `<strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}`;
+
+        const customIcon = leaflet.icon({
+          iconUrl: '/assets/icons/marker.svg',
+          iconSize: [40, 40]
+        });
 
         leaflet
-          .marker(marker.map.coordinates.reverse())
+          .marker(marker.map.coordinates.reverse(), { icon: customIcon })
           .addTo(map)
           .bindPopup(popUpInfo);
       });
@@ -61,5 +66,9 @@
 
     div {
       height:70vh;
+    }
+
+    .marker-icon {
+      fill: var(--brown-dark);
     }
 </style>
