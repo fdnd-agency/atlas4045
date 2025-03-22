@@ -3,8 +3,6 @@
 
   let { mapAddresses, javascriptEnabled } = $props();
 
-  console.log(mapAddresses);
-
   let mapElement = $state(null);
   let map = $state(null);
 
@@ -65,10 +63,6 @@
     }
 
     div {
-      height:70vh;
-    }
-
-    .marker-icon {
-      fill: var(--brown-dark);
+      height:60vh;
     }
 </style>

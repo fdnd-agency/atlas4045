@@ -26,10 +26,4 @@
     margin: 0 auto;
     padding: var(--spacing-sm) var(--page-padding);
   }
-
-  @media screen and (min-width: 800px) {
-    main {
-      max-width: var(--max-width-desktop);
-    }
-  }
 </style>
