@@ -33,6 +33,7 @@ export async function load({ fetch, url }) {
     'house_number',
     'floor',
     'addition',
+    'map',
     { person: ['first_name', 'last_name'] },
     { poster: [
         'id',
