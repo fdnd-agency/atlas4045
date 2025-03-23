@@ -7,7 +7,6 @@
   let { data } = $props();
   let mapAddresses = $derived(data.addresses.filter(address => address.map?.coordinates));
   
-  
   let javascriptEnabled = $state(false);
 
   onMount(() => {
@@ -15,7 +14,6 @@
   });
 </script>
 
-<!-- Overview section -->
 <main>
   <Map mapAddresses={mapAddresses} javascriptEnabled={javascriptEnabled}/>
   <PostersOverview addresses={data.addresses} />
