@@ -1,48 +1,3 @@
-<!-- <script>
-  import { onMount, onDestroy } from 'svelte';
-
-  let { mapAddresses, javascriptEnabled } = $props();
-
-  let mapElement = $state(null);
-  let map = $state(null);
-
-  onMount(async () => {
-      const leaflet = await import('leaflet');
-      
-      const mapStyle = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-      const attribution = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-      const initialView = [52.35846685, 4.91372582947583];
-      const initialZoom = 15;
-      
-      map = leaflet.map(mapElement).setView(initialView, initialZoom);
-
-      leaflet.tileLayer(mapStyle, {
-          attribution
-      }).addTo(map);
-
-      mapAddresses.forEach((marker) => {
-        const popUpInfo = `<strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}`;
-
-        const customIcon = leaflet.icon({
-          iconUrl: '/assets/icons/marker.svg',
-          iconSize: [20, 20]
-        });
-
-        leaflet
-          .marker(marker.map.coordinates.reverse(), { icon: customIcon })
-          .addTo(map)
-          .bindPopup(popUpInfo);
-      });
-  });
-
-    onDestroy(async () => {
-      if(map) {
-          console.log('Unloading map from memory.');
-          map.remove();
-      }
-    });
-</script> -->
-
 <script>
   import { onDestroy, onMount } from 'svelte';
   import { tick } from 'svelte';
@@ -55,7 +10,6 @@
 
   async function initializeMap() {
     leaflet = await import('leaflet');
-
 
     const mapStyle = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
     const attribution = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
@@ -74,14 +28,12 @@
   function updateMarkers() {
     if (!map) return;
 
-    // Remove existing markers
     markers.forEach(marker => map.removeLayer(marker));
     markers = [];
 
-    // Add new markers
     mapAddresses.forEach((marker) => {
       const popUpInfo = `<strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}`;
-
+      
       const customIcon = leaflet.icon({
         iconUrl: '/assets/icons/marker.svg',
         iconSize: [20, 20]
@@ -96,7 +48,6 @@
 
       markers.push(newMarker);
     });
-    console.log('Updating markers', markers);
   }
 
   onMount(async () => {
@@ -104,14 +55,11 @@
   });
 
   $effect(() => {
-    updateMarkers(); // Runs whenever mapAddresses changes
+    updateMarkers();
   });
 
   onDestroy(() => {
-    if (map) {
-      console.log('Unloading map from memory.');
-      map.remove();
-    }
+    if (map) map.remove();
   });
 </script>
 
