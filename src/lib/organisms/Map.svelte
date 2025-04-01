@@ -2,7 +2,7 @@
   import { onDestroy, onMount } from 'svelte';
   import { tick } from 'svelte';
   import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
-  
+
   let { mapAddresses} = $props();
   let mapElement = $state(null);
   let map = $state(null);
@@ -73,7 +73,6 @@
     @import 'leaflet/dist/leaflet.css';
     section {
       display:none;
-      margin: -.75rem calc(-1* var(--page-padding)) var(--spacing-md);
       width: calc(100% + 2* var(--page-padding));
       position: relative;
       z-index:1;
