@@ -20,11 +20,11 @@
 		display: grid;
 		grid-template-areas:
 			'map map'
-      'filter header'
+      'filter posters'
 			'filter posters';
 	}
 
-	:global(main.posters-overview > section) {
+	:global(main.posters-overview > section.map) {
 		grid-area: map; 
 	}
 
@@ -32,11 +32,7 @@
 		grid-area: filter;
 	}
 
-	:global(main.posters-overview > header) {
-		grid-area: header;
-	}
-
-	:global(main.posters-overview > ul) {
+	:global(main.posters-overview > section.overview) {
 		grid-area: posters;
 	}
 </style>
