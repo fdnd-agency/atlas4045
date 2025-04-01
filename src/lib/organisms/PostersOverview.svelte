@@ -1,18 +1,18 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
   import PostersTitle from '$lib/atoms/PostersTitle.svelte';
-	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
+	import Button from '$lib/atoms/Button.svelte';
 
 	import { flip } from "svelte/animate";
   import { fade } from "svelte/transition";
 	import { cubicOut } from "svelte/easing";
 
-	let { addresses = [] } = $props();
+	let { addresses = [], filterOpen } = $props();
 </script>
 
 <header>
   <PostersTitle length={addresses.length} />
-  <PostersFilter />
+  <Button onclick={() => filterOpen = !filterOpen}>Filters</Button>
 </header>
 
 {#await addresses}
@@ -64,8 +64,6 @@
     padding-top: var(--spacing-lg);
   }
 
-	
-  
   @media screen and (min-width: 800px) {
     div:global(:has(.landscape)) {
       grid-column: span 2;
