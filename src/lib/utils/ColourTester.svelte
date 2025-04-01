@@ -104,6 +104,7 @@
 		top: 0;
 		left: 0;
 		padding: 4px;
+		z-index: 200;
 	}
 
 	span {
