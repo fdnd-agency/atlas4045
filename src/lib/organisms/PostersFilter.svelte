@@ -2,15 +2,9 @@
 	import FilterName from '$lib/molecules/FilterName.svelte';
 	import FilterStreet from '$lib/molecules/FilterStreet.svelte';
 	import Button from '$lib/atoms/Button.svelte';
-	import { onMount } from 'svelte';
+	import { javascript } from "$lib/utils/javascriptEnabled.svelte.js";
 
 	let form;
-	let javascriptEnabled;
-
-  // Check if javascript is enabled using onMount so that we only hide the submit button if JS is enabled
-	onMount(() => {
-		javascriptEnabled = true;
-	});
 
   // Submit the form on change so that svelte handles the rest
 	function filterHandler(event) {
@@ -22,9 +16,8 @@
 	<FilterName onchange={filterHandler} />
 	<FilterStreet onchange={filterHandler} />
 	<Button 
-    class={{ 'sr-only': javascriptEnabled, 'highlight':true}}
+    class={{ 'sr-only': javascript.enabled, 'highlight':true}}
     buttonClass={$css('show-on-focus')}  
-		
     type="submit"
   >
     Filter
