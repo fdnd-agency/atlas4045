@@ -43,11 +43,6 @@
 </aside>
 
 <style>
-  /* h3 {
-    margin-top: var(--spacing-md);
-    position: sticky;
-    top: 8rem;
-  } */
 	aside {
     position: sticky;
     top: 6rem;
@@ -60,8 +55,6 @@
 	}
 
 	form {
-    /* position: sticky;
-    top: 8rem; */
 		display: grid;
 		grid-template-columns: 1fr auto;
 		grid-template-rows: auto auto;
