@@ -1,8 +1,9 @@
 <script>
   import { onDestroy, onMount } from 'svelte';
   import { tick } from 'svelte';
-  
-  let { mapAddresses, javascriptEnabled } = $props();
+  import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
+
+  let { mapAddresses} = $props();
   let mapElement = $state(null);
   let map = $state(null);
   let markers = [];
@@ -63,7 +64,7 @@
   });
 </script>
 
-<section class={{ 'js-enabled': javascriptEnabled}}>
+<section class={{ 'js-enabled': javascript.enabled, 'map': true }}>
   <h2 class="sr-only">Adressen op de kaart</h2>
   
   <div bind:this={mapElement}></div>
@@ -72,7 +73,6 @@
     @import 'leaflet/dist/leaflet.css';
     section {
       display:none;
-      margin: -.75rem calc(-1* var(--page-padding)) var(--spacing-md);
       width: calc(100% + 2* var(--page-padding));
       position: relative;
       z-index:1;

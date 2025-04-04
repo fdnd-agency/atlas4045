@@ -1,54 +1,57 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
-  import PostersTitle from '$lib/atoms/PostersTitle.svelte';
-	import PostersFilter from '$lib/organisms/PostersFilter.svelte';
+	import PostersTitle from '$lib/atoms/PostersTitle.svelte';
+	import Button from '$lib/atoms/Button.svelte';
 
-	import { flip } from "svelte/animate";
-  import { fade } from "svelte/transition";
-	import { cubicOut } from "svelte/easing";
+	import { flip } from 'svelte/animate';
+	import { fade } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 
-	let { addresses = [] } = $props();
+	let { addresses = [], filterOpen } = $props();
 </script>
 
-<header>
-  <PostersTitle length={addresses.length} />
-  <PostersFilter />
-</header>
+<section class="overview">
+	<header>
+		<PostersTitle length={addresses.length} />
+		<Button onclick={() => (filterOpen = !filterOpen)} class={$css('filter-button')}>Filters</Button>
+	</header>
 
-{#await addresses}
-	<p>Loading posters...</p>
-{:then addresses}
-	{#if addresses.length > 0}
-		<ul>
-			{#each addresses as address (address.id)}
-      <div transition:fade={{duration: 300, easing: cubicOut}} animate:flip={{duration: 300, easing: cubicOut}}>
-				<PosterCard
-					name={address.person?.[0]?.last_name ?? 'Onbekend'}
-					street={address.street ?? 'Onbekend'}
-					house_number={address.house_number ?? 'Onbekend'}
-					floor={address?.floor}
-					addition={address?.addition}
-					image={address.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
-					width={address.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
-					height={address.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
-					id={address?.id ?? ''}
-				/>
-      </div>
-			{/each}
-		</ul>
-	{:else}
-		<p>
-		  Geen posters gevonden. Probeer de filters te wijzigen, of probeer het later opnieuw.
-		</p>
-	{/if}
-{:catch error}
-	<p>error loading posters: {error.message}</p>
-{/await}
+	{#await addresses}
+		<p>Loading posters...</p>
+	{:then addresses}
+		{#if addresses.length > 0}
+			<ul>
+				{#each addresses as address (address.id)}
+					<div
+						transition:fade={{ duration: 300, easing: cubicOut }}
+						animate:flip={{ duration: 300, easing: cubicOut }}
+					>
+						<PosterCard
+							name={address.person?.[0]?.last_name ?? 'Onbekend'}
+							street={address.street ?? 'Onbekend'}
+							house_number={address.house_number ?? 'Onbekend'}
+							floor={address?.floor}
+							addition={address?.addition}
+							image={address.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
+							width={address.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
+							height={address.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
+							id={address?.id ?? ''}
+						/>
+					</div>
+				{/each}
+			</ul>
+		{:else}
+			<p>Geen posters gevonden. Probeer de filters te wijzigen, of probeer het later opnieuw.</p>
+		{/if}
+	{:catch error}
+		<p>error loading posters: {error.message}</p>
+	{/await}
+</section>
 
 <style>
 	header {
 		display: flex;
-    gap: var(--spacing-md);
+		gap: var(--spacing-md);
 		flex-direction: column;
 		align-items: center;
 		padding: var(--spacing-md) var(--spacing-xs) 0;
@@ -60,26 +63,36 @@
 		padding-top: var(--spacing-sm);
 	}
 
-  p {
-    padding-top: var(--spacing-lg);
+	p {
+		padding-top: var(--spacing-lg);
+	}
+
+  .filter-button {
+    display: block !important;
   }
 
-	
-  
-  @media screen and (min-width: 800px) {
-    div:global(:has(.landscape)) {
-      grid-column: span 2;
+	@media screen and (min-width: 800px) {
+		div:global(:has(.landscape)) {
+			grid-column: span 2;
 		}
-  }
-  
-  @media screen and (min-width: 940px) {
-    header {
-      flex-direction: row;
-      justify-content: space-between;
+	}
+
+	@media screen and (min-width: 940px) {
+		header {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		ul {
+			padding-top: var(--spacing-md);
+		}
+
+    section {
+      padding: 0 var(--spacing-md);
     }
-    
-    ul {
-      padding-top: var(--spacing-lg);
+
+    .filter-button {
+      display: none !important;
     }
-  }
+	}
 </style>
