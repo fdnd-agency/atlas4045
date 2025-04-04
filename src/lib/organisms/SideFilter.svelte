@@ -49,8 +49,7 @@
 		background-color: var(--white);
 		box-shadow: -20px 0px 10px 20px rgba(0, 0, 0, 0.303);
 		padding: var(--spacing-md);
-    height: fit-content;
-    max-height: calc(100vh - 6rem);
+    height: calc(100vh - 6rem);
     overflow-y: auto;
 	}
 
