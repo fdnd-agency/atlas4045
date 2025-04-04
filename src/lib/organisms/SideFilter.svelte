@@ -18,7 +18,6 @@
   let form;
 
   function filterHandler(event) {
-    console.log(event);
     form.requestSubmit();
   }
 </script>
