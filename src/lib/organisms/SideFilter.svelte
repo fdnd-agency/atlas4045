@@ -4,6 +4,8 @@
 	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import { page } from '$app/state';
 
+	let { streets } = $props();
+
 	// Derive the list of streets from the posters
 	let streetsList = $derived(
 		Array.from(
@@ -33,7 +35,7 @@
 			Toepassen
 		</Button>
 		<div>
-			<FilterSection title="Straat" name="s" items={streetsList} onchange={filterHandler} />
+			<FilterSection title="Straat" name="s" items={streets} onchange={filterHandler} />
 			<FilterSection title="Naam" name="n" items={['Jacob', 'Vries', 'Kreveld']} onchange={filterHandler} />
       <!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
       <!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
