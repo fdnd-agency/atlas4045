@@ -35,9 +35,9 @@
 		</Button>
 		<div>
 			<FilterSection title="Straat" name="s" items={streetsList} onchange={filterHandler} />
-			<FilterSection title="Naam" name="n" items={['Naam 1', 'Naam 2', 'Naam 3', 'Naam 4']} onchange={filterHandler} />
-      <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} />
-      <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} />
+			<FilterSection title="Naam" name="n" items={['Jacob', 'Vries', 'Kreveld']} onchange={filterHandler} />
+      <!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
+      <!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
 	</form>
 </aside>
