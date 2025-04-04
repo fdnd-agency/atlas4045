@@ -1,7 +1,7 @@
 <script>
   import Checkbox from '$lib/atoms/Checkbox.svelte';
 
-  let { title, items } = $props();
+  let { title, items, onchange } = $props();
 </script>
 
 <fieldset>
@@ -9,7 +9,7 @@
   <ul>
     {#each items as item}
       <li>
-        <Checkbox id={item} label={item}>
+        <Checkbox id={item} label={item} {onchange}>
           {item}
         </Checkbox>
       </li>
