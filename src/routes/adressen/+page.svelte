@@ -22,6 +22,7 @@
 			'map map'
       'filter posters'
 			'filter posters';
+		min-height: 100vh;
 	}
 
 	:global(main.posters-overview > section.map) {
