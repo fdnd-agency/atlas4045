@@ -13,7 +13,7 @@
 <section class="overview">
 	<header>
 		<PostersTitle length={addresses.length} />
-		<Button onclick={() => (filterOpen = !filterOpen)}>Filters</Button>
+		<Button onclick={() => (filterOpen = !filterOpen)} class={$css('filter-button')}>Filters</Button>
 	</header>
 
 	{#await addresses}
@@ -67,6 +67,10 @@
 		padding-top: var(--spacing-lg);
 	}
 
+  .filter-button {
+    display: block !important;
+  }
+
 	@media screen and (min-width: 800px) {
 		div:global(:has(.landscape)) {
 			grid-column: span 2;
@@ -85,6 +89,10 @@
 
     section {
       padding: 0 var(--spacing-md);
+    }
+
+    .filter-button {
+      display: none !important;
     }
 	}
 </style>
