@@ -2,23 +2,25 @@ import getDirectusInstance from '$lib/directus';
 import { readItems } from '@directus/sdk';
 
 export async function load({ fetch, url }) {
-
+  // Initialize the filters
   let streetFilters = [];
   let nameFilters = [];
+  let queryFilters = {};
+
   // Extract the values by key and add them to their respective arrays
   url.searchParams.forEach((value, key) => {
     (key == 's') && (streetFilters.push(value));
     (key == 'n') && (nameFilters.push(value));
   });
 
-	let queryFilters = {};
-
+  // Add the street filters to the query
 	if (streetFilters.length > 0) {
 		queryFilters.street = {
 			_in: streetFilters
 		};
 	}
 
+  // Add the name filters to the query  
 	if (nameFilters.length > 0) {
 		queryFilters.person = {
 			_or: [
@@ -36,6 +38,7 @@ export async function load({ fetch, url }) {
 		};
 	}
 
+  // Define the fields to be fetched
 	const queryFields = [
 		'id',
 		'street',
@@ -52,6 +55,7 @@ export async function load({ fetch, url }) {
 		}
 	];
 
+  // Get the addresses
 	try {
 		const directus = getDirectusInstance(fetch);
 		return {
