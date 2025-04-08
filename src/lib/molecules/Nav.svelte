@@ -13,7 +13,7 @@
 </script>
 
 <nav class={{"js-enabled": javascript.enabled}}>
-  <Button buttonClass={$css("menu-button")} onclick={toggleMenu} class={{"hidden": !javascript.enabled}}>
+  <Button buttonClass={$css("menu-button")} onclick={toggleMenu} class={{"hidden": !javascript.enabled, "highlight": true}}>
     Menu
   </Button>
   <ul class={{"is-open": isOpen}}>
@@ -53,7 +53,6 @@
     background-color: var(--white);
     padding: 0 0 var(--spacing-sm) 0;
     gap: var(--spacing-sm);
-    z-index: 100;
     text-align: center;
     border-bottom: 1px solid var(--neutral-400);
     font-weight: var(--font-weight-bold);
