@@ -73,7 +73,7 @@
     @import 'leaflet/dist/leaflet.css';
     section {
       display: none;
-      width: calc(100% + 2* var(--page-padding));
+      width: 100%;
       position: relative;
       z-index: 1;
       border-bottom: 5px solid var(--blue-300);
