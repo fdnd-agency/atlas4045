@@ -72,18 +72,18 @@
 <style>
     @import 'leaflet/dist/leaflet.css';
     section {
-      display:none;
-      width: calc(100% + 2* var(--page-padding));
+      display: none;
+      width: 100%;
       position: relative;
-      z-index:1;
-      border-bottom:5px solid var(--blue-300);
+      z-index: 1;
+      border-bottom: 5px solid var(--blue-300);
     }
 
     section.js-enabled {
-      display:block;
+      display: block;
     }
 
     div {
-      height:60vh;
+      height: 60vh;
     }
 </style>

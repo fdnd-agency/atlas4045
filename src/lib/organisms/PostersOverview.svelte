@@ -7,13 +7,12 @@
 	import { fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 
-	let { addresses = [], filterOpen } = $props();
+	let { addresses = []} = $props();
 </script>
 
 <section class="overview">
 	<header>
 		<PostersTitle length={addresses.length} />
-		<Button onclick={() => (filterOpen = !filterOpen)} class={$css('filter-button')}>Filters</Button>
 	</header>
 
 	{#await addresses}
@@ -58,7 +57,7 @@
 	}
 	ul {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: var(--spacing-sm);
 		padding-top: var(--spacing-sm);
 	}
@@ -67,8 +66,8 @@
 		padding-top: var(--spacing-lg);
 	}
 
-  .filter-button {
-    display: block !important;
+  section.overview {
+    padding: 0 var(--page-padding);
   }
 
 	@media screen and (min-width: 800px) {
@@ -87,12 +86,8 @@
 			padding-top: var(--spacing-md);
 		}
 
-    section {
+    section.overview {
       padding: 0 var(--spacing-md);
-    }
-
-    .filter-button {
-      display: none !important;
     }
 	}
 </style>

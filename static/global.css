@@ -188,6 +188,10 @@ div.query-container {
 	border-width: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .focus-ring {
 	transition: outline 0.15s ease-in-out;
 	outline: 0px solid var(--brown-400);

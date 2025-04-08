@@ -5,7 +5,6 @@
 
 	let { data } = $props();
 	let mapAddresses = $derived(data.addresses.filter((address) => address.map?.coordinates));
-	let filterOpen = $state(false);
 
 	let streets = $derived(
 		Array.from(new Set(data.streets.map((item) => item.street.trim()))).sort()
@@ -14,30 +13,37 @@
 
 <main class="posters-overview">
 	<Map {mapAddresses} />
-	<SideFilter bind:filterOpen {streets} />
-	<PostersOverview addresses={data.addresses} {filterOpen} />
+	<SideFilter {streets} />
+	<PostersOverview addresses={data.addresses} />
 </main>
 
 <style>
-	main {
-		margin: 0 auto;
-		display: grid;
-		grid-template-areas:
-			'map map'
-			'filter posters'
-			'filter posters';
-		min-height: 100vh;
-	}
+  main {
+    margin: 0 auto;
+  }
 
-	:global(main.posters-overview > section.map) {
-		grid-area: map;
-	}
+	@media screen and (min-width: 460px) {
+		main {
+			margin: 0 auto;
+			display: grid;
+			grid-template-areas:
+				'map map'
+				'filter posters'
+				'filter posters';
+      grid-template-columns: auto 1fr;
+			min-height: 100vh;
+		}
 
-	:global(main.posters-overview > aside) {
-		grid-area: filter;
-	}
+		main :global(section.map) {
+			grid-area: map;
+		}
 
-	:global(main.posters-overview > section.overview) {
-		grid-area: posters;
+		main :global(aside) {
+			grid-area: filter;
+		}
+
+		main :global(section.overview) {
+			grid-area: posters;
+		}
 	}
 </style>

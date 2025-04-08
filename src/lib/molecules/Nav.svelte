@@ -1,23 +1,19 @@
 <script>
 	import Button from "$lib/atoms/Button.svelte";
+  import { javascript } from "$lib/utils/javascriptEnabled.svelte.js";
   import { onMount } from 'svelte';
 
 	let { children } = $props()
 
-  let jsEnabled = $state(false);
   let isOpen = $state(false);
-
-  onMount(() => {
-    jsEnabled = true;
-  });
 
   function toggleMenu() {
     isOpen = !isOpen;
   }
 </script>
 
-<nav class={{"js-enabled": jsEnabled}}>
-  <Button buttonClass={$css("menu-button")} onclick={toggleMenu}>
+<nav class={{"js-enabled": javascript.enabled}}>
+  <Button buttonClass={$css("menu-button")} onclick={toggleMenu} class={{"hidden": !javascript.enabled, "highlight": true}}>
     Menu
   </Button>
   <ul class={{"is-open": isOpen}}>
@@ -57,7 +53,6 @@
     background-color: var(--white);
     padding: 0 0 var(--spacing-sm) 0;
     gap: var(--spacing-sm);
-    z-index: 100;
     text-align: center;
     border-bottom: 1px solid var(--neutral-400);
     font-weight: var(--font-weight-bold);
