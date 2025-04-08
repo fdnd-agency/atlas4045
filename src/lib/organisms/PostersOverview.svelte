@@ -66,6 +66,10 @@
 		padding-top: var(--spacing-lg);
 	}
 
+  section {
+    padding: 0 var(--page-padding);
+  }
+
 	@media screen and (min-width: 800px) {
 		div:global(:has(.landscape)) {
 			grid-column: span 2;
