@@ -6,7 +6,7 @@
 
 	let { streets } = $props();
 
-  let filterOpen = $state(false);
+	let filterOpen = $state(false);
 
 	// Derive the list of streets from the posters
 	let streetsList = $derived(
@@ -35,7 +35,12 @@
 			Toepassen
 		</Button>
 		<div>
-			<FilterSection title="Straat" name="s" items={streets} onchange={() => formAside.requestSubmit()} />
+			<FilterSection
+				title="Straat"
+				name="s"
+				items={streets}
+				onchange={() => formAside.requestSubmit()}
+			/>
 			<FilterSection
 				title="Naam"
 				name="n"
@@ -68,7 +73,12 @@
 			Toepassen
 		</Button>
 		<div>
-			<FilterSection title="Straat" name="s" items={streets} onchange={() => formDetails.requestSubmit()} />
+			<FilterSection
+				title="Straat"
+				name="s"
+				items={streets}
+				onchange={() => formDetails.requestSubmit()}
+			/>
 			<FilterSection
 				title="Naam"
 				name="n"
@@ -89,7 +99,7 @@
 		left: 0;
 		background-color: var(--white);
 		padding: var(--spacing-md);
-    height: calc(100vh - 6rem);
+		height: calc(100vh - 6rem);
 		width: 100vw;
 		overflow-y: auto;
 		z-index: 100;
@@ -106,8 +116,8 @@
 	}
 
 	aside.open + .filter-button {
-    /* Move button to right of screen */
-		transform: translateX(calc(100vw - 100% - var(--page-padding)*2));
+		/* Move button to right of screen */
+		transform: translateX(calc(100vw - 100% - var(--page-padding) * 2));
 	}
 
 	aside.open {
@@ -143,9 +153,13 @@
 			position: sticky;
 			box-shadow: -20px 0px 10px 20px rgba(0, 0, 0, 0.303);
 			height: calc(100vh - 6rem);
-      width: 20rem;
-      transform: translateX(0);
-      z-index: 0;
+			width: 20rem;
+			transform: translateX(0);
+			z-index: 0;
+		}
+
+		.filter-button {
+			display: none !important;
 		}
 	}
 </style>
