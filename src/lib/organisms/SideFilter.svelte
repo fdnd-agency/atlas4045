@@ -19,17 +19,14 @@
 		).sort() // Sort alphabetically
 	);
 
-	let form;
-
-	function filterHandler(event) {
-		form.requestSubmit();
-	}
+	let formAside;
+	let formDetails;
 </script>
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={{ hidden: !javascript.enabled, open: filterOpen }}>
 	<h3>Filters</h3>
-	<form bind:this={form} action="/adressen" data-sveltekit-noscroll>
+	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
 			buttonClass={$css('show-on-focus')}
@@ -38,12 +35,12 @@
 			Toepassen
 		</Button>
 		<div>
-			<FilterSection title="Straat" name="s" items={streets} onchange={filterHandler} />
+			<FilterSection title="Straat" name="s" items={streets} onchange={() => formAside.requestSubmit()} />
 			<FilterSection
 				title="Naam"
 				name="n"
 				items={['Jacob', 'Vries', 'Kreveld']}
-				onchange={filterHandler}
+				onchange={() => formAside.requestSubmit()}
 			/>
 			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
 			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
@@ -62,7 +59,7 @@
 	<summary>
 		<h3>Filters</h3>
 	</summary>
-	<form bind:this={form} action="/adressen" data-sveltekit-noscroll>
+	<form bind:this={formDetails} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
 			buttonClass={$css('show-on-focus')}
@@ -71,12 +68,12 @@
 			Toepassen
 		</Button>
 		<div>
-			<FilterSection title="Straat" name="s" items={streets} onchange={filterHandler} />
+			<FilterSection title="Straat" name="s" items={streets} onchange={() => formDetails.requestSubmit()} />
 			<FilterSection
 				title="Naam"
 				name="n"
 				items={['Jacob', 'Vries', 'Kreveld']}
-				onchange={filterHandler}
+				onchange={() => formDetails.requestSubmit()}
 			/>
 			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
 			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
@@ -92,7 +89,7 @@
 		left: 0;
 		background-color: var(--white);
 		padding: var(--spacing-md);
-		height: 100vh;
+    height: calc(100vh - 6rem);
 		width: 100vw;
 		overflow-y: auto;
 		z-index: 100;
@@ -144,10 +141,11 @@
 	@media screen and (min-width: 460px) {
 		aside {
 			position: sticky;
-			top: 6rem;
 			box-shadow: -20px 0px 10px 20px rgba(0, 0, 0, 0.303);
-			padding: var(--spacing-md);
 			height: calc(100vh - 6rem);
+      width: 20rem;
+      transform: translateX(0);
+      z-index: 0;
 		}
 	}
 </style>
