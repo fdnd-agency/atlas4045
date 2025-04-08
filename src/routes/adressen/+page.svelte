@@ -18,25 +18,32 @@
 </main>
 
 <style>
-	main {
-		margin: 0 auto;
-		display: grid;
-		grid-template-areas:
-			'map map'
-			'filter posters'
-			'filter posters';
-		min-height: 100vh;
-	}
+  main {
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--page-padding) 0;
+  }
 
-	:global(main.posters-overview > section.map) {
-		grid-area: map;
-	}
+	@media screen and (min-width: 460px) {
+		main {
+			margin: 0 auto;
+			display: grid;
+			grid-template-areas:
+				'map map'
+				'filter posters'
+				'filter posters';
+			min-height: 100vh;
+		}
 
-	:global(main.posters-overview > aside) {
-		grid-area: filter;
-	}
+		main :global(section.map) {
+			grid-area: map;
+		}
 
-	:global(main.posters-overview > section.overview) {
-		grid-area: posters;
+		main :global(aside) {
+			grid-area: filter;
+		}
+
+		main :global(section.overview) {
+			grid-area: posters;
+		}
 	}
 </style>
