@@ -66,7 +66,7 @@
 		padding-top: var(--spacing-lg);
 	}
 
-  section {
+  section.overview {
     padding: 0 var(--page-padding);
   }
 
@@ -86,12 +86,8 @@
 			padding-top: var(--spacing-md);
 		}
 
-    section {
+    section.overview {
       padding: 0 var(--spacing-md);
-    }
-
-    .filter-button {
-      display: none !important;
     }
 	}
 </style>
