@@ -7,13 +7,12 @@
 	import { fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 
-	let { addresses = [], filterOpen } = $props();
+	let { addresses = []} = $props();
 </script>
 
 <section class="overview">
 	<header>
 		<PostersTitle length={addresses.length} />
-		<Button onclick={() => (filterOpen = !filterOpen)} class={$css('filter-button')}>Filters</Button>
 	</header>
 
 	{#await addresses}
@@ -66,10 +65,6 @@
 	p {
 		padding-top: var(--spacing-lg);
 	}
-
-  .filter-button {
-    display: block !important;
-  }
 
 	@media screen and (min-width: 800px) {
 		div:global(:has(.landscape)) {

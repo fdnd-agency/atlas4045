@@ -5,7 +5,6 @@
 
 	let { data } = $props();
 	let mapAddresses = $derived(data.addresses.filter((address) => address.map?.coordinates));
-	let filterOpen = $state(false);
 
 	let streets = $derived(
 		Array.from(new Set(data.streets.map((item) => item.street.trim()))).sort()
@@ -14,8 +13,8 @@
 
 <main class="posters-overview">
 	<Map {mapAddresses} />
-	<SideFilter bind:filterOpen {streets} />
-	<PostersOverview addresses={data.addresses} {filterOpen} />
+	<SideFilter {streets} />
+	<PostersOverview addresses={data.addresses} />
 </main>
 
 <style>
