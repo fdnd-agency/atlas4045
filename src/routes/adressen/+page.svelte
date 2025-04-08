@@ -30,6 +30,7 @@
 				'map map'
 				'filter posters'
 				'filter posters';
+      grid-template-columns: auto 1fr;
 			min-height: 100vh;
 		}
 
