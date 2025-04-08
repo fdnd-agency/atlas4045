@@ -20,7 +20,6 @@
 <style>
   main {
     margin: 0 auto;
-    padding: var(--spacing-sm) var(--page-padding) 0;
   }
 
 	@media screen and (min-width: 460px) {
