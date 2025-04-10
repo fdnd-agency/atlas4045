@@ -5,7 +5,6 @@
 		children,
 		inputClass = '',
 		labelClass = '',
-		checked = '',
 		value = 'on',
     onchange,
     ...rest
