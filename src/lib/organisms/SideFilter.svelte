@@ -1,5 +1,6 @@
 <script>
-	import FilterSection from '$lib/molecules/FilterSection.svelte';
+	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
+  import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
 	import Button from '$lib/atoms/Button.svelte';
 	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import { page } from '$app/state';
@@ -35,16 +36,15 @@
 			Toepassen
 		</Button>
 		<div>
-			<FilterSection
+			<FilterSectionList
 				title="Straat"
 				name="s"
 				items={streets}
 				onchange={() => formAside.requestSubmit()}
 			/>
-			<FilterSection
+			<FilterSectionSearch
 				title="Naam"
 				name="n"
-				items={['Jacob', 'Vries', 'Kreveld']}
 				onchange={() => formAside.requestSubmit()}
 			/>
 			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
@@ -73,16 +73,15 @@
 			Toepassen
 		</Button>
 		<div>
-			<FilterSection
+			<FilterSectionList
 				title="Straat"
 				name="s"
 				items={streets}
 				onchange={() => formDetails.requestSubmit()}
 			/>
-			<FilterSection
+			<FilterSectionSearch
 				title="Naam"
 				name="n"
-				items={['Jacob', 'Vries', 'Kreveld']}
 				onchange={() => formDetails.requestSubmit()}
 			/>
 			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
