@@ -97,8 +97,9 @@
 		position: fixed;
 		top: 6rem;
 		left: 0;
-		background-color: var(--white);
-		padding: var(--spacing-md);
+		background-color: var(--blue-500);
+    color: var(--white);
+		padding: var(--spacing-lg) var(--spacing-md);
 		height: calc(100vh - 6rem);
 		width: 100vw;
 		overflow-y: auto;
@@ -106,6 +107,12 @@
 		transform: translateX(-100%);
 		transition: transform 0.3s ease-in-out;
 	}
+
+  aside h3 {
+    color: var(--white);
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-regular);
+  }
 
 	.filter-button {
 		position: fixed;
@@ -151,7 +158,6 @@
 	@media screen and (min-width: 800px) {
 		aside {
 			position: sticky;
-			box-shadow: -20px 0px 10px 20px rgba(0, 0, 0, 0.303);
 			height: calc(100vh - 6rem);
 			width: 20rem;
 			transform: translateX(0);
