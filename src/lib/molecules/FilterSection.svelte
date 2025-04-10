@@ -21,13 +21,13 @@
   fieldset {
     border: none;
     padding: 0;
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-lg) 0;
   }
 
   legend {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
   }
 
   ul {
