@@ -6,6 +6,7 @@
 	let { data } = $props();
 	let mapAddresses = $derived(data.addresses.filter((address) => address.map?.coordinates));
 
+  // Parse the streets list
 	let streets = $derived(
 		Array.from(new Set(data.streets.map((item) => item.street.trim()))).sort()
 	);
@@ -27,8 +28,7 @@
 			margin: 0 auto;
 			display: grid;
 			grid-template-areas:
-				'map map'
-				'filter posters'
+				'filter map'
 				'filter posters';
       grid-template-columns: auto 1fr;
 			min-height: 100vh;

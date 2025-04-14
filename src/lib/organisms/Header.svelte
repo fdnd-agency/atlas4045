@@ -29,7 +29,8 @@
 	header {
 		display: flex;
 		width: 100%;
-		padding: var(--spacing-sm) var(--page-padding);
+    /* Lining up with the side filter */
+		padding: var(--spacing-sm) calc(var(--spacing-sm) + 0.2rem);
 		margin-bottom: var(--spacing-sm);
 		background-color: #fff;
 		box-shadow: 0 -20px 10px 20px rgba(0, 0, 0, 0.303);
