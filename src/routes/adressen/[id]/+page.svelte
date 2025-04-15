@@ -21,17 +21,19 @@
 		{/each}
 	</ol>
 	
-	<article>
-		<h1>{street} {house_number} {addition} {floor}</h1>
-		<h2>Personen op dit adres</h2>
-		<ul>
-			{#each person as person}
-					<li>{person.first_name} {person.last_name}</li>
-			{/each}
-		</ul>
+	<section>
+		<article>
+			<h1>{street} {house_number} {addition} {floor}</h1>
+			<h2>Personen op dit adres</h2>
+			<ul>
+				{#each person as person}
+						<li>{person.first_name} {person.last_name}</li>
+				{/each}
+			</ul>
+		</article>
 
-		<Map mapAddresses={mapAddress} />
-	</article>
+		<Map mapAddresses={mapAddress}/>
+	</section>
 </main>
 
 <style>
@@ -96,9 +98,10 @@
 	}
 
 
-	article {
+	section {
 		display: flex;
 		flex-direction: column;
+		gap: var(--spacing-md);
 		width: 100%;
 		padding:var(--spacing-md) 0;
 	}
