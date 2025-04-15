@@ -10,13 +10,16 @@
 </script>
 
 <header>
-	<img
-		src="/assets/logo.avif"
-		alt="4 Mei Comité Oosterparkbuurt"
-		width="404"
-		height="178"
-		loading="eager"
-	/>
+	<a href="/">
+		<img
+			src="/assets/logo.avif"
+			alt="4 Mei Comité Oosterparkbuurt"
+			width="404"
+			height="178"
+			loading="eager"
+		/>
+	</a>
+
 
 	<Nav>
 		<NavItem active={currentPage === 'gedenkposters'} href="/">Gedenkposters</NavItem>
