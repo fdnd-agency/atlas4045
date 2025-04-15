@@ -100,14 +100,18 @@
 	section {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-around;
 		gap: var(--spacing-md);
 		width: 100%;
-		padding:var(--spacing-md) 0;
+	}
+
+	article {
+		height: fit-content;
 	}
 
 	.map {
-		height: 100%;
-		border-radius: 4rem;
+		height: 50vh !important;
+		border-radius: var(--border-radius-md);
 	}
 
 	@media screen and (min-width: 800px) {
