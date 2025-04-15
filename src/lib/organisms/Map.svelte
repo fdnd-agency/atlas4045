@@ -3,7 +3,7 @@
   import { tick } from 'svelte';
   import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 
-  let { mapAddresses} = $props();
+  let { mapAddresses, mapClass = "" } = $props();
   let mapElement = $state(null);
   let map = $state(null);
   let markers = [];
@@ -64,10 +64,10 @@
   });
 </script>
 
-<section class={{ 'js-enabled': javascript.enabled, 'map': true }}>
+<section class={{ 'js-enabled': javascript.enabled, 'map': true}}>
   <h2 class="sr-only">Adressen op de kaart</h2>
   
-  <div bind:this={mapElement}></div>
+  <div bind:this={mapElement} class={mapClass}></div>
 </section>
 <style>
     @import 'leaflet/dist/leaflet.css';

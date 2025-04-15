@@ -32,7 +32,7 @@
 			</ul>
 		</article>
 
-		<Map mapAddresses={mapAddress}/>
+		<Map mapAddresses={mapAddress} mapClass={$css('map')}/>
 	</section>
 </main>
 
@@ -97,13 +97,17 @@
 		scroll-snap-align: start;
 	}
 
-
 	section {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacing-md);
 		width: 100%;
 		padding:var(--spacing-md) 0;
+	}
+
+	.map {
+		height: 100%;
+		border-radius: 4rem;
 	}
 
 	@media screen and (min-width: 800px) {
