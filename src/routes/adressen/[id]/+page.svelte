@@ -1,7 +1,9 @@
 <script>
 	import DirectusImage from '$lib/atoms/DirectusImage.svelte';
+	import Map from '$lib/organisms/Map.svelte';
 
 	const { data } = $props();
+	let mapAddress = data.address;
 	const { street, house_number, floor, addition, person, poster } = data.address[0];
 </script>
 
@@ -19,16 +21,19 @@
 		{/each}
 	</ol>
 	
-	<article>
-		<h1>{street} {house_number} {addition} {floor}</h1>
-		<h2>Personen op dit adres</h2>
-	
-		<ul>
-			{#each person as person}
-					<li>{person.first_name} {person.last_name}</li>
-			{/each}
-		</ul>
-	</article>
+	<section>
+		<article>
+			<h1>{street} {house_number} {addition} {floor}</h1>
+			<h2>Personen op dit adres</h2>
+			<ul>
+				{#each person as person}
+						<li>{person.first_name} {person.last_name}</li>
+				{/each}
+			</ul>
+		</article>
+
+		<Map mapAddresses={mapAddress} mapClass={$css('map')}/>
+	</section>
 </main>
 
 <style>
@@ -92,12 +97,21 @@
 		scroll-snap-align: start;
 	}
 
-
-	article {
+	section {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-around;
+		gap: var(--spacing-md);
 		width: 100%;
-		padding:var(--spacing-md) 0;
+	}
+
+	article {
+		height: fit-content;
+	}
+
+	.map {
+		height: 50vh !important;
+		border-radius: var(--border-radius-md);
 	}
 
 	@media screen and (min-width: 800px) {
