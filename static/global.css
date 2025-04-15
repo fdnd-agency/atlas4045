@@ -74,7 +74,6 @@
 	--neutral-200: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-200));
 	--neutral-100: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-100));
 
-	--max-width-desktop: 1600px;
 
 	/*-----------------
           Fonts
@@ -142,7 +141,7 @@ body {
 	font-weight: var(--font-weight-light);
 	color: var(--neutral-900);
 	padding-top:6rem;
-	background-color: var(--brown-100);
+	background-color: var(--blue-100);
 }
 
 h1,
@@ -175,7 +174,9 @@ div.query-container {
         A11y utils
     -----------------*/
 
-.sr-only {
+.sr-only,
+.sr-only:focus-visible,
+.sr-only:focus {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -187,6 +188,10 @@ div.query-container {
 	border-width: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .focus-ring {
 	transition: outline 0.15s ease-in-out;
 	outline: 0px solid var(--brown-400);
@@ -194,7 +199,7 @@ div.query-container {
 
 	&:focus-visible,
 	&:focus-within {
-		outline: 3px solid var(--brown-400);
+		/* outline: 3px solid var(--brown-400); */
 	}
 }
 

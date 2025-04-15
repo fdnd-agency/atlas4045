@@ -26,6 +26,7 @@
 		"prettier-plugin-svelte": "^3.3.3",
 		"svelte": "^5.0.0",
 		"svelte-css-rune": "^0.2.1",
+		"leaflet": "^1.9.4",
 		"vite": "^6.0.0"
 	},
 	"dependencies": {

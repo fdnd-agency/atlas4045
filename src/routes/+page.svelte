@@ -5,7 +5,7 @@
 	import Button from '$lib/atoms/Button.svelte';
 
 	let { data } = $props();
-	let { posters } = data;
+	let { addresses } = data;
 </script>
 
 <main>
@@ -36,15 +36,15 @@
 
 	<div class="page-content">
 		<section>
-			<h3 class="title-highlighted">Uitgelichte gedenkposters:</h3>
+			<h3>Uitgelichte gedenkposters</h3>
 	
-			<PostersCarousel {posters} />
+			<PostersCarousel {addresses} />
 		</section>
 	
 		<section class="section-CTA">
 			<h3>Alle posters zien?</h3>
 	
-			<Button href="/posters">Door naar overzicht</Button>
+			<Button href="/adressen" class="highlight">Bekijk alle adressen met een poster</Button>
 		</section>
 	</div>
 	
@@ -53,7 +53,7 @@
 <style>
 	main {
 		margin: 0 auto;
-		padding: var(--spacing-sm) var(--page-padding);
+		padding: var(--spacing-sm) var(--page-padding) 0;
 	}
 
 	header {
@@ -61,7 +61,7 @@
 		--_padding: var(--spacing-md);
 		--_margin: var(--spacing-md);
 		background-image: url("/assets/gedenkposter.avif");
-		background-color: black;
+		background-color: var(--blue-900);
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
@@ -70,7 +70,7 @@
 	}
 
 	header > * {
-		background-color: rgba(255,255,255,0.85);
+		background-color: rgb(255,255,255,0.9);
 		padding:var(--spacing-sm);
 		
 	}
@@ -78,14 +78,18 @@
 	h2,
 	h3 {
 		font-size: var(--font-size-title-md);
-		font-weight: var(--font-weight-bold);
+		font-weight: var(--font-weight-light);
 		color: var(--neutral-900);
 		text-align: center;
 		margin-bottom: var(--spacing-md);
 	}
 
-	.title-highlighted {
-		font-size: var(--font-size-lg);
+	h2 {
+		font-weight:var(--font-weight-bold);
+	}
+
+	h3 {
+		margin:var(--spacing-md) 0 calc(1.5 * var(--spacing-lg));
 	}
 
 	p {
@@ -110,19 +114,27 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		background-color: var(--blue-200);
+		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
+		width:calc(100% + 1.5 * var(--page-padding));
+		padding:var(--spacing-lg) 0;
 	}
+
+	.section-CTA h3 {
+		margin-bottom:var(--spacing-md)
+	}
+
 	.page-content {
 		position: relative;
 		z-index:1;
 		margin-top:100vh;
-		background-color: var(--brown-100);
+		background-color: var(--blue-100);
 		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
 		width:calc(100% + 2* var(--page-padding));
-		padding:var(--spacing-md);
+		padding:var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
 	}
 
 	@media screen and (min-width: 800px) {
-
 		header {
 			--_page-padding: var(--page-padding);
 			--_padding: var(--spacing-xl);
@@ -159,11 +171,7 @@
 		}
 
 		h3 {
-			font-size: var(--font-size-title-lg);
-		}
-
-		.title-highlighted {
-			font-size: var(--font-size-title-sm);
+			font-size: var(--font-size-title-md);
 		}
 	}
 </style>

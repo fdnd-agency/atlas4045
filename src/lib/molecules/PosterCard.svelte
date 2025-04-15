@@ -31,10 +31,15 @@
 
 <li class="focus-ring {orientation} {cardClass}">
 	<!-- no-focus is added so that the default focus ring is hidden and does not conflict with the custom style -->
-	<a href={`/posters/${id}`} class="no-focus">
-		<DirectusImage imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy" />
-		<p class="name">Familie {name}</p>
-		<p>{street} {house_number} {floor} {addition}</p>
+	<a href={`/adressen/${id}`} class="no-focus">
+		<div>
+			<DirectusImage imageId={image} {width} {height} alt="Gedenkposter van {name}" loading="lazy" />
+		</div>
+		
+		<div>
+			<p class="name">Familie {name}</p>
+			<p>{street} {house_number} {floor} {addition}</p>
+		</div>
 	</a>
 </li>
 
@@ -48,10 +53,21 @@
 		list-style-type: none;
 		display: block;
 		width: 100%;
-		padding: var(--spacing-xs);
-		border-radius: var(--border-radius-md);
 	}
 
+	li div {
+		padding: var(--spacing-xs);
+		border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+		transition: 0.25s ease-out;
+	}
+
+	li div:last-child {
+		border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+	}
+
+	p {
+		padding: 0 
+	}
 	p.name {
 		margin-top: 0.25rem;
 		font-size: var(--font-size-lg);
@@ -59,14 +75,19 @@
 		font-weight: var(--font-weight-medium);
 	}
 
-	.focus-ring {
-		transition: 0.25s ease-out;
-    
-		&:hover,
-		&:focus-visible,
-		&:focus-within {
-			background-color: var(--blue-700);
-			color: var(--white);
+	.focus-ring a {
+		
+		&:hover div,
+		&:focus-visible div,
+		&:focus-within div {
+			background-color: var(--blue-200);
+		}
+
+		&:hover div:last-child,
+		&:focus-visible div:last-child,
+		&:focus-within div:last-child {
+			background-color: var(--blue-500);
+			color:#fff;
 		}
 	}
 </style>

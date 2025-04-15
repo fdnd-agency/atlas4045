@@ -6,22 +6,25 @@
 
 	import { page } from '$app/state';
 
-	let currentPage = $derived(getCurrentPage(page.url.pathname));
+	let currentPage = $derived(getCurrentPage(page.url.pathname));	
 </script>
 
 <header>
-	<img
-		src="/assets/logo.avif"
-		alt="4 Mei Comité Oosterparkbuurt"
-		width="404"
-		height="178"
-		loading="eager"
-	/>
+	<a href="/">
+		<img
+			src="/assets/logo.avif"
+			alt="4 Mei Comité Oosterparkbuurt"
+			width="404"
+			height="178"
+			loading="eager"
+		/>
+	</a>
+
 
 	<Nav>
-		<NavItem active={currentPage === 'home'} href="/">Gedenkposters</NavItem>
-		<NavItem active={currentPage === 'overview'} href="/posters">Overzicht</NavItem>
-		<NavItem>Kaart</NavItem>
+		<NavItem active={currentPage === 'gedenkposters'} href="/">Gedenkposters</NavItem>
+		<NavItem active={currentPage === 'adressen'} href="/adressen">Adressen</NavItem>
+		<NavItem active={currentPage === 'gebeurtenissen'} href="/gebeurtenissen">Gebeurtenissen</NavItem>
 	</Nav>
 </header>
 
@@ -29,7 +32,8 @@
 	header {
 		display: flex;
 		width: 100%;
-		padding: var(--spacing-sm) var(--page-padding);
+    /* Lining up with the side filter */
+		padding: var(--spacing-sm) calc(var(--spacing-sm) + 0.2rem);
 		margin-bottom: var(--spacing-sm);
 		background-color: #fff;
 		box-shadow: 0 -20px 10px 20px rgba(0, 0, 0, 0.303);
@@ -37,7 +41,7 @@
     justify-content: space-between;
     position: fixed;
 		top:0;
-		z-index:100;
+		z-index: 200;
 	}
 
 	img {

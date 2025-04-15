@@ -1,13 +1,13 @@
 export default function getCurrentPage(pageURL) {
   switch (pageURL) {
     case '/':
-      console.log("home");
-      return 'home';
-    case '/posters/':
-      console.log("overview");
-      return 'overview';
+      return 'gedenkposters';
+    case '/adressen/':
+      return 'adressen';
+    case '/gebeurtenissen/':
+      return 'gebeurtenissen';
     default:
-      console.log("other");
+      console.log(`'${pageURL}' is not a handled route`);
       return 'other';
   }
 }

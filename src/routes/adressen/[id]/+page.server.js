@@ -4,7 +4,7 @@ export async function load({ fetch, params }) {
 	try {
 		const directus = getDirectusInstance(fetch);
 		return {
-			poster: await directus.request(
+			address: await directus.request(
 				readItems('atlas_address', {
 					filter: {
 						id: {
