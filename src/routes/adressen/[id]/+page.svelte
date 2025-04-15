@@ -34,9 +34,9 @@
 <style>
 	main {
 		display: flex;
-		max-height: calc(100vh - 6rem); /* 6rem = padding top */
+		flex-wrap: wrap;
 		padding: var(--spacing-md);
-		gap: var(--spacing-xl);
+		gap: var(--spacing-md);
 	}
 
 	h1 {
@@ -87,20 +87,35 @@
 
 	ol li {
 		width: fit-content;
-		height: 100% !important;
 		max-width: auto;
+		min-width: 16rem;
 		scroll-snap-align: start;
 	}
 
-	ol li :global(img) {
-		height: 100% !important;
-		width: auto;
-	}
 
 	article {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
 		padding:var(--spacing-md) 0;
+	}
+
+	@media screen and (min-width: 800px) {
+		main {
+			flex-wrap: nowrap;
+			max-height: calc(100vh - 6rem); /* 6rem = padding top */
+			gap: var(--spacing-xl);
+		}
+
+		ol li {
+			width: 100%;
+			height: 100% !important;
+			min-width: unset;
+		}
+
+		ol li :global(img) {
+			height: 100% !important;
+			width: auto;	
+		}
 	}
 </style>
