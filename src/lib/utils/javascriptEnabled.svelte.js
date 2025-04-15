@@ -1,1 +1,1 @@
-export const javascript = $state({ enabled: false });
+export let javascript = $state({ enabled: false });

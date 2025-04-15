@@ -3,15 +3,9 @@ import { readItems } from '@directus/sdk';
 
 export async function load({ fetch, url }) {
   // Initialize the filters
-  let streetFilters = [];
-  let nameFilters = [];
+  let streetFilters = url.searchParams.getAll('s');
+  let nameFilters = url.searchParams.getAll('n');
   let queryFilters = {};
-
-  // Extract the values by key and add them to their respective arrays
-  url.searchParams.forEach((value, key) => {
-    (key == 's') && (streetFilters.push(value));
-    (key == 'n') && (nameFilters.push(value));
-  });
 
   // Add the street filters to the query
 	if (streetFilters.length > 0) {
