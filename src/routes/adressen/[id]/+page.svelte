@@ -24,9 +24,9 @@
 		<h2>Personen op dit adres</h2>
 	
 		<ul>
-		{#each person as person}
-				<li>{person.first_name} {person.last_name}</li>
-		{/each}
+			{#each person as person}
+					<li>{person.first_name} {person.last_name}</li>
+			{/each}
 		</ul>
 	</article>
 </main>
@@ -34,14 +34,14 @@
 <style>
 	main {
 		display: flex;
-		background-color: aqua;
 		max-height: calc(100vh - 6rem); /* 6rem = padding top */
 		padding: var(--spacing-md);
-		gap: var(--spacing-sm);
+		gap: var(--spacing-xl);
 	}
 
 	h1 {
-		padding:var(--spacing-md) 0;
+		/* padding:var(--spacing-md) 0; */
+		font-size: var(--font-size-title-md);
 	}
 
 	h2 {
@@ -59,8 +59,10 @@
 		flex-direction: row;
 		align-items:start;
 		gap: var(--spacing-sm);
+		align-items: start;
 
 		/* SCROLLING */
+		overflow-y: hidden;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;		
 		scroll-behavior: smooth;
@@ -84,7 +86,6 @@
 	}
 
 	ol li {
-		/* flex: 0 0 1; */
 		width: fit-content;
 		height: 100% !important;
 		max-width: auto;
@@ -98,10 +99,8 @@
 
 	article {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		flex-direction: column;
-		background-color: goldenrod;
 		width: 100%;
+		padding:var(--spacing-md) 0;
 	}
 </style>
