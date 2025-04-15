@@ -1,7 +1,9 @@
 <script>
 	import DirectusImage from '$lib/atoms/DirectusImage.svelte';
+	import Map from '$lib/organisms/Map.svelte';
 
 	const { data } = $props();
+	let mapAddress = data.address;
 	const { street, house_number, floor, addition, person, poster } = data.address[0];
 </script>
 
@@ -22,12 +24,13 @@
 	<article>
 		<h1>{street} {house_number} {addition} {floor}</h1>
 		<h2>Personen op dit adres</h2>
-	
 		<ul>
 			{#each person as person}
 					<li>{person.first_name} {person.last_name}</li>
 			{/each}
 		</ul>
+
+		<Map mapAddresses={mapAddress} />
 	</article>
 </main>
 

@@ -17,6 +17,7 @@ export async function load({ fetch, params }) {
 						'house_number',
 						'floor',
 						'addition',
+						'map',
 						{
 							person: ['first_name', 'last_name']
 						},
