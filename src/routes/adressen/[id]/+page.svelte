@@ -6,35 +6,43 @@
 </script>
 
 <main>
-	<h1>{street} {house_number} {addition} {floor}</h1>
-
-	{#each poster.covers as image}
-		<DirectusImage
-			imageId={image.directus_files_id.id}
-			width={image.directus_files_id.width}
-			height={image.directus_files_id.height}
-			alt="Gedenkposter van {street} {house_number} {addition} {floor}}"
-		/>
-	{/each}
-
-	<h2>Personen op dit adres</h2>
-
-	<ul>
-	{#each person as person}
-			<li>{person.first_name} {person.last_name}</li>
-	{/each}
-	</ul>
+	<ol>
+		{#each poster.covers as image}
+			<li>
+				<DirectusImage
+					imageId={image.directus_files_id.id}
+					width={image.directus_files_id.width}
+					height={image.directus_files_id.height}
+					alt="Gedenkposter van {street} {house_number} {addition} {floor}}"
+				/>
+			</li>
+		{/each}
+	</ol>
+	
+	<article>
+		<h1>{street} {house_number} {addition} {floor}</h1>
+		<h2>Personen op dit adres</h2>
+	
+		<ul>
+		{#each person as person}
+				<li>{person.first_name} {person.last_name}</li>
+		{/each}
+		</ul>
+	</article>
 </main>
 
 <style>
 	main {
-		padding:var(--spacing-md);
+		display: flex;
+		background-color: aqua;
+		max-height: calc(100vh - 6rem); /* 6rem = padding top */
+		padding: var(--spacing-md);
+		gap: var(--spacing-sm);
 	}
 
 	h1 {
 		padding:var(--spacing-md) 0;
 	}
-
 
 	h2 {
 		margin:var(--spacing-md) 0 var(--spacing-xs);
@@ -42,5 +50,37 @@
 
 	ul {
 		list-style: none;
+	}
+
+	ol {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items:start;
+		gap: var(--spacing-sm);
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;		
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	ol li {
+		flex: 0 0 80%;
+		min-width: 16rem;
+		scroll-snap-align: start;
+	}
+
+	/* ol li :global(img) {
+		height: 100%;
+		width: 80%;
+	} */
+
+	article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: goldenrod;
+		width: 100%;
 	}
 </style>
