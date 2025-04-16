@@ -4,6 +4,7 @@
   import ColourTester from "$lib/utils/ColourTester.svelte"
   import { javascript } from "$lib/utils/javascriptEnabled.svelte.js"
   import { onMount } from "svelte"
+  import NearbyPostersList from '$lib/organisms/NearbyPostersList.svelte';
 
   let { children, data } = $props()
   let { isAuthenticated } = data
@@ -22,5 +23,7 @@
 <Logout {isAuthenticated} />
 
 <Header />
+
+<NearbyPostersList />
 
 {@render children()}
