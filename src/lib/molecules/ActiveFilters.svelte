@@ -15,3 +15,12 @@
 		{/each}
 	{/key}
 </form>
+
+<style>
+  form {
+    padding-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-xxs);
+    flex-wrap: wrap;
+  }
+</style>
