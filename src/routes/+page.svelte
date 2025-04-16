@@ -97,7 +97,7 @@
 	p {
 		font-size: var(--font-size-md);
 		color: var(--neutral-900);
-		text-align: justify;
+		text-align: left;
 		margin: auto;
 		margin-bottom: var(--spacing-md);
 		width: 100%;
