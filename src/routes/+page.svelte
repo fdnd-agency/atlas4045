@@ -108,6 +108,11 @@
 		width: 100%;
 	}
 
+	header p:first-of-type::first-line {
+		color: var(--blue-700);
+		font-weight: var(--font-weight-bold);
+	}
+
 	.content-container {
 		margin-bottom: var(--spacing-md);
 	}
