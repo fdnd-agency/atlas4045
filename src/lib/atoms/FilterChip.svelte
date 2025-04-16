@@ -16,11 +16,19 @@
 <style>
 	li {
 		display: flex;
+    cursor: pointer;
 		align-items: center;
 		justify-content: space-between;
 		padding: var(--spacing-xs) var(--spacing-sm);
 		border-radius: var(--border-radius-pill);
 		background-color: var(--blue-700);
 		width: fit-content;
+    list-style: none;
+    font-size: var(--font-size-sm);
+    border-radius: var(--border-radius-md);
 	}
+
+  label {
+    cursor: pointer;
+  }
 </style>
