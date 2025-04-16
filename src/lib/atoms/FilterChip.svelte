@@ -5,12 +5,11 @@
     id,
     name,
     checked = true,
-    ...rest
 	} = $props();
 </script>
 
 <li>
-  <input {id} {name} {onchange} type="checkbox" class="no-focus sr-only" value={id} {...rest} bind:checked={checked} />
+  <input {id} {name} {onchange} type="checkbox" class="no-focus sr-only" value={id} bind:checked={checked} />
   <label for={id}>{@render children()}</label>
 </li>
 
