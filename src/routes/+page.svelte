@@ -70,7 +70,6 @@
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
-		
 	}
 
 	header > * {
