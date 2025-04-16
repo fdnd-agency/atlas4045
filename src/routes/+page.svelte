@@ -81,7 +81,7 @@
 	h3 {
 		font-size: var(--font-size-title-md);
 		font-weight: var(--font-weight-light);
-		color: var(--neutral-900);
+		color: var(--blue-700);
 		text-align: center;
 		margin-bottom: var(--spacing-md);
 	}
