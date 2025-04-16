@@ -63,6 +63,10 @@
 		list-style: none;
 	}
 
+	ul li {
+		font-weight: var(--font-weight-regular) ;
+	}
+
 	ol {
 		width: 100%;
 		list-style: none;
