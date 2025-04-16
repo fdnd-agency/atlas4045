@@ -145,7 +145,6 @@
 			justify-content: center;
 			flex-wrap:wrap;
 			gap: var(--spacing-md);
-			position:sticky;
 			z-index:-1;
 			top:6rem;
 		}
