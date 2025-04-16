@@ -56,12 +56,8 @@
 	}
 
 	/* WHITESPACE */
-	main > * {
-		padding: var(--spacing-sm) var(--page-padding) 0;
-	}
-
-	div > * {
-		margin: var(--spacing-sm) var(--page-padding) 0;
+	main > .page-content > * {
+		padding: calc(var(--spacing-md)*2) var(--page-padding) var(--spacing-md);
 	}
 
 	/* STYLING */
@@ -74,12 +70,12 @@
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
+		
 	}
 
 	header > * {
 		background-color: rgb(255,255,255,0.9);
 		padding:var(--spacing-sm);
-		
 	}
 
 	h2,
@@ -122,9 +118,7 @@
 		flex-direction: column;
 		align-items: center;
 		background-color: var(--blue-200);
-		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
-		width:calc(100% + 1.5 * var(--page-padding));
-		padding:var(--spacing-lg) 0;
+		margin-bottom: 0;
 	}
 
 	.section-CTA h3 {
@@ -132,13 +126,8 @@
 	}
 
 	.page-content {
-		position: relative;
 		z-index:1;
-		margin-top:100vh;
 		background-color: var(--blue-100);
-		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
-		width:calc(100% + 2* var(--page-padding));
-		padding:var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
 	}
 
 	@media screen and (min-width: 800px) {
