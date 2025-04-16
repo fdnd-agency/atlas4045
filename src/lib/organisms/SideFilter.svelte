@@ -26,7 +26,7 @@
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={{ hidden: !javascript.enabled, open: filterOpen }}>
-	<h3>Filters</h3>
+	<h3>Vind personen, adressen, verhalen en stolpensteiners</h3>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
@@ -109,8 +109,8 @@
 
   aside h3 {
     color: var(--white);
-    font-size: var(--font-size-xxl);
-    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-title-sm);
+    font-weight: var(--font-weight-light);
   }
 
 	.filter-button {
