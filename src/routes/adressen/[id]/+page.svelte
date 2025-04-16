@@ -5,6 +5,9 @@
 	const { data } = $props();
 	let mapAddress = data.address;
 	const { street, house_number, floor, addition, person, poster } = data.address[0];
+	console.log(data.address[0])
+
+	let coordinates = $derived([data.address[0].map.coordinates[1], data.address[0].map.coordinates[0]])
 </script>
 
 <main>
@@ -32,7 +35,7 @@
 			</ul>
 		</article>
 
-		<Map mapAddresses={mapAddress} mapClass={$css('map')}/>
+		<Map mapAddresses={mapAddress} mapClass={$css('map')} initialZoom={20} initialView={coordinates}/>
 	</section>
 </main>
 
@@ -45,8 +48,11 @@
 	}
 
 	h1 {
-		/* padding:var(--spacing-md) 0; */
 		font-size: var(--font-size-title-md);
+		background-color: var(--blue-200);
+		width: fit-content;
+		padding: var(--spacing-xs);
+		margin-left: calc(-1* var(--spacing-xs));
 	}
 
 	h2 {
@@ -107,11 +113,13 @@
 
 	article {
 		height: fit-content;
+		padding: var(--spacing-xs);
 	}
 
 	.map {
 		height: 50vh !important;
 		border-radius: var(--border-radius-md);
+		border: 5px solid var(--blue-300);
 	}
 
 	@media screen and (min-width: 800px) {

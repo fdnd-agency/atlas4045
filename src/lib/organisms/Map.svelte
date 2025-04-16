@@ -3,19 +3,18 @@
   import { tick } from 'svelte';
   import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 
-  let { mapAddresses, mapClass = "" } = $props();
+  let { mapAddresses, mapClass = "", initialZoom = 15, initialView = [52.35846685, 4.91372582947583] } = $props();
   let mapElement = $state(null);
   let map = $state(null);
   let markers = [];
   let leaflet = $state(null); 
+  
 
   async function initializeMap() {
     leaflet = await import('leaflet');
 
     const mapStyle = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
     const attribution = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-    const initialView = [52.35846685, 4.91372582947583];
-    const initialZoom = 15;
 
     map = leaflet.map(mapElement).setView(initialView, initialZoom);
 
@@ -76,7 +75,6 @@
       width: 100%;
       position: relative;
       z-index: 1;
-      border-bottom: 5px solid var(--blue-300);
     }
 
     section.js-enabled {
