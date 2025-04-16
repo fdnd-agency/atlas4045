@@ -1,4 +1,5 @@
 <script>
+  import ActiveFilters from '$lib/molecules/ActiveFilters.svelte';
 	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
   import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
 	import Button from '$lib/atoms/Button.svelte';
@@ -27,6 +28,7 @@
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={{ hidden: !javascript.enabled, open: filterOpen }}>
 	<h3>Filters</h3>
+  <ActiveFilters />
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
