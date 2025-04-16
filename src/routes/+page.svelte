@@ -53,9 +53,14 @@
 <style>
 	main {
 		margin: 0 auto;
-		padding: var(--spacing-sm) var(--page-padding) 0;
 	}
 
+	/* WHITESPACE */
+	main > .page-content > * {
+		padding: calc(var(--spacing-md)*2) var(--page-padding) var(--spacing-md);
+	}
+
+	/* STYLING */
 	header {
 		--_page-padding: var(--spacing-md);
 		--_padding: var(--spacing-md);
@@ -65,14 +70,11 @@
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
-		margin:calc(-1 * var(--_margin)) calc(-1 * var(--_page-padding));
-		width:calc(100% + 2* var(--_page-padding));
 	}
 
 	header > * {
 		background-color: rgb(255,255,255,0.9);
 		padding:var(--spacing-sm);
-		
 	}
 
 	h2,
@@ -115,9 +117,7 @@
 		flex-direction: column;
 		align-items: center;
 		background-color: var(--blue-200);
-		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
-		width:calc(100% + 1.5 * var(--page-padding));
-		padding:var(--spacing-lg) 0;
+		margin-bottom: 0;
 	}
 
 	.section-CTA h3 {
@@ -125,13 +125,8 @@
 	}
 
 	.page-content {
-		position: relative;
 		z-index:1;
-		margin-top:100vh;
 		background-color: var(--blue-100);
-		margin:calc(-1 * var(--spacing-md)) calc(-1 * var(--page-padding)) 0;
-		width:calc(100% + 2* var(--page-padding));
-		padding:var(--spacing-md) var(--spacing-md) 0 var(--spacing-md);
 	}
 
 	@media screen and (min-width: 800px) {
@@ -145,7 +140,6 @@
 			justify-content: center;
 			flex-wrap:wrap;
 			gap: var(--spacing-md);
-			position:sticky;
 			z-index:-1;
 			top:6rem;
 		}
