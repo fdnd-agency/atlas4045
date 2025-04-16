@@ -74,8 +74,6 @@
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
-		/* margin:calc(-1 * var(--_margin)) calc(-1 * var(--_page-padding)); */
-		/* width:calc(100% + 2* var(--_page-padding)); */
 	}
 
 	header > * {
