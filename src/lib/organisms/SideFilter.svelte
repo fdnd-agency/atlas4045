@@ -1,4 +1,5 @@
 <script>
+	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
 	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
   import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
 	import Button from '$lib/atoms/Button.svelte';
@@ -36,6 +37,7 @@
 			Toepassen
 		</Button>
 		<div>
+      <FilterSearchbar title="Straat" onchange={() => formAside.requestSubmit()} />
 			<FilterSectionList
 				title="Straat"
 				name="s"
