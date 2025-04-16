@@ -1,4 +1,5 @@
 <script>
+	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
   import ActiveFilters from '$lib/molecules/ActiveFilters.svelte';
 	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
 	import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
@@ -27,7 +28,7 @@
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
-	<h3>Filters</h3>
+	<h3>Vind personen, adressen, verhalen en stolpensteiners</h3>
   <ActiveFilters />
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
@@ -38,6 +39,7 @@
 			Toepassen
 		</Button>
 		<div>
+      <FilterSearchbar title="Straat" onchange={() => formAside.requestSubmit()} />
 			<FilterSectionList
 				title="Straat"
 				name="s"
