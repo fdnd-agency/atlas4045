@@ -53,9 +53,18 @@
 <style>
 	main {
 		margin: 0 auto;
+	}
+
+	/* WHITESPACE */
+	main > * {
 		padding: var(--spacing-sm) var(--page-padding) 0;
 	}
 
+	div > * {
+		margin: var(--spacing-sm) var(--page-padding) 0;
+	}
+
+	/* STYLING */
 	header {
 		--_page-padding: var(--spacing-md);
 		--_padding: var(--spacing-md);
@@ -65,8 +74,6 @@
 		background-size:cover;
 		background-repeat: no-repeat;
 		padding:var(--_padding);
-		margin:calc(-1 * var(--_margin)) calc(-1 * var(--_page-padding));
-		width:calc(100% + 2* var(--_page-padding));
 	}
 
 	header > * {
@@ -145,7 +152,6 @@
 			justify-content: center;
 			flex-wrap:wrap;
 			gap: var(--spacing-md);
-			position:sticky;
 			z-index:-1;
 			top:6rem;
 		}
