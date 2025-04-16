@@ -81,23 +81,28 @@
 	h3 {
 		font-size: var(--font-size-title-md);
 		font-weight: var(--font-weight-light);
-		color: var(--neutral-900);
 		text-align: center;
 		margin-bottom: var(--spacing-md);
 	}
 
 	h2 {
 		font-weight:var(--font-weight-bold);
+		color: var(--blue-700);
 	}
 
 	h3 {
 		margin:var(--spacing-md) 0 calc(1.5 * var(--spacing-lg));
+		background-color: var(--blue-200);
+		width: fit-content;
+		padding: var(--spacing-xs);
+		font-weight:var(--font-weight-medium);
+		justify-self: center;
 	}
 
 	p {
 		font-size: var(--font-size-md);
 		color: var(--neutral-900);
-		text-align: justify;
+		text-align: left;
 		margin: auto;
 		margin-bottom: var(--spacing-md);
 		width: 100%;
