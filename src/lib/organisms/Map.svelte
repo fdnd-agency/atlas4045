@@ -75,7 +75,6 @@
       width: 100%;
       position: relative;
       z-index: 1;
-      border-bottom: 5px solid var(--blue-300);
     }
 
     section.js-enabled {
