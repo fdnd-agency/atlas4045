@@ -31,4 +31,8 @@
   label {
     cursor: pointer;
   }
+
+  li:has(input[type="checkbox"]:not(:checked)) {
+    display: none;
+  }
 </style>
