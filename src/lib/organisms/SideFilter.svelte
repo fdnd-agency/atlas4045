@@ -127,14 +127,14 @@
 	}
 
 	form {
-		display: grid;
+		display: grid !important;
 		grid-template-columns: 1fr auto;
 		grid-template-rows: auto auto;
 		gap: var(--spacing-md);
 	}
 
 	form > div {
-		grid-column: 0 / 2;
+		grid-column: 1 / 3;
 		grid-row: 2;
 	}
 
