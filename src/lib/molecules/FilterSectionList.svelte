@@ -39,4 +39,10 @@
     gap: var(--spacing-xs);
     list-style: none;
   }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
 </style>
