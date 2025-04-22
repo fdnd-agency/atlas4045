@@ -6,10 +6,12 @@
 	let mapAddress = data.address;
 	const { street, house_number, floor, addition, person, poster } = data.address[0];
 	
-
-	let allCoordinates = $derived(data.coordinates.map((currentArray) => {currentArray.map.coordinates.reverse()}))
-	console.log(allCoordinates)
 	let currentCoordinates = $derived([data.address[0].map.coordinates[1], data.address[0].map.coordinates[0]])
+	let allCoordinates = $derived(
+		data.coordinates
+			.filter((currentArray) => {return !(currentArray.map.coordinates[0] === currentCoordinates[0] && currentArray.map.coordinates[1] === currentCoordinates[1])}))
+	console.log(allCoordinates)
+
 </script>
 
 <main>
@@ -37,7 +39,7 @@
 			</ul>
 		</article>
 
-		<Map mapAddresses={mapAddress} mapClass={$css('map')} initialZoom={20} initialView={currentCoordinates}/>
+		<Map mapAddresses={data.coordinates} activeMapAddresses={mapAddress} mapClass={$css('map')} initialZoom={20} initialView={currentCoordinates}/>
 	</section>
 </main>
 
