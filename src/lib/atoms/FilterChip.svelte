@@ -9,7 +9,7 @@
 </script>
 
 <li>
-  <input {id} {name} {onchange} type="checkbox" class="no-focus sr-only" value={id} bind:checked={checked} />
+  <input {id} {name} {onchange} type="checkbox" class="sr-only" value={id} bind:checked={checked} />
   <label for={id}>{@render children()}</label>
 </li>
 
@@ -27,6 +27,10 @@
     font-size: var(--font-size-sm);
     border-radius: var(--border-radius-md);
 	}
+
+  li:focus-within {
+    background-color: var(--blue-800);
+  }
 
   label {
     cursor: pointer;
