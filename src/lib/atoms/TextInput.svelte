@@ -27,6 +27,7 @@
 		border-radius: var(--border-radius-pill);
 		border: 2px solid var(--blue-100);
 		text-overflow: ellipsis;
+    height: 2.5rem;
 
 		transition-property: border, background-color;
 		transition-duration: 0.15s;
