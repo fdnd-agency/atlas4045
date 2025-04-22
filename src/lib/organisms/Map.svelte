@@ -43,9 +43,7 @@
         .marker([...marker.map.coordinates].reverse(), { icon: customIcon })
         .addTo(map)
         .bindPopup(popUpInfo);
-
-      
-
+        
       markers.push(newMarker);
     });
   }
