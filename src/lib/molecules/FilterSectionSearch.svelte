@@ -6,16 +6,11 @@
 	let { title, onchange, name } = $props();
 
 	let enteredValue = $state('');
-	let activeValues = $state([]);
-
-	// Extract active names from the URL and add them to the activeNames array
-	page.url.searchParams.forEach((value, key) => {
-		key == name && activeValues.push(value);
-	});
+	let activeValues = $derived(page.url.searchParams.getAll(name));
 
 	function addValueHandler() {
 		if (enteredValue.length > 0) {
-			activeValues.push(enteredValue);
+			activeValues = [...activeValues, enteredValue];
 			enteredValue = '';
 		}
 	}
@@ -68,14 +63,15 @@
 		display: flex;
 		gap: var(--spacing-xs);
 		max-width: 100%;
-		margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
 	}
 
 	ul {
-		padding-top: var(--spacing-md);
+		/* padding-top: var(--spacing-md); */
 		display: flex;
 		gap: var(--spacing-xxs);
 		flex-wrap: wrap;
+    margin-bottom: var(--spacing-sm);
 	}
 
 	.add-value {
