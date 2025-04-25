@@ -3,7 +3,7 @@
   import { tick } from 'svelte';
   import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 
-  let { mapAddresses, mapClass = "", initialZoom = 15, initialView = [52.35846685, 4.91372582947583] } = $props();
+  let { mapAddresses, activeMapAddresses = [], mapClass = "", initialZoom = 15, initialView = [52.35846685, 4.91372582947583] } = $props();
   let mapElement = $state(null);
   let map = $state(null);
   let markers = [];
@@ -35,20 +35,42 @@
       const popUpInfo = `<strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}`;
       
       const customIcon = leaflet.icon({
-        iconUrl: '/assets/icons/marker.svg',
+        iconUrl: (activeMapAddresses ? '/assets/icons/marker-inactive.svg' : '/assets/icons/marker.svg'),
         iconSize: [20, 20]
       });
 
       const newMarker = leaflet
-        .marker([...marker.map.coordinates].reverse(), { icon: customIcon })
+        .marker([...marker.map.coordinates].reverse(), { 
+          icon: customIcon
+        })
         .addTo(map)
         .bindPopup(popUpInfo);
-
-      
-
+        
       markers.push(newMarker);
     });
+
+    activeMapAddresses.forEach((marker) => {
+      const popUpInfo = `<strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}`;
+      
+      const customIcon = leaflet.icon({
+        iconUrl: '/assets/icons/marker-active.svg',
+        iconSize: [40, 40],
+        iconAnchor: [20, 30],
+      });
+
+      const newMarker = leaflet
+        .marker([...marker.map.coordinates].reverse(), { 
+          icon: customIcon,
+          zIndexOffset: 10000 
+        })
+        .addTo(map)
+        .bindPopup(popUpInfo);
+        
+        markers.push(newMarker);
+    });
+
   }
+
 
   onMount(async () => {
     await initializeMap();
