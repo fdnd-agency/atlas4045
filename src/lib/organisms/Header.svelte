@@ -22,8 +22,8 @@
 
 
 	<Nav>
-		<NavItem active={currentPage === 'gedenkposters'} href="/">Gedenkposters</NavItem>
-		<NavItem active={currentPage === 'adressen'} href="/adressen">Adressen</NavItem>
+		<NavItem active={currentPage === 'gedenkposters'} href="/">Home</NavItem>
+		<NavItem active={currentPage === 'adressen'} href="/adressen">Gedenkposters</NavItem>
 		<NavItem active={currentPage === 'gebeurtenissen'} href="/gebeurtenissen">Gebeurtenissen</NavItem>
 	</Nav>
 </header>
