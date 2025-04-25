@@ -29,7 +29,6 @@
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
 	<h3>Vind personen, adressen, verhalen en stolpensteiners</h3>
-  <ActiveFilters />
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
@@ -39,16 +38,12 @@
 			Toepassen
 		</Button>
 		<div>
-      <FilterSearchbar title="Straat" onchange={() => formAside.requestSubmit()} />
 			<FilterSectionList
 				title="Straat"
 				name="s"
 				items={streets}
 				onchange={() => formAside.requestSubmit()}
 			/>
-			<FilterSectionSearch title="Naam" name="n" onchange={() => formAside.requestSubmit()} />
-			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
-			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
 	</form>
 </aside>
@@ -79,9 +74,6 @@
 				items={streets}
 				onchange={() => formDetails.requestSubmit()}
 			/>
-			<FilterSectionSearch title="Naam" name="n" onchange={() => formDetails.requestSubmit()} />
-			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
-			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
 	</form>
 </details>
