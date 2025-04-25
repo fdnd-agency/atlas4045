@@ -21,7 +21,7 @@
 		font-weight: var(--font-weight-light);
 	}
 	.highlight {
-		color: var(--red-600);
+		color: var(--red-900);
 	}
 
 	span.length {
