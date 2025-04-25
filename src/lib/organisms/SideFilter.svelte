@@ -1,6 +1,8 @@
 <script>
+	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
+  import ActiveFilters from '$lib/molecules/ActiveFilters.svelte';
 	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
-  import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
+	import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
 	import Button from '$lib/atoms/Button.svelte';
 	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import { page } from '$app/state';
@@ -25,8 +27,9 @@
 </script>
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={{ hidden: !javascript.enabled, open: filterOpen }}>
-	<h3>Filters</h3>
+<aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
+	<h3>Vind personen, adressen, verhalen en stolpensteiners</h3>
+  <ActiveFilters />
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
@@ -36,17 +39,14 @@
 			Toepassen
 		</Button>
 		<div>
+      <FilterSearchbar title="Straat" onchange={() => formAside.requestSubmit()} />
 			<FilterSectionList
 				title="Straat"
 				name="s"
 				items={streets}
 				onchange={() => formAside.requestSubmit()}
 			/>
-			<FilterSectionSearch
-				title="Naam"
-				name="n"
-				onchange={() => formAside.requestSubmit()}
-			/>
+			<FilterSectionSearch title="Naam" name="n" onchange={() => formAside.requestSubmit()} />
 			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
 			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
@@ -56,11 +56,11 @@
 <Button
 	onclick={() => (filterOpen = !filterOpen)}
 	class="highlight"
-	buttonClass={$css('filter-button')}>Filters</Button
+	buttonClass={[$css('filter-button'), !javascript.enabled && $css('hide-mobile')]}>Filters</Button
 >
 
 <!-- IF JS DISABLED SHOW DETAILS VERSION -->
-<details class={{ hidden: javascript.enabled }}>
+<details class={{ hidden: javascript.enabled, 'hide-desktop': !javascript.enabled }}>
 	<summary>
 		<h3>Filters</h3>
 	</summary>
@@ -79,11 +79,7 @@
 				items={streets}
 				onchange={() => formDetails.requestSubmit()}
 			/>
-			<FilterSectionSearch
-				title="Naam"
-				name="n"
-				onchange={() => formDetails.requestSubmit()}
-			/>
+			<FilterSectionSearch title="Naam" name="n" onchange={() => formDetails.requestSubmit()} />
 			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
 			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
@@ -97,7 +93,7 @@
 		top: 6rem;
 		left: 0;
 		background-color: var(--blue-500);
-    color: var(--white);
+		color: var(--white);
 		padding: var(--spacing-lg) var(--spacing-md);
 		height: calc(100vh - 6rem);
 		width: 100vw;
@@ -107,11 +103,11 @@
 		transition: transform 0.3s ease-in-out;
 	}
 
-  aside h3 {
-    color: var(--white);
-    font-size: var(--font-size-xxl);
-    font-weight: var(--font-weight-regular);
-  }
+	aside h3 {
+		color: var(--white);
+		font-size: var(--font-size-xxl);
+		font-weight: var(--font-weight-regular);
+	}
 
 	.filter-button {
 		position: fixed;
@@ -154,6 +150,14 @@
 		border-width: 0;
 	}
 
+	.hide-mobile {
+		display: none !important;
+	}
+
+	.hide-desktop {
+		display: block !important;
+	}
+
 	@media screen and (min-width: 800px) {
 		aside {
 			position: sticky;
@@ -161,6 +165,14 @@
 			width: 20rem;
 			transform: translateX(0);
 			z-index: 0;
+		}
+
+    .hide-mobile {
+			display: block !important;
+		}
+
+		.hide-desktop {
+			display: none !important;
 		}
 
 		.filter-button {

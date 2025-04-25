@@ -13,7 +13,7 @@
 </script>
 
 <main class="posters-overview">
-	<Map {mapAddresses} />
+	<Map {mapAddresses} mapClass={$css('map')}/>
 	<SideFilter {streets} />
 	<PostersOverview addresses={data.addresses} />
 </main>
@@ -21,6 +21,10 @@
 <style>
   main {
     margin: 0 auto;
+  }
+
+  .map {
+	border-bottom: 5px solid var(--blue-300);
   }
 
 	@media screen and (min-width: 460px) {
