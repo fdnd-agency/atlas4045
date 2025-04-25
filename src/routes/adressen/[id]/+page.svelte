@@ -131,11 +131,18 @@
 		border: 5px solid var(--blue-300);
 	}
 
+
+
 	@media screen and (min-width: 800px) {
 		main {
 			flex-wrap: nowrap;
 			max-height: calc(100vh - 6rem); /* 6rem = padding top */
 			gap: var(--spacing-xl);
+		}
+
+		ol {
+			container-type: size;
+			container-name: carousel;
 		}
 
 		ol li {
@@ -148,5 +155,22 @@
 			height: 100% !important;
 			width: auto;	
 		}
+	}
+
+	@media screen and (max-aspect-ratio: 1120/898) {
+		main {
+			background-color: aqua;
+			gap: var(--spacing-md);
+		}
+		
+	}
+
+	@container carousel (max-aspect-ratio: 426/620) {
+		li {
+			background-color: aquamarine;
+			width: 100%;
+		}
+
+
 	}
 </style>
