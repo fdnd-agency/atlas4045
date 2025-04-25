@@ -43,6 +43,6 @@
 		width: 100%;
 		height: auto;
 		aspect-ratio: var(--img-width) / var(--img-height);
-		border-radius:var(--border-radius-sm);
+		border-radius:var(--border-radius-md);
 	}
 </style>

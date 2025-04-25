@@ -17,7 +17,6 @@ export async function load({ fetch, params }) {
 						'house_number',
 						'floor',
 						'addition',
-						'map',
 						{
 							person: ['first_name', 'last_name']
 						},
@@ -33,18 +32,6 @@ export async function load({ fetch, params }) {
 								}
 							]
 						}
-					]
-				})
-			),
-			coordinates: await directus.request(
-				readItems('atlas_address', {
-					fields: [						
-						'id',
-						'street',
-						'house_number',
-						'floor',
-						'addition',
-						'map',
 					]
 				})
 			)

@@ -6,7 +6,7 @@
 	let { children } = $props()
 
   let isOpen = $state(false);
-  
+
   function toggleMenu() {
     isOpen = !isOpen;
   }
