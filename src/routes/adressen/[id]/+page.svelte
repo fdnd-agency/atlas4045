@@ -79,6 +79,7 @@
 		align-items:start;
 		gap: var(--spacing-sm);
 		align-items: start;
+		/* justify-content: center; */
 
 		/* SCROLLING */
 		overflow-y: hidden;
@@ -105,10 +106,10 @@
 	}
 
 	ol li {
-		width: fit-content;
-		max-width: auto;
+		max-width: fit-content;
 		min-width: 16rem;
 		scroll-snap-align: start;
+		margin: auto;
 	}
 
 	section {
