@@ -3,8 +3,10 @@
   import Button from '$lib/atoms/Button.svelte';
   import Checkbox from '$lib/atoms/Checkbox.svelte';
   import { onMount } from 'svelte';
-
+  import { page } from '$app/state';
   let { title, onevent, name, formRef} = $props();
+
+  let activeSearch = $derived(page.url.searchParams.get('n'));
 
   let searchTimeout;
   let inputRef;
@@ -25,6 +27,7 @@
   <TextInput 
     id="search" 
     placeholder="Jacob..." 
+    value={activeSearch}
     sronly={true} 
     name="n" 
     inputClass={$css('input')}
