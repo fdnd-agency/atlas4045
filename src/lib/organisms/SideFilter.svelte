@@ -25,8 +25,9 @@
 </script>
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={{ hidden: !javascript.enabled, open: filterOpen }}>
+<aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
 	<h3>Filters</h3>
+  <h4>Vind adressen via een zoekterm, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
@@ -42,13 +43,6 @@
 				items={streets}
 				onchange={() => formAside.requestSubmit()}
 			/>
-			<FilterSectionSearch
-				title="Naam"
-				name="n"
-				onchange={() => formAside.requestSubmit()}
-			/>
-			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
-			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
 	</form>
 </aside>
@@ -79,13 +73,6 @@
 				items={streets}
 				onchange={() => formDetails.requestSubmit()}
 			/>
-			<FilterSectionSearch
-				title="Naam"
-				name="n"
-				onchange={() => formDetails.requestSubmit()}
-			/>
-			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
-			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
 	</form>
 </details>
@@ -107,11 +94,18 @@
 		transition: transform 0.3s ease-in-out;
 	}
 
-  aside h3 {
-    color: var(--white);
-    font-size: var(--font-size-xxl);
-    font-weight: var(--font-weight-regular);
-  }
+	aside h3 {
+		color: var(--white);
+		font-size: var(--font-size-xxl);
+		font-weight: var(--font-weight-regular);
+		margin-bottom: var(--spacing-sm);
+	}
+
+	aside h4 {
+		color: var(--white);
+		font-size: var(--font-size-md);
+		font-weight: var(--font-weight-light);
+	}
 
 	.filter-button {
 		position: fixed;
@@ -131,14 +125,14 @@
 	}
 
 	form {
-		display: grid;
+		display: grid !important;
 		grid-template-columns: 1fr auto;
 		grid-template-rows: auto auto;
 		gap: var(--spacing-md);
 	}
 
 	form > div {
-		grid-column: 0 / 2;
+		grid-column: 1 / 3;
 		grid-row: 2;
 	}
 

@@ -33,12 +33,13 @@
   fieldset {
     border: none;
     padding: 0;
-    margin: var(--spacing-lg) 0;
+    margin: var(--spacing-md) 0 0 0;
   }
 
   legend {
+    font-family: var(--font-family-fraunces);
     font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-regular);
     margin-bottom: var(--spacing-sm);
   }
 
@@ -47,5 +48,11 @@
     flex-direction: column;
     gap: var(--spacing-xs);
     list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
   }
 </style>
