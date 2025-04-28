@@ -54,7 +54,7 @@
 	aside {
 		display: block;
 		position: sticky;
-		top: 0;
+		top: -8rem;
 		left: 0;
 		background-color: var(--blue-500);
 		color: var(--white);

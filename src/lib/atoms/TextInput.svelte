@@ -25,8 +25,8 @@
 		color: var(--neutral-900);
 		padding: var(--spacing-xxs) var(--spacing-sm);
 		border: none;
-		border-radius: var(--border-radius-pill);
-		border: 2px solid var(--blue-100);
+		border-radius: var(--border-radius-sm);
+		/* border: 3px solid var(--blue-600); */
 		text-overflow: ellipsis;
     height: 2.5rem;
 
