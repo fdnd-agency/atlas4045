@@ -35,7 +35,7 @@
 	</header>
 
 	<div class="page-content">
-		<section>
+		<section class="section-suggested">
 			<h3>Uitgelichte gedenkposters</h3>
 	
 			<PostersCarousel {addresses} />
@@ -115,12 +115,12 @@
 	section {
 		margin-bottom: var(--spacing-md);
 		padding: var(--spacing-md) 0;
+    display: flex;
+		flex-direction: column;
+    align-items: center;
 	}
 
 	.section-CTA {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		background-color: var(--blue-200);
 		margin-bottom: 0;
 	}
