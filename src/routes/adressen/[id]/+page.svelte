@@ -125,18 +125,12 @@
 	}
 
 	.map {
-		height: 50vh !important;
+		max-height: 50vh !important;
 		border-radius: var(--border-radius-md);
 		border: 5px solid var(--blue-300);
 	}
 
 	@media screen and (min-width: 800px) {
-		:global(body) {
-			height: 100vh; /* For big screens */
-			display: flex;
-			align-items: center;
-			/* background-color: aquamarine; */
-		}
 		main {
 			flex-wrap: nowrap;
 			max-height: calc(100vh - 6rem); /* 6rem = padding top */
@@ -176,7 +170,7 @@
 			}
 
 			.map {
-				height: 30vh !important;
+				max-height: 30vh !important;
 			}
 
 			ol {
@@ -190,7 +184,5 @@
 				width: 100%;
 			}
 		}
-	}
-
-	
+	}	
 </style>
