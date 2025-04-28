@@ -27,7 +27,7 @@
 </script>
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={[filterOpen && 'open', !javascript.enabled]}> <!--  && $css('hide-mobile') -->
+<aside class={[filterOpen && 'open', !javascript.enabled]}>
 	<h3>Filters</h3>
 	<h4>Vind adressen via een zoekterm, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
@@ -48,38 +48,6 @@
 		</Button>
 	</form>
 </aside>
-<!-- <div class="filter-button-container">
-	<Button
-		onclick={() => (filterOpen = !filterOpen)}
-		class="highlight"
-		buttonClass={[$css('filter-button'), !javascript.enabled && $css('hide-mobile')]}>Filters </Button
-	>
-</div> -->
-
-<!--
-IF JS DISABLED SHOW DETAILS VERSION 
-<details class={{ hidden: javascript.enabled, 'hide-desktop': !javascript.enabled }}>
-	<summary>
-		<h3>Filters</h3>
-	</summary>
-	<form bind:this={formDetails} action="/adressen" data-sveltekit-noscroll>
-		<div>
-			<FilterSectionList
-				title="Straat"
-				name="s"
-				items={streets}
-				onchange={() => formDetails.requestSubmit()}
-			/>
-		</div>
-		<Button
-			class={{ 'sr-only': javascript.enabled, highlight: true }}
-			buttonClass={$css('show-on-focus')}
-			type="submit"
-		>
-			Toepassen
-		</Button>
-	</form>
-</details> -->
 
 <style>
 	aside {
@@ -107,41 +75,12 @@ IF JS DISABLED SHOW DETAILS VERSION
 		font-weight: var(--font-weight-light);
 	}
 
-	/* .filter-button {
-		position: sticky;
-		top: calc(6rem + var(--spacing-md));
-		left: var(--page-padding);
-		z-index: 100;
-		transition: all 0.3s ease-in-out !important;
-	}
-
-	aside.open + .filter-button {
-		transform: translateX(calc(100vw - 100% - var(--page-padding) * 2));
-	}
-
-	aside.open {
-		transform: translateX(0);
-	} */
-
-	/* .filter-button-container {
-		background-color: var(--blue-500);
-		width: 100%;
-		height: fit-content;
-	} */
-
 	form {
 		display: flex;
 		flex-direction: column;
-		/* grid-template-columns: 1fr auto;
-		grid-template-rows: auto auto; */
 		gap: var(--spacing-xs);
 		margin-top: var(--spacing-md);
 	}
-
-	/* form > div {
-		grid-column: 1 / 3;
-		grid-row: 2;
-	} */
 
 	.show-on-focus:focus-visible {
 		background-color: var(--blue-700) !important;
