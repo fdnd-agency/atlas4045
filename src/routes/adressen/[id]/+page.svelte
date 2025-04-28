@@ -10,7 +10,6 @@
 	let allCoordinates = $derived(
 		data.coordinates
 			.filter((currentArray) => {return !(currentArray.map.coordinates[0] === currentCoordinates[0] && currentArray.map.coordinates[1] === currentCoordinates[1])}))
-	console.log(allCoordinates)
 
 </script>
 

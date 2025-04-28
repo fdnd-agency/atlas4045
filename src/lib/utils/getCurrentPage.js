@@ -7,7 +7,6 @@ export default function getCurrentPage(pageURL) {
     case '/gebeurtenissen/':
       return 'gebeurtenissen';
     default:
-      console.log(`'${pageURL}' is not a handled route`);
       return 'other';
   }
 }
