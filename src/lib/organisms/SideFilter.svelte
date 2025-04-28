@@ -85,16 +85,12 @@ IF JS DISABLED SHOW DETAILS VERSION
 	aside {
 		display: block;
 		position: sticky;
-		top: 6rem;
+		top: 0;
 		left: 0;
 		background-color: var(--blue-500);
 		color: var(--white);
 		padding: var(--spacing-md) var(--spacing-md);
-
-		/* width: 100vw; */
-		/* overflow-y: auto; */
-		/* z-index: 100; */
-		/* transform: translateX(-100%); */
+		padding-bottom: var(--spacing-sm);
 		transition: transform 0.3s ease-in-out;
 	}
 
@@ -168,6 +164,7 @@ IF JS DISABLED SHOW DETAILS VERSION
 	@media screen and (min-width: 800px) {
 		aside {
 			position: sticky;
+			top: 6rem;
 			height: calc(100vh - 6rem);
 			width: 20rem;
 			transform: translateX(0);
