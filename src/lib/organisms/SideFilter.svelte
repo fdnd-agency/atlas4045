@@ -148,6 +148,14 @@
 		border-width: 0;
 	}
 
+  .hide-mobile {
+		display: none !important;
+	}
+
+	.hide-desktop {
+		display: block !important;
+	}
+
 	@media screen and (min-width: 800px) {
 		aside {
 			position: sticky;
