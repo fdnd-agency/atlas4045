@@ -44,7 +44,7 @@
 			buttonClass={$css('show-on-focus')}
 			type="submit"
 		>
-			Toepassen
+			Filter toepassen
 		</Button>
 	</form>
 </aside>
@@ -130,27 +130,33 @@ IF JS DISABLED SHOW DETAILS VERSION
 	} */
 
 	form {
-		display: grid !important;
-		grid-template-columns: 1fr auto;
-		grid-template-rows: auto auto;
-		gap: var(--spacing-md);
+		display: flex;
+		flex-direction: column;
+		/* grid-template-columns: 1fr auto;
+		grid-template-rows: auto auto; */
+		gap: var(--spacing-xs);
+		margin-top: var(--spacing-md);
 	}
 
-	form > div {
+	/* form > div {
 		grid-column: 1 / 3;
 		grid-row: 2;
-	}
+	} */
 
 	.show-on-focus:focus-visible {
-		position: static;
-		display: inline-block;
-		width: fit-content;
-		height: fit-content;
-		padding: var(--spacing-xxs) var(--spacing-sm);
-		overflow: visible;
-		clip: auto;
-		white-space: normal;
-		border-width: 0;
+		background-color: var(--blue-700) !important;
+	}
+
+	.show-on-focus {
+		background-color: var(--blue-600) !important;
+		border-radius: var(--border-radius-sm) !important;
+		box-shadow: none !important;
+		width: 100% !important;
+		margin-bottom: var(--spacing-xs);
+	}
+
+	.higlight {
+		background-color: var(--blue-200);
 	}
 
 	.hide-mobile {
@@ -163,7 +169,8 @@ IF JS DISABLED SHOW DETAILS VERSION
 
 	@media screen and (min-width: 800px) {
 		aside {
-			position: sticky;
+			display: flex;
+			flex-direction: column;
 			top: 6rem;
 			height: calc(100vh - 6rem);
 			width: 20rem;
@@ -182,6 +189,12 @@ IF JS DISABLED SHOW DETAILS VERSION
 
 		.filter-button {
 			display: none !important;
+		}
+
+		form {
+			margin-top: var(--spacing-lg);
+			gap: var(--spacing-lg);
+			height: 100%;
 		}
 	}
 </style>
