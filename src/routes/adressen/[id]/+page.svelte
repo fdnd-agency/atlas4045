@@ -105,16 +105,16 @@
 	}
 
 	ol li {
-		width: fit-content;
-		max-width: auto;
+		max-width: fit-content;
 		min-width: 16rem;
 		scroll-snap-align: start;
+		margin: auto;
 	}
 
 	section {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: space-between;
 		gap: var(--spacing-md);
 		width: 100%;
 	}
@@ -125,7 +125,7 @@
 	}
 
 	.map {
-		height: 50vh !important;
+		max-height: 50vh !important;
 		border-radius: var(--border-radius-md);
 		border: 5px solid var(--blue-300);
 	}
@@ -135,6 +135,13 @@
 			flex-wrap: nowrap;
 			max-height: calc(100vh - 6rem); /* 6rem = padding top */
 			gap: var(--spacing-xl);
+			align-self: center;
+			width: 100%;
+		}
+
+		ol {
+			container-type: size;
+			container-name: carousel;
 		}
 
 		ol li {
@@ -147,5 +154,28 @@
 			height: 100% !important;
 			width: auto;	
 		}
-	}
+
+
+		@media screen and (max-aspect-ratio: 1120/898) {
+			main {
+				gap: var(--spacing-md);
+			}
+		}
+
+		@media screen and (max-aspect-ratio: 1271/1273) {
+			main {
+				max-height: 50rem;
+			}
+
+			.map {
+				max-height: 30vh !important;
+			}
+		}
+
+		@container carousel (max-aspect-ratio: 426/620) {
+			li {
+				width: 100%;
+			}
+		}
+	}	
 </style>
