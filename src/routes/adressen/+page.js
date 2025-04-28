@@ -8,12 +8,6 @@ export async function load({ fetch, url }) {
   nameFilters = nameFilters ? nameFilters.split(/\s+/).map(word => word.replace(/[.,!?]/g, '')) : null;
   let queryFilters = {};
 
-  // Extract the values by key and add them to their respective arrays
-  url.searchParams.forEach((value, key) => {
-    (key == 's') && (streetFilters.push(value));
-    (key == 'n') && (nameFilters.push(value));
-  });
-
   // Add the street filters to the query
 	if (streetFilters.length > 0) {
 		queryFilters.street = {
