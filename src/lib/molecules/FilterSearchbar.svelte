@@ -16,7 +16,7 @@
     // Set a new timeout to submit the form after 300ms of no typing
     searchTimeout = setTimeout(() => {
         inputRef.form.requestSubmit();
-    }, 600);
+    }, 300);
   }
 </script>
 
