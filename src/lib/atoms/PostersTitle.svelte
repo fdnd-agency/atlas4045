@@ -19,6 +19,7 @@ Alle adressen met een gedenkposter
 {/if}
 <span class="length">({length})</span>
 </h2>
+
 <style>
 	h2 {
 		font-weight: var(--font-weight-light);
