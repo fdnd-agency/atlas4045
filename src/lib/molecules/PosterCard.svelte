@@ -57,12 +57,12 @@
 
 	li div {
 		padding: var(--spacing-xs);
-		border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+		border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
 		transition: 0.25s ease-out;
 	}
 
 	li div:last-child {
-		border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+		border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
 	}
 
 	p {
