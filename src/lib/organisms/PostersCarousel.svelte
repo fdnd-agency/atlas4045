@@ -30,6 +30,26 @@
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
     width: 100%;
+			/* SCROLLING */
+			scroll-snap-type: x mandatory;		
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+
+		/* SCROLLBAR */
+		scrollbar-width: 0;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: transparent;
+			border: none;
+		}
 	}
 
 	.carousel-item {
