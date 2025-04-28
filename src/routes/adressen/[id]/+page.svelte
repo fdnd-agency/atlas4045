@@ -158,10 +158,8 @@
 
 		@media screen and (max-aspect-ratio: 1120/898) {
 			main {
-				/* background-color: aqua; */
 				gap: var(--spacing-md);
 			}
-			
 		}
 
 		@media screen and (max-aspect-ratio: 1271/1273) {
@@ -172,11 +170,6 @@
 			.map {
 				max-height: 30vh !important;
 			}
-
-			ol {
-				background-color: blueviolet;
-			}
-			
 		}
 
 		@container carousel (max-aspect-ratio: 426/620) {
