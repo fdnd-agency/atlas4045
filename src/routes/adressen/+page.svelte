@@ -23,7 +23,11 @@
     margin: 0 auto;
   }
 
-	@media screen and (min-width: 460px) {
+  .map {
+	border-bottom: 5px solid var(--blue-300);
+  }
+
+	@media screen and (min-width: 800px) {
 		main {
 			margin: 0 auto;
 			display: grid;

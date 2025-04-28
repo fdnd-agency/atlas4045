@@ -38,7 +38,7 @@
 		
 		<div>
 			<p class="name">Familie {name}</p>
-			<p>{street} {house_number} {floor} {addition}</p>
+			<p>{street} {house_number} {floor ? '-' : ''} {floor} {addition}</p>
 		</div>
 	</a>
 </li>

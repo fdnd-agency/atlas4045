@@ -8,13 +8,14 @@
     inputClass = "", 
     labelClass = "",
     value = $bindable(""),
+    inputRef = $bindable(),
     ...rest
   } = $props();
 </script>
 
 <!-- Give label a sr-only class if (sronly) is truthy -->
 <label for={id} class={[sronly && "sr-only", labelClass]} >{@render children()}</label>
-<input bind:value {id} {type} {placeholder} class="no-focus {inputClass}" name={id} {...rest} />
+<input bind:value bind:this={inputRef} {id} {type} {placeholder} class="no-focus {inputClass}" name={id} {...rest} />
 
 <style>
 	input {
@@ -24,8 +25,8 @@
 		color: var(--neutral-900);
 		padding: var(--spacing-xxs) var(--spacing-sm);
 		border: none;
-		border-radius: var(--border-radius-pill);
-		border: 2px solid var(--blue-100);
+		border-radius: var(--border-radius-sm);
+		/* border: 3px solid var(--blue-600); */
 		text-overflow: ellipsis;
     height: 2.5rem;
 

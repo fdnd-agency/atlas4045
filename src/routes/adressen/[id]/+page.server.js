@@ -45,6 +45,18 @@ export async function load({ fetch, params }) {
 						'floor',
 						'addition',
 						'map',
+            {
+							poster: [
+								'id',
+								{
+									covers: [
+										'directus_files_id.id',
+										'directus_files_id.width',
+										'directus_files_id.height'
+									]
+								}
+							]
+						}
 					]
 				})
 			)
