@@ -146,9 +146,9 @@
 			--_margin: var(--spacing-md);
 			height: fit-content;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			flex-wrap:wrap;
 			gap: var(--spacing-md);
 			z-index:-1;
 			top:6rem;
