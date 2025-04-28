@@ -13,7 +13,7 @@
 </script>
 
 <main class="posters-overview">
-	<Map {mapAddresses} />
+	<Map {mapAddresses} mapClass={$css('map')}/>
 	<SideFilter {streets} />
 	<PostersOverview addresses={data.addresses} />
 </main>
