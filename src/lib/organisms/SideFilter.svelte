@@ -28,7 +28,8 @@
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
-	<h3>Vind personen, adressen, verhalen en stolpensteiners</h3>
+	<h3>Filters</h3>
+  <h4>Vind adressen via een zoekterm, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
@@ -99,6 +100,13 @@
 		color: var(--white);
 		font-size: var(--font-size-xxl);
 		font-weight: var(--font-weight-regular);
+		margin-bottom: var(--spacing-sm);
+	}
+
+	aside h4 {
+		color: var(--white);
+		font-size: var(--font-size-md);
+		font-weight: var(--font-weight-light);
 	}
 
 	.filter-button {
