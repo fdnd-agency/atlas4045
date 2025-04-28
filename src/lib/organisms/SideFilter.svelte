@@ -27,17 +27,10 @@
 </script>
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
+<aside class={[filterOpen && 'open', !javascript.enabled]}>
 	<h3>Filters</h3>
 	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
-		<Button
-			class={{ 'sr-only': javascript.enabled, highlight: true }}
-			buttonClass={$css('show-on-focus')}
-			type="submit"
-		>
-			Toepassen
-		</Button>
 		<div>
 			<FilterSearchbar formRef={formAside} />
 			<FilterSectionList
@@ -47,53 +40,26 @@
 				onchange={() => formAside.requestSubmit()}
 			/>
 		</div>
-	</form>
-</aside>
-
-<Button
-	onclick={() => (filterOpen = !filterOpen)}
-	class="highlight"
-	buttonClass={[$css('filter-button'), !javascript.enabled && $css('hide-mobile')]}>Filters</Button
->
-
-<!-- IF JS DISABLED SHOW DETAILS VERSION -->
-<details class={{ hidden: javascript.enabled, 'hide-desktop': !javascript.enabled }}>
-	<summary>
-		<h3>Filters</h3>
-	</summary>
-	<form bind:this={formDetails} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
 			buttonClass={$css('show-on-focus')}
 			type="submit"
 		>
-			Toepassen
+			Filter toepassen
 		</Button>
-		<div>
-			<FilterSectionList
-				title="Straat"
-				name="s"
-				items={streets}
-				onchange={() => formDetails.requestSubmit()}
-			/>
-		</div>
 	</form>
-</details>
+</aside>
 
 <style>
 	aside {
 		display: block;
-		position: fixed;
-		top: 6rem;
+		position: sticky;
+		top: -8rem;
 		left: 0;
 		background-color: var(--blue-500);
 		color: var(--white);
-		padding: var(--spacing-lg) var(--spacing-md);
-		height: calc(100vh - 6rem);
-		width: 100vw;
-		overflow-y: auto;
-		z-index: 100;
-		transform: translateX(-100%);
+		padding: var(--spacing-md) var(--spacing-md);
+		padding-bottom: var(--spacing-sm);
 		transition: transform 0.3s ease-in-out;
 	}
 
@@ -108,48 +74,29 @@
 		color: var(--white);
 		font-size: var(--font-size-md);
 		font-weight: var(--font-weight-light);
-		line-height: 1.2;
-	}
-
-	.filter-button {
-		position: fixed;
-		top: calc(6rem + var(--spacing-md));
-		left: var(--page-padding);
-		z-index: 100;
-		transition: all 0.3s ease-in-out !important;
-	}
-
-	aside.open + .filter-button {
-		/* Move button to right of screen */
-		transform: translateX(calc(100vw - 100% - var(--page-padding) * 2));
-	}
-
-	aside.open {
-		transform: translateX(0);
 	}
 
 	form {
-		display: grid !important;
-		grid-template-columns: 1fr auto;
-		grid-template-rows: auto auto;
-		gap: var(--spacing-md);
-	}
-
-	form > div {
-		grid-column: 1 / 3;
-		grid-row: 2;
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+		margin-top: var(--spacing-md);
 	}
 
 	.show-on-focus:focus-visible {
-		position: static;
-		display: inline-block;
-		width: fit-content;
-		height: fit-content;
-		padding: var(--spacing-xxs) var(--spacing-sm);
-		overflow: visible;
-		clip: auto;
-		white-space: normal;
-		border-width: 0;
+		background-color: var(--blue-700) !important;
+	}
+
+	.show-on-focus {
+		background-color: var(--blue-600) !important;
+		border-radius: var(--border-radius-sm) !important;
+		box-shadow: none !important;
+		width: 100% !important;
+		margin-bottom: var(--spacing-xs);
+	}
+
+	.higlight {
+		background-color: var(--blue-200);
 	}
 
 	.hide-mobile {
@@ -162,11 +109,14 @@
 
 	@media screen and (min-width: 800px) {
 		aside {
-			position: sticky;
+			display: flex;
+			flex-direction: column;
+			top: 6rem;
 			height: calc(100vh - 6rem);
 			width: 20rem;
 			transform: translateX(0);
 			z-index: 0;
+			padding: var(--spacing-lg) var(--spacing-md);
 		}
 
 		.hide-mobile {
@@ -179,6 +129,12 @@
 
 		.filter-button {
 			display: none !important;
+		}
+
+		form {
+			margin-top: var(--spacing-lg);
+			gap: var(--spacing-lg);
+			height: 100%;
 		}
 	}
 </style>
