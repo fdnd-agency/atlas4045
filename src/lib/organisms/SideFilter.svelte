@@ -62,6 +62,7 @@
 		padding-bottom: var(--spacing-sm);
 		transition: transform 0.3s ease-in-out;
     overflow-y: scroll;
+    overflow-x: hidden;
 	}
 
 	aside h3 {
