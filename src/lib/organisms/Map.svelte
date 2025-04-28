@@ -32,11 +32,9 @@
     markers = [];
 
     mapAddresses.forEach((marker) => {
-      console.log(marker);
-      const popup = new L.popup({
-      });
+      const popup = new L.popup({});
 
-      popup.setContent(`<div style="width: 100px;"><p><strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}</p><img style="width: 100%; margin-bottom: 0.75rem;" src="https://fdnd-agency.directus.app/assets/${marker.poster.covers[0].directus_files_id.id}" alt="Afbeelding van ${marker.street} ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}"><a href="/adressen/${marker.id}" class="button">Bekijk poster</a></div>`);
+      popup.setContent(`<div style="width: 100px;"><p><strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}</p><img style="width: 100%; margin-bottom: 0.75rem;" src="https://fdnd-agency.directus.app/assets/${marker.poster.covers[0].directus_files_id.id}" alt="Afbeelding van ${marker.street} ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}"><a href="/adressen/${marker.id}" data-sveltekit-reload>Bekijk poster</a></div>`);
       
       const customIcon = leaflet.icon({
         iconUrl: (activeMapAddresses ? '/assets/icons/marker-inactive.svg' : '/assets/icons/marker.svg'),
@@ -54,7 +52,9 @@
     });
 
     activeMapAddresses.forEach((marker) => {
-      const popUpInfo = `<strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}`;
+      const popup = new L.popup({});
+
+      popup.setContent(`<div style="width: 100px;"><p><strong>${marker.street}</strong> ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}</p><img style="width: 100%; margin-bottom: 0.75rem;" src="https://fdnd-agency.directus.app/assets/${marker.poster.covers[0].directus_files_id.id}" alt="Afbeelding van ${marker.street} ${marker.house_number} ${marker.floor ?? ''} ${marker.addition ?? ''}"><a href="/adressen/${marker.id}" data-sveltekit-reload>Bekijk poster</a></div>`);
       
       const customIcon = leaflet.icon({
         iconUrl: '/assets/icons/marker-active.svg',
@@ -68,7 +68,7 @@
           zIndexOffset: 10000 
         })
         .addTo(map)
-        .bindPopup(popUpInfo);
+        .bindPopup(popup);
         
         markers.push(newMarker);
     });
