@@ -4,15 +4,18 @@
   let { length } = $props();
 
   let streets = $derived(page.url.searchParams.getAll('s'));
+  let name = $derived(page.url.searchParams.get('n'));
 </script>
 
 <h2>
+Alle adressen met een gedenkposter
+{#if name}
+  met naam <strong><span class="highlight">{name}</span></strong>
+{/if}
 {#if streets?.length === 1}
-	Alle addressen met een gedenkposter in straat <strong><span class="highlight">{streets[0]}</span></strong>
+	in straat <strong><span class="highlight">{streets[0]}</span></strong>
 {:else if streets?.length > 1}
-	Alle addressen met een gedenkposter gefiltered op <strong><span class="highlight">straat</span></strong>
-{:else}
-	Alle addressen met een gedenkposter
+	gefiltered op <strong><span class="highlight">straat</span></strong>
 {/if}
 <span class="length">({length})</span>
 </h2>

@@ -1,6 +1,6 @@
 <script>
 	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
-  import ActiveFilters from '$lib/molecules/ActiveFilters.svelte';
+	import ActiveFilters from '$lib/molecules/ActiveFilters.svelte';
 	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
 	import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
 	import Button from '$lib/atoms/Button.svelte';
@@ -29,8 +29,8 @@
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
 	<h3>Filters</h3>
-  <h4>Vind adressen via een zoekterm, of filter op straatnaam.</h4>
-	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
+	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
+	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
 			buttonClass={$css('show-on-focus')}
@@ -39,6 +39,7 @@
 			Toepassen
 		</Button>
 		<div>
+			<FilterSearchbar formRef={formAside} />
 			<FilterSectionList
 				title="Straat"
 				name="s"
@@ -107,6 +108,7 @@
 		color: var(--white);
 		font-size: var(--font-size-md);
 		font-weight: var(--font-weight-light);
+		line-height: 1.2;
 	}
 
 	.filter-button {
@@ -167,7 +169,7 @@
 			z-index: 0;
 		}
 
-    .hide-mobile {
+		.hide-mobile {
 			display: block !important;
 		}
 
