@@ -27,17 +27,10 @@
 </script>
 
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
+<aside class={[filterOpen && 'open', !javascript.enabled]}> <!--  && $css('hide-mobile') -->
 	<h3>Filters</h3>
-  <h4>Vind adressen via een zoekterm, of filter op straatnaam.</h4>
+	<h4>Vind adressen via een zoekterm, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
-		<Button
-			class={{ 'sr-only': javascript.enabled, highlight: true }}
-			buttonClass={$css('show-on-focus')}
-			type="submit"
-		>
-			Toepassen
-		</Button>
 		<div>
 			<FilterSectionList
 				title="Straat"
@@ -46,21 +39,6 @@
 				onchange={() => formAside.requestSubmit()}
 			/>
 		</div>
-	</form>
-</aside>
-
-<Button
-	onclick={() => (filterOpen = !filterOpen)}
-	class="highlight"
-	buttonClass={[$css('filter-button'), !javascript.enabled && $css('hide-mobile')]}>Filters</Button
->
-
-<!-- IF JS DISABLED SHOW DETAILS VERSION -->
-<details class={{ hidden: javascript.enabled, 'hide-desktop': !javascript.enabled }}>
-	<summary>
-		<h3>Filters</h3>
-	</summary>
-	<form bind:this={formDetails} action="/adressen" data-sveltekit-noscroll>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
 			buttonClass={$css('show-on-focus')}
@@ -68,6 +46,23 @@
 		>
 			Toepassen
 		</Button>
+	</form>
+</aside>
+<!-- <div class="filter-button-container">
+	<Button
+		onclick={() => (filterOpen = !filterOpen)}
+		class="highlight"
+		buttonClass={[$css('filter-button'), !javascript.enabled && $css('hide-mobile')]}>Filters </Button
+	>
+</div> -->
+
+<!--
+IF JS DISABLED SHOW DETAILS VERSION 
+<details class={{ hidden: javascript.enabled, 'hide-desktop': !javascript.enabled }}>
+	<summary>
+		<h3>Filters</h3>
+	</summary>
+	<form bind:this={formDetails} action="/adressen" data-sveltekit-noscroll>
 		<div>
 			<FilterSectionList
 				title="Straat"
@@ -76,23 +71,30 @@
 				onchange={() => formDetails.requestSubmit()}
 			/>
 		</div>
+		<Button
+			class={{ 'sr-only': javascript.enabled, highlight: true }}
+			buttonClass={$css('show-on-focus')}
+			type="submit"
+		>
+			Toepassen
+		</Button>
 	</form>
-</details>
+</details> -->
 
 <style>
 	aside {
 		display: block;
-		position: fixed;
+		position: sticky;
 		top: 6rem;
 		left: 0;
 		background-color: var(--blue-500);
 		color: var(--white);
-		padding: var(--spacing-lg) var(--spacing-md);
-		height: calc(100vh - 6rem);
-		width: 100vw;
-		overflow-y: auto;
-		z-index: 100;
-		transform: translateX(-100%);
+		padding: var(--spacing-md) var(--spacing-md);
+
+		/* width: 100vw; */
+		/* overflow-y: auto; */
+		/* z-index: 100; */
+		/* transform: translateX(-100%); */
 		transition: transform 0.3s ease-in-out;
 	}
 
@@ -109,8 +111,8 @@
 		font-weight: var(--font-weight-light);
 	}
 
-	.filter-button {
-		position: fixed;
+	/* .filter-button {
+		position: sticky;
 		top: calc(6rem + var(--spacing-md));
 		left: var(--page-padding);
 		z-index: 100;
@@ -118,13 +120,18 @@
 	}
 
 	aside.open + .filter-button {
-		/* Move button to right of screen */
 		transform: translateX(calc(100vw - 100% - var(--page-padding) * 2));
 	}
 
 	aside.open {
 		transform: translateX(0);
-	}
+	} */
+
+	/* .filter-button-container {
+		background-color: var(--blue-500);
+		width: 100%;
+		height: fit-content;
+	} */
 
 	form {
 		display: grid !important;
@@ -165,9 +172,10 @@
 			width: 20rem;
 			transform: translateX(0);
 			z-index: 0;
+			padding: var(--spacing-lg) var(--spacing-md);
 		}
 
-    .hide-mobile {
+		.hide-mobile {
 			display: block !important;
 		}
 

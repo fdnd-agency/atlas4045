@@ -23,7 +23,7 @@
   fieldset {
     border: none;
     padding: 0;
-    margin: var(--spacing-md) 0 0 0;
+    /* margin: var(--spacing-md) 0 0 0; */
   }
 
   legend {
