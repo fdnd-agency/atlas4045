@@ -49,6 +49,7 @@
 		flex-wrap: wrap;
 		padding: var(--spacing-md);
 		gap: var(--spacing-md);
+		height: 100%;
 	}
 
 	h1 {
@@ -79,7 +80,6 @@
 		align-items:start;
 		gap: var(--spacing-sm);
 		align-items: start;
-		/* justify-content: center; */
 
 		/* SCROLLING */
 		overflow-y: hidden;
@@ -115,7 +115,7 @@
 	section {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: space-between;
 		gap: var(--spacing-md);
 		width: 100%;
 	}
@@ -131,9 +131,10 @@
 		border: 5px solid var(--blue-300);
 	}
 
-
-
 	@media screen and (min-width: 800px) {
+		:global(body) {
+			height: 100vh; /* For big screens */
+		}
 		main {
 			flex-wrap: nowrap;
 			max-height: calc(100vh - 6rem); /* 6rem = padding top */
