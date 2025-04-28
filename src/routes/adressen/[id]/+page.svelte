@@ -160,22 +160,37 @@
 			height: 100% !important;
 			width: auto;	
 		}
-	}
 
-	@media screen and (max-aspect-ratio: 1120/898) {
-		main {
-			/* background-color: aqua; */
-			gap: var(--spacing-md);
-		}
-		
-	}
 
-	@container carousel (max-aspect-ratio: 426/620) {
-		li {
-			/* background-color: aquamarine; */
-			width: 100%;
+		@media screen and (max-aspect-ratio: 1120/898) {
+			main {
+				/* background-color: aqua; */
+				gap: var(--spacing-md);
+			}
+			
 		}
 
+		@media screen and (max-aspect-ratio: 1271/1273) {
+			main {
+				max-height: 50rem;
+			}
 
+			.map {
+				height: 30vh !important;
+			}
+
+			ol {
+				background-color: blueviolet;
+			}
+			
+		}
+
+		@container carousel (max-aspect-ratio: 426/620) {
+			li {
+				width: 100%;
+			}
+		}
 	}
+
+	
 </style>
