@@ -49,7 +49,6 @@
 		flex-wrap: wrap;
 		padding: var(--spacing-md);
 		gap: var(--spacing-md);
-		height: 100%;
 	}
 
 	h1 {
@@ -134,11 +133,16 @@
 	@media screen and (min-width: 800px) {
 		:global(body) {
 			height: 100vh; /* For big screens */
+			display: flex;
+			align-items: center;
+			/* background-color: aquamarine; */
 		}
 		main {
 			flex-wrap: nowrap;
 			max-height: calc(100vh - 6rem); /* 6rem = padding top */
 			gap: var(--spacing-xl);
+			align-self: center;
+			width: 100%;
 		}
 
 		ol {
@@ -160,7 +164,7 @@
 
 	@media screen and (max-aspect-ratio: 1120/898) {
 		main {
-			background-color: aqua;
+			/* background-color: aqua; */
 			gap: var(--spacing-md);
 		}
 		
@@ -168,7 +172,7 @@
 
 	@container carousel (max-aspect-ratio: 426/620) {
 		li {
-			background-color: aquamarine;
+			/* background-color: aquamarine; */
 			width: 100%;
 		}
 
