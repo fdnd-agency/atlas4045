@@ -8,7 +8,7 @@
 
   let searchTimeout;
   let inputRef;
-  
+
   function debounceSearch(event) {
     // Clear any existing timeout
     clearTimeout(searchTimeout);
@@ -21,12 +21,12 @@
 </script>
 
 <fieldset>
-  <legend>Zoeken</legend>
+  <legend>Zoeken op naam</legend>
   <TextInput 
     id="search" 
-    placeholder="Zoek op naam, adres, huisnummer..." 
+    placeholder="Jacob..." 
     sronly={true} 
-    name="q" 
+    name="n" 
     inputClass={$css('input')}
     bind:inputRef
     onkeyup={debounceSearch}
