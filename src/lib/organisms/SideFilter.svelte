@@ -29,7 +29,7 @@
 <!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
 	<h3>Filters</h3>
-	<h4>Vind adressen via een zoekterm, of filter op straatnaam.</h4>
+	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<Button
 			class={{ 'sr-only': javascript.enabled, highlight: true }}
@@ -108,6 +108,7 @@
 		color: var(--white);
 		font-size: var(--font-size-md);
 		font-weight: var(--font-weight-light);
+		line-height: 1.2;
 	}
 
 	.filter-button {
