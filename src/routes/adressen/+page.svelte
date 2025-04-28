@@ -12,6 +12,12 @@
 	);
 </script>
 
+<svelte:head>
+  <title>Atlas Oosterparkbuurt - Adressen</title>
+  <meta name="description" content="Atlas Oosterparkbuurt is een website die gedenkposters van de Oosterparkbuurt in Amsterdam bevat. Deze posters zijn gemaakt door vrijwilligers en zijn bedoeld om de joodse slachtoffers van de oorlog in de Oosterparkbuurt te herdenken." />
+</svelte:head>
+
+
 <main class="posters-overview">
 	<Map {mapAddresses} mapClass={$css('map')}/>
 	<SideFilter {streets} />
