@@ -55,6 +55,7 @@
 		align-items: center;
 		padding: var(--spacing-md) var(--spacing-xs) 0;
 	}
+  
 	ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
