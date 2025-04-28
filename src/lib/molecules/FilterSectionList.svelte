@@ -3,17 +3,7 @@
   import { page } from '$app/state';
   let { title, items, onchange, name } = $props();
 
-  let activeValues = $state([]);
-
-  // Extract active values from the URL and add them to the activeValues array
-  page.url.searchParams.forEach((value, key) => {
-    (key == name) && (activeValues.push(value));
-  });
-
-  function removeValueHandler(event) {
-    activeValues = activeValues.filter(value => value !== event.target.id);
-    onchange();
-  }
+  let activeValues = $derived(page.url.searchParams.getAll(name));
 </script>
 
 <fieldset>
@@ -21,7 +11,7 @@
   <ul>
     {#each items as item}
       <li>
-        <Checkbox id={item} label={item} {name} onchange={removeValueHandler} checked={activeValues.includes(item)}>
+        <Checkbox id={item} label={item} {name} {onchange} checked={activeValues.includes(item)}>
           {item}
         </Checkbox>
       </li>
