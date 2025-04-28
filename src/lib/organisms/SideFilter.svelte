@@ -61,8 +61,29 @@
 		padding: var(--spacing-md) var(--spacing-md);
 		padding-bottom: var(--spacing-sm);
 		transition: transform 0.3s ease-in-out;
-    overflow-y: scroll;
-    overflow-x: hidden;
+		overflow-y: scroll;
+		overflow-x: hidden;
+
+		/* SCROLLING */
+		scroll-snap-type: x mandatory;		
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+
+		/* SCROLLBAR */
+		scrollbar-width: 0;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: transparent;
+			border: none;
+		}
 	}
 
 	aside h3 {
