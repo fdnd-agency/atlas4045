@@ -4,7 +4,8 @@ import { readItems } from '@directus/sdk';
 export async function load({ fetch, url }) {
   // Initialize the filters
   let streetFilters = url.searchParams.getAll('s');
-  let nameFilters = url.searchParams.get('n').split(/\s+/).map(word => word.replace(/[.,!?]/g, ''));
+  let nameFilters = url.searchParams.get('n');
+  nameFilters = nameFilters ? nameFilters.split(/\s+/).map(word => word.replace(/[.,!?]/g, '')) : null;
   let queryFilters = {};
 
   // Add the street filters to the query
