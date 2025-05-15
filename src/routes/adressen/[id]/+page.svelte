@@ -1,10 +1,10 @@
 <script>
-	import DirectusImage from '$lib/atoms/DirectusImage.svelte';
-	import Map from '$lib/organisms/Map.svelte';
+    import DirectusImage from '$lib/atoms/DirectusImage.svelte';
+    import Map from '$lib/organisms/Map.svelte';
 
-	const { data } = $props();
-	let mapAddress = data.address;
-	const { street, house_number, floor, addition, person, poster } = data.address[0];
+    const { data } = $props();
+    let mapAddress = $derived(data.address);
+    const { street, house_number, floor, addition, person, poster } = $derived(data.address[0]);
 </script>
 
 <main>
