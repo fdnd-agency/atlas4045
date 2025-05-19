@@ -1,7 +1,7 @@
 <script>
 	import TextInput from '$lib/atoms/TextInput.svelte';
 	import Button from '$lib/atoms/Button.svelte';
-	import FilterChip from '$lib/atoms/FilterChip.svelte';
+	// import FilterChip from '$lib/atoms/FilterChip.svelte';
 	import { page } from '$app/state';
 	let { title, onchange, name } = $props();
 
