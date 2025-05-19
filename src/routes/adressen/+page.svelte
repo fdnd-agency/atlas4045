@@ -1,7 +1,5 @@
 <script>
-	import PostersOverview from '$lib/organisms/PostersOverview.svelte';
-	import Map from '$lib/organisms/Map.svelte';
-	import SideFilter from '$lib/organisms/SideFilter.svelte';
+	import { PostersOverview, Map, SideFilter } from '$lib/index.js';
 
 	let { data } = $props();
 	let mapAddresses = $derived(data.addresses.filter((address) => address.map?.coordinates));
