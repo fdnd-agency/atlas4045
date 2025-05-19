@@ -9,11 +9,13 @@
     onchange,
     ...rest
 	} = $props();
+
+	let uid = $props.id();
 </script>
 
 <!-- Give label a sr-only class if (sronly) is truthy -->
-<input {id} type="checkbox" class={inputClass} {onchange} value={id} {...rest} />
-<label for={id} class={[sronly && 'sr-only', labelClass]}>{@render children()}</label>
+<input id={uid} type="checkbox" class={inputClass} {onchange} value={id} {...rest} />
+<label for={uid} class={[sronly && 'sr-only', labelClass]}>{@render children()}</label>
 
 <style>
 	input {
