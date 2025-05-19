@@ -24,7 +24,7 @@
 	{type}
 	{placeholder}
 	class="no-focus {inputClass}"
-	name={uid}
+	name={id}
 	{...rest}
 />
 
@@ -37,8 +37,7 @@
 		padding: var(--spacing-xxs) var(--spacing-sm);
 		border: none;
 		border-radius: var(--border-radius-sm);
-		/* border: 3px solid var(--blue-600); */
-		text-overflow: ellipsis;
+    text-overflow: ellipsis;
 		height: 2.5rem;
 
 		transition-property: border, background-color;
