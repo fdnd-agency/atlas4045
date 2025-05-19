@@ -1,9 +1,6 @@
 <script>
-	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
-	import ActiveFilters from '$lib/molecules/ActiveFilters.svelte';
-	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
-	import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
-	import Button from '$lib/atoms/Button.svelte';
+	import { FilterSearchbar, ActiveFilters, FilterSectionList, FilterSectionSearch, Button  } from '$lib/index';
+
 	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import { page } from '$app/state';
 

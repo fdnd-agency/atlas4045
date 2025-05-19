@@ -1,7 +1,6 @@
 <script>
-	import Button from '$lib/atoms/Button.svelte';
-	import Nav from '$lib/molecules/Nav.svelte';
-	import NavItem from '$lib/atoms/NavItem.svelte';
+	import { Button, Nav, NavItem  } from '$lib/index';
+
 	import getCurrentPage from '$lib/utils/getCurrentPage';
 
 	import { page } from '$app/state';
