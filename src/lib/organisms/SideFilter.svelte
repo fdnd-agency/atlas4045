@@ -1,6 +1,6 @@
 <script>
 	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
-	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
+	import FilterListSelect from "$lib/molecules/FilterListSelect.svelte";
 	import Button from '$lib/atoms/Button.svelte';
 	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import { page } from '$app/state';
@@ -31,7 +31,7 @@
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
 			<FilterSearchbar title="Zoek op naam" name="n" />
-			<FilterSectionList
+			<FilterListSelect
 				title="Filter op straat"
 				name="s"
 				items={streets}
