@@ -17,7 +17,7 @@ Alle adressen met een gedenkposter
 {:else if streets?.length > 1}
 	gefiltered op <strong><span>straat</span></strong>
 {/if}
-<span class="length">({length})</span>
+<span>({length})</span>
 </h2>
 
 <style>
