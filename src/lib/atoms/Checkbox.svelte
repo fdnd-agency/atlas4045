@@ -6,8 +6,8 @@
 		inputClass = '',
 		labelClass = '',
 		value = 'on',
-    onchange,
-    ...rest
+		onchange,
+		...rest
 	} = $props();
 
 	let uid = $props.id();
