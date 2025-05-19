@@ -10,12 +10,12 @@
 <h2>
 Alle adressen met een gedenkposter
 {#if name}
-  met naam <strong><span class="highlight">{name}</span></strong>
+  met naam <strong><span>{name}</span></strong>
 {/if}
 {#if streets?.length === 1}
-	in straat <strong><span class="highlight">{streets[0]}</span></strong>
+	in straat <strong><span>{streets[0]}</span></strong>
 {:else if streets?.length > 1}
-	gefiltered op <strong><span class="highlight">straat</span></strong>
+	gefiltered op <strong><span>straat</span></strong>
 {/if}
 <span class="length">({length})</span>
 </h2>
@@ -23,12 +23,5 @@ Alle adressen met een gedenkposter
 <style>
 	h2 {
 		font-weight: var(--font-weight-light);
-	}
-	.highlight {
-		color: var(--red-900);
-	}
-
-	span.length {
-		font-size: 1rem;
 	}
 </style>
