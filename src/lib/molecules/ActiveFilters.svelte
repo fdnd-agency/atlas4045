@@ -1,5 +1,6 @@
 <script>
-	import FilterChip from '$lib/atoms/FilterChip.svelte';
+	import { FilterChip  } from '$lib/index';
+
 	import { page } from '$app/state';
 
 	let activeFilters = $derived(page.url.searchParams);

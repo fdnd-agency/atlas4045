@@ -1,5 +1,6 @@
 <script>
-  import Checkbox from '$lib/atoms/Checkbox.svelte';
+  import { Checkbox  } from '$lib/index';
+
   import { page } from '$app/state';
   let { title, items, onchange, name } = $props();
 
