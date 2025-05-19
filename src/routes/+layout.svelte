@@ -1,5 +1,6 @@
 <script>
-  import Header from "$lib/organisms/Header.svelte"
+  import { Header } from '$lib/index.js';
+  
   import { javascript } from "$lib/utils/javascriptEnabled.svelte.js"
   import { onMount } from "svelte"
 
