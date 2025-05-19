@@ -3,7 +3,7 @@
 	import FilterSection from '$lib/atoms/FilterSection.svelte';
 	import { page } from '$app/state';
 
-	let { name } = $props();
+	let { title, name } = $props();
 
 	let activeSearch = $derived(page.url.searchParams.get(name));
 	let searchTimeout;
@@ -20,7 +20,7 @@
 	}
 </script>
 
-<FilterSection title="Zoeken op naam">
+<FilterSection {title}>
 	<TextInput
 		id="search"
 		placeholder="Jacob..."

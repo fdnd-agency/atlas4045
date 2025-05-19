@@ -1,13 +1,13 @@
 <script>
   import Checkbox from '$lib/atoms/Checkbox.svelte';
+  import FilterSection from '$lib/atoms/FilterSection.svelte';
   import { page } from '$app/state';
   let { title, items, onchange, name } = $props();
 
   let activeValues = $derived(page.url.searchParams.getAll(name));
 </script>
 
-<fieldset>
-  <legend>{title}</legend>
+<FilterSection {title}>
   <ul>
     {#each items as item}
       <li>
@@ -17,23 +17,9 @@
       </li>
     {/each}
   </ul>
-</fieldset>
+</FilterSection>
 
 <style>
-  fieldset {
-    border: none;
-    padding: 0;
-    /* margin: var(--spacing-md) 0 0 0; */
-    display: flex;
-  }
-
-  legend {
-    font-family: var(--font-family-fraunces);
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-regular);
-    margin-bottom: var(--spacing-sm);
-  }
-
   ul {
     display: flex;
     flex-direction: row;
