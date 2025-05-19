@@ -10,7 +10,7 @@
 
 <section class="overview">
 	<header>
-		<PostersTitle length={addresses.length} />
+		<OverviewTitle length={addresses.length} />
 	</header>
 
 	{#await addresses}
