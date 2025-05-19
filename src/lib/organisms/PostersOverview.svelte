@@ -1,6 +1,6 @@
 <script>
 	import PosterCard from '../molecules/PosterCard.svelte';
-	import PostersTitle from '$lib/atoms/PostersTitle.svelte';
+	import OverviewTitle from '$lib/atoms/OverviewTitle.svelte';
 	import Button from '$lib/atoms/Button.svelte';
 
 	import { flip } from 'svelte/animate';
@@ -12,7 +12,7 @@
 
 <section class="overview">
 	<header>
-		<PostersTitle length={addresses.length} />
+		<OverviewTitle length={addresses.length} />
 	</header>
 
 	{#await addresses}
