@@ -1,6 +1,6 @@
 <script>
-  import { Header } from '$lib/index.js';
-  
+  import { Header } from '$lib/index';
+
   import { javascript } from "$lib/utils/javascriptEnabled.svelte.js"
   import { onMount } from "svelte"
 

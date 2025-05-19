@@ -1,5 +1,5 @@
 <script>
-	import { Nav, NavItem, PostersCarousel, Button } from '$lib/index.js';
+	import { Nav, NavItem, PostersCarousel, Button } from '$lib/index';
 
 	console.log(Nav)
 

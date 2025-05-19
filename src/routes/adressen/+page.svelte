@@ -1,5 +1,5 @@
 <script>
-	import { PostersOverview, Map, SideFilter } from '$lib/index.js';
+	import { PostersOverview, Map, SideFilter } from '$lib/index';
 
 	let { data } = $props();
 	let mapAddresses = $derived(data.addresses.filter((address) => address.map?.coordinates));

@@ -1,5 +1,5 @@
 <script>
-	import { DirectusImage, Map } from '$lib/index.js';
+	import { DirectusImage, Map } from '$lib/index';
 
 	const { data } = $props();
 	let mapAddress = data.address;
