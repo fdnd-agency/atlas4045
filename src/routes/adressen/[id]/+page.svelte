@@ -1,6 +1,5 @@
 <script>
-	import DirectusImage from '$lib/atoms/DirectusImage.svelte';
-	import Map from '$lib/organisms/Map.svelte';
+	import { DirectusImage, Map } from '$lib/index';
 
 	const { data } = $props();
 	let mapAddress = data.address;
