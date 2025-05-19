@@ -1,8 +1,7 @@
 <script>
-	import Nav from '$lib/molecules/Nav.svelte';
-	import NavItem from '$lib/atoms/NavItem.svelte';
-	import PostersCarousel from '$lib/organisms/PostersCarousel.svelte';
-	import Button from '$lib/atoms/Button.svelte';
+	import { Nav, NavItem, PostersCarousel, Button } from '$lib/index.js';
+
+	console.log(Nav)
 
 	let { data } = $props();
 	let { addresses } = data;

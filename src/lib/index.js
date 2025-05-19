@@ -20,6 +20,6 @@ export { default as PosterCard } from '$lib/molecules/PosterCard.svelte';
 // ORGANISMS
 export { default as Header } from '$lib/organisms/Header.svelte';
 export { default as Map } from '$lib/organisms/Map.svelte';
-export { default as PosterCarousel } from '$lib/organisms/PosterCarousel.svelte';
-export { default as PosterOverview } from '$lib/organisms/PosterOverview.svelte';
+export { default as PostersCarousel } from '$lib/organisms/PostersCarousel.svelte';
+export { default as PostersOverview } from '$lib/organisms/PostersOverview.svelte';
 export { default as SideFilter } from '$lib/organisms/SideFilter.svelte';
