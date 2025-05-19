@@ -1,13 +1,11 @@
 <script>
 	import TextInput from '$lib/atoms/TextInput.svelte';
-	import Button from '$lib/atoms/Button.svelte';
-	import Checkbox from '$lib/atoms/Checkbox.svelte';
-	import { onMount } from 'svelte';
+	import FilterSection from '$lib/atoms/FilterSection.svelte';
 	import { page } from '$app/state';
 
-	let { title, onevent, name, formRef } = $props();
+	let { name } = $props();
 
-	let activeSearch = $derived(page.url.searchParams.get('n'));
+	let activeSearch = $derived(page.url.searchParams.get(name));
 	let searchTimeout;
 	let inputRef;
 
@@ -22,34 +20,20 @@
 	}
 </script>
 
-<fieldset>
-	<legend>Zoeken op naam</legend>
+<FilterSection title="Zoeken op naam">
 	<TextInput
 		id="search"
 		placeholder="Jacob..."
 		value={activeSearch}
 		sronly={true}
-		name="n"
+		{name}
 		inputClass={$css('input')}
 		bind:inputRef
 		onkeyup={debounceSearch}>Zoeken</TextInput
 	>
-</fieldset>
+</FilterSection>
 
 <style>
-	fieldset {
-		border: none;
-		padding: 0;
-		margin: var(--spacing-xs) 0 var(--spacing-md) 0;
-	}
-
-	legend {
-		font-family: var(--font-family-fraunces);
-		font-size: var(--font-size-lg);
-		font-weight: var(--font-weight-regular);
-		margin-bottom: var(--spacing-sm);
-	}
-
 	.input {
 		width: 100%;
 	}

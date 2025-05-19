@@ -30,7 +30,7 @@
 	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
-			<FilterSearchbar formRef={formAside} />
+			<FilterSearchbar name="n" />
 			<FilterSectionList
 				title="Straat"
 				name="s"
