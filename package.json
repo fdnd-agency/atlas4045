@@ -22,11 +22,11 @@
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^2.46.1",
 		"globals": "^15.14.0",
+		"leaflet": "^1.9.4",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"svelte": "^5.0.0",
-		"svelte-css-rune": "^0.2.1",
-		"leaflet": "^1.9.4",
+		"svelte-css-rune": "^0.2.2",
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
