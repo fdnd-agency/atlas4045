@@ -1,5 +1,5 @@
 <script>
-	import PosterCard from '$lib/molecules/PosterCard.svelte';
+	import { PosterCard  } from '$lib/index';
 
 	let { addresses = [] } = $props();
 </script>

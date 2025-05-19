@@ -1,7 +1,5 @@
 <script>
-	import PosterCard from '../molecules/PosterCard.svelte';
-	import OverviewTitle from '$lib/atoms/OverviewTitle.svelte';
-	import Button from '$lib/atoms/Button.svelte';
+	import { PosterCard, PostersTitle, Button  } from '$lib/index';
 
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';

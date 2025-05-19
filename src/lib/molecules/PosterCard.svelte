@@ -1,5 +1,6 @@
 <script>
-	import DirectusImage from '$lib/atoms/DirectusImage.svelte';
+	import { DirectusImage  } from '$lib/index';
+
 	import toRomanNumerals from '$lib/utils/toRomanNumerals';
 
 	let {
