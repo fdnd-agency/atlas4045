@@ -1,10 +1,8 @@
 <script>
 	import Button from "$lib/atoms/Button.svelte";
   import { javascript } from "$lib/utils/javascriptEnabled.svelte.js";
-  import { onMount } from 'svelte';
 
 	let { children } = $props()
-
   let isOpen = $state(false);
 
   function toggleMenu() {
@@ -12,11 +10,11 @@
   }
 </script>
 
-<nav class={{"js-enabled": javascript.enabled}}>
-  <Button buttonClass={$css("menu-button")} onclick={toggleMenu} class={{"hidden": !javascript.enabled, "highlight": true}}>
+<nav class={[javascript.enabled && "js-enabled"]}>
+  <Button buttonClass={$css("menu-button")} onclick={toggleMenu} class={[!javascript.enabled && "hidden", "highlight"]}>
     Menu
   </Button>
-  <ul class={{"is-open": isOpen}}>
+  <ul class={[isOpen && "is-open"]}>
 		{@render children()}
 	</ul>
 </nav>
