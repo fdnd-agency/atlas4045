@@ -9,6 +9,7 @@
 		labelClass = '',
 		value = $bindable(''),
 		inputRef = $bindable(),
+		name,
 		...rest
 	} = $props();
 
@@ -23,8 +24,8 @@
 	id={uid}
 	{type}
 	{placeholder}
+	{name}
 	class="no-focus {inputClass}"
-	name={id}
 	{...rest}
 />
 
