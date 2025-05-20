@@ -1,7 +1,6 @@
 <script>
 	import { PostersCarousel, Button, Hero } from '$lib/index';
 	let { data } = $props();
-	let { addresses } = data;
 </script>
 
 <svelte:head>
@@ -16,7 +15,7 @@
 		<section class="section-suggested">
 			<h3>Uitgelichte gedenkposters</h3>
 	
-			<PostersCarousel {addresses} />
+			<PostersCarousel addresses={data.addresses} />
 		</section>
 	
 		<section class="section-CTA">
