@@ -1,46 +1,30 @@
 <script>
 	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
 	import FilterListSelect from "$lib/molecules/FilterListSelect.svelte";
+  import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import Button from '$lib/atoms/Button.svelte';
-	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
-	import { page } from '$app/state';
 
 	let { streets } = $props();
 
-	let filterOpen = $state(false);
-
-	// Derive the list of streets from the posters
-	let streetsList = $derived(
-		Array.from(
-			// Remove duplicates
-			new Set(
-				// Get all streets from posters
-				page.data.addresses.map((address) => address.street.trim())
-			)
-		).sort() // Sort alphabetically
-	);
-
-	let formAside;
-	let formDetails;
+	let form;
 </script>
 
-<!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={[filterOpen && 'open', !javascript.enabled]}>
+<aside>
 	<h3>Filters</h3>
 	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
-	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
+	<form bind:this={form} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
 			<FilterSearchbar title="Zoek op naam" name="n" />
 			<FilterListSelect
 				title="Filter op straat"
 				name="s"
 				items={streets}
-				onchange={() => formAside.requestSubmit()}
+				onchange={() => form.requestSubmit()}
 			/>
 		</div>
 		<Button
-			class={{ 'sr-only': javascript.enabled, highlight: true }}
-			buttonClass={$css('show-on-focus')}
+			class={[ javascript.enabled && 'sr-only', 'highlight' ]}
+			buttonClass={$css('submit-button')}
 			type="submit"
 		>
 			Filter toepassen
@@ -104,29 +88,15 @@
 		margin-top: var(--spacing-md);
 	}
 
-	.show-on-focus:focus-visible {
-		background-color: var(--blue-700) !important;
-	}
+  .submit-button {
+    background-color: var(--blue-200) !important;
+    color: var(--black) !important;
+  }
 
-	.show-on-focus {
-		background-color: var(--blue-600) !important;
-		border-radius: var(--border-radius-sm) !important;
-		box-shadow: none !important;
-		width: 100% !important;
-		margin-bottom: var(--spacing-xs);
-	}
-
-	.higlight {
-		background-color: var(--blue-200);
-	}
-
-	.hide-mobile {
-		display: none !important;
-	}
-
-	.hide-desktop {
-		display: block !important;
-	}
+  .submit-button:hover {
+    background-color: var(--blue-300) !important;
+    color: var(--black) !important;
+  }
 
 	@media screen and (min-width: 800px) {
 		aside {
@@ -138,18 +108,6 @@
 			transform: translateX(0);
 			z-index: 0;
 			padding: var(--spacing-lg) var(--spacing-md);
-		}
-
-		.hide-mobile {
-			display: block !important;
-		}
-
-		.hide-desktop {
-			display: none !important;
-		}
-
-		.filter-button {
-			display: none !important;
 		}
 
 		form {
