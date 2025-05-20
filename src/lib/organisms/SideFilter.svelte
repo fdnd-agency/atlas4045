@@ -2,40 +2,23 @@
 	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
 	import FilterListSelect from "$lib/molecules/FilterListSelect.svelte";
 	import Button from '$lib/atoms/Button.svelte';
-	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
-	import { page } from '$app/state';
 
 	let { streets } = $props();
 
-	let filterOpen = $state(false);
-
-	// Derive the list of streets from the posters
-	let streetsList = $derived(
-		Array.from(
-			// Remove duplicates
-			new Set(
-				// Get all streets from posters
-				page.data.addresses.map((address) => address.street.trim())
-			)
-		).sort() // Sort alphabetically
-	);
-
-	let formAside;
-	let formDetails;
+	let form;
 </script>
 
-<!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={[filterOpen && 'open', !javascript.enabled]}>
+<aside>
 	<h3>Filters</h3>
 	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
-	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
+	<form bind:this={form} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
 			<FilterSearchbar title="Zoek op naam" name="n" />
 			<FilterListSelect
 				title="Filter op straat"
 				name="s"
 				items={streets}
-				onchange={() => formAside.requestSubmit()}
+				onchange={() => form.requestSubmit()}
 			/>
 		</div>
 		<Button
@@ -44,7 +27,7 @@
 			type="submit"
 		>
 			Filter toepassen
-		</Button>
+		</Buttonas>
 	</form>
 </aside>
 
