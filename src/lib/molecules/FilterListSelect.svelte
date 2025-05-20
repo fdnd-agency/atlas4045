@@ -1,6 +1,7 @@
 <script>
 	import Checkbox from '$lib/atoms/Checkbox.svelte';
 	import FilterSection from '$lib/atoms/FilterSection.svelte';
+  
 	import { page } from '$app/state';
 	let { title, items, onchange, name } = $props();
 
