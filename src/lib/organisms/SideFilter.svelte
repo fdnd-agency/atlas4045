@@ -1,6 +1,7 @@
 <script>
-	import { FilterSearchbar, ActiveFilters, FilterSectionList, FilterSectionSearch, Button  } from '$lib/index';
-
+	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
+	import FilterListSelect from "$lib/molecules/FilterListSelect.svelte";
+	import Button from '$lib/atoms/Button.svelte';
 	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import { page } from '$app/state';
 
@@ -29,9 +30,9 @@
 	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
 	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
-			<FilterSearchbar formRef={formAside} />
-			<FilterSectionList
-				title="Straat"
+			<FilterSearchbar title="Zoek op naam" name="n" />
+			<FilterListSelect
+				title="Filter op straat"
 				name="s"
 				items={streets}
 				onchange={() => formAside.requestSubmit()}
