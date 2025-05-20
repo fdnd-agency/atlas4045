@@ -1,5 +1,5 @@
 <script>
-	import { PostersCarousel, Button } from '$lib/index';
+	import { HomeCarousel, Button } from '$lib/index';
 	let { addresses } = $props();
 </script>
 
@@ -7,7 +7,7 @@
   <section class="posters">
     <h3>Uitgelichte gedenkposters</h3>
 
-    <PostersCarousel {addresses} />
+    <HomeCarousel {addresses} />
   </section>
 
   <section class="CTA">
