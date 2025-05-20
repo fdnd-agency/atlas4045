@@ -39,7 +39,7 @@
 			/>
 		</div>
 		<Button
-			class={{ 'sr-only': javascript.enabled, highlight: true }}
+			class={[ javascript.enabled && 'sr-only', 'highlight' ]}
 			buttonClass={$css('show-on-focus')}
 			type="submit"
 		>
