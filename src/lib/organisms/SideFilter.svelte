@@ -1,6 +1,7 @@
 <script>
 	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
 	import FilterListSelect from "$lib/molecules/FilterListSelect.svelte";
+  import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import Button from '$lib/atoms/Button.svelte';
 
 	let { streets } = $props();
