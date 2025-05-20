@@ -24,7 +24,7 @@
 		</div>
 		<Button
 			class={[ javascript.enabled && 'sr-only', 'highlight' ]}
-			buttonClass={$css('show-on-focus')}
+			buttonClass={$css('submit-button')}
 			type="submit"
 		>
 			Filter toepassen
@@ -88,29 +88,15 @@
 		margin-top: var(--spacing-md);
 	}
 
-	.show-on-focus:focus-visible {
-		background-color: var(--blue-700) !important;
-	}
+  .submit-button {
+    background-color: var(--blue-200) !important;
+    color: var(--black) !important;
+  }
 
-	.show-on-focus {
-		background-color: var(--blue-600) !important;
-		border-radius: var(--border-radius-sm) !important;
-		box-shadow: none !important;
-		width: 100% !important;
-		margin-bottom: var(--spacing-xs);
-	}
-
-	.higlight {
-		background-color: var(--blue-200);
-	}
-
-	.hide-mobile {
-		display: none !important;
-	}
-
-	.hide-desktop {
-		display: block !important;
-	}
+  .submit-button:hover {
+    background-color: var(--blue-300) !important;
+    color: var(--black) !important;
+  }
 
 	@media screen and (min-width: 800px) {
 		aside {
@@ -122,18 +108,6 @@
 			transform: translateX(0);
 			z-index: 0;
 			padding: var(--spacing-lg) var(--spacing-md);
-		}
-
-		.hide-mobile {
-			display: block !important;
-		}
-
-		.hide-desktop {
-			display: none !important;
-		}
-
-		.filter-button {
-			display: none !important;
 		}
 
 		form {
