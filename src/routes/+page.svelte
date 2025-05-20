@@ -39,22 +39,6 @@
 	}
 
 	/* STYLING */
-	header {
-		--_page-padding: var(--spacing-md);
-		--_padding: var(--spacing-md);
-		--_margin: var(--spacing-md);
-		background-image: url("/assets/gedenkposter.avif");
-		background-color: var(--blue-900);
-		background-size:cover;
-		background-repeat: no-repeat;
-		padding:var(--_padding);
-	}
-
-	header > * {
-		background-color: rgb(255,255,255,0.9);
-		padding:var(--spacing-sm);
-	}
-
 	h3 {
 		font-size: var(--font-size-title-md);
 		font-weight: var(--font-weight-light);
