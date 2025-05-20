@@ -1,6 +1,5 @@
 <script>
-	import { Nav, NavItem, PostersCarousel, Button } from '$lib/index';
-
+	import { PostersCarousel, Button, Hero } from '$lib/index';
 	let { data } = $props();
 	let { addresses } = data;
 </script>
@@ -11,30 +10,7 @@
 </svelte:head>
 
 <main>
-	<header>
-		<h2>Herdenken door te vertellen.</h2>
-
-		<div class="content-container">
-			<p>
-				In de jaren tussen 1940 en 1945 zijn door de Duitse bezetter meer dan 2800 mensen uit de
-				Oosterparkbuurt gedeporteerd en vermoord in Oost-Europa. Het Joodse leven in de buurt, dat
-				voor de oorlog bloeiende was, verdween.
-			</p>
-
-			<p>
-				Wie waren deze mensen? Hoe zagen hun levens eruit? Wat hebben ze tijdens de oorlog meegemaakt?
-				Op deze vragen proberen we met de gedenkposters antwoord te geven. Zo'n veertig buurtbewoners
-				in wiens huizen Joodse mensen hebben gewoond hebben al onderzoek gedaan naar die oud-bewoners
-				en hun verhalen opgeschreven. De gedenkposters hangen in april en mei door de hele buurt voor
-				de ramen. Ook worden er wandelingen langs de posters georganiseerd.
-			</p>
-
-			<p>
-				De gedenkposters zijn geïnspireerd op het project Namen en Nummers van kunstenaar Ida van der
-				Lee. Ontdek hier meer over Namen en Nummers.
-			</p>
-		</div>
-	</header>
+	<Hero />
 
 	<div class="page-content">
 		<section class="section-suggested">
@@ -79,17 +55,11 @@
 		padding:var(--spacing-sm);
 	}
 
-	h2,
 	h3 {
 		font-size: var(--font-size-title-md);
 		font-weight: var(--font-weight-light);
 		text-align: center;
 		margin-bottom: var(--spacing-md);
-	}
-
-	h2 {
-		font-weight:var(--font-weight-bold);
-		color: var(--blue-700);
 	}
 
 	h3 {
@@ -99,19 +69,6 @@
 		padding: var(--spacing-xs);
 		font-weight:var(--font-weight-medium);
 		justify-self: center;
-	}
-
-	p {
-		font-size: var(--font-size-md);
-		color: var(--neutral-900);
-		text-align: left;
-		margin: auto;
-		margin-bottom: var(--spacing-md);
-		width: 100%;
-	}
-
-	.content-container {
-		margin-bottom: var(--spacing-md);
 	}
 
 	section {
@@ -137,40 +94,6 @@
 	}
 
 	@media screen and (min-width: 800px) {
-		header {
-			--_page-padding: var(--page-padding);
-			--_padding: var(--spacing-xl);
-			--_margin: var(--spacing-md);
-			height: fit-content;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			gap: var(--spacing-md);
-			z-index:-1;
-			top:6rem;
-		}
-			
-
-		header h2 {
-			flex-shrink:0;
-		}
-
-		.content-container {
-			column-count: 2;
-			column-gap: var(--spacing-md);
-			width:810px;
-			margin-bottom: 0;
-		}
-
-		h2 {
-			font-size: var(--font-size-title-xl);
-		}
-
-		p {
-			font-size: var(--font-size-lg);
-		}
-
 		h3 {
 			font-size: var(--font-size-title-md);
 		}

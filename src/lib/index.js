@@ -15,6 +15,7 @@ export { default as PosterCard } from '$lib/molecules/PosterCard.svelte';
 
 // ORGANISMS
 export { default as Header } from '$lib/organisms/Header.svelte';
+export { default as Hero } from '$lib/organisms/Hero.svelte';
 export { default as Map } from '$lib/organisms/Map.svelte';
 export { default as PostersCarousel } from '$lib/organisms/PostersCarousel.svelte';
 export { default as PostersOverview } from '$lib/organisms/PostersOverview.svelte';
