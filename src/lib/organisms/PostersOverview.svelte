@@ -22,14 +22,14 @@
 					animate:flip={{ duration: 300, easing: cubicOut }}
 				>
 					<PosterCard
-						name={address.person?.[0]?.last_name ?? 'Onbekend'}
-						street={address.street ?? 'Onbekend'}
-						house_number={address.house_number ?? 'Onbekend'}
+						name={address?.person?.[0]?.last_name ?? 'Onbekend'}
+						street={address?.street ?? 'Onbekend'}
+						house_number={address?.house_number ?? 'Onbekend'}
 						floor={address?.floor}
 						addition={address?.addition}
-						image={address.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
-						width={address.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
-						height={address.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
+						image={address?.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
+						width={address?.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
+						height={address?.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 						id={address?.id ?? ''}
 					/>
 				</div>
