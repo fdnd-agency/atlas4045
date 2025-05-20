@@ -20,3 +20,4 @@ export { default as Map } from '$lib/organisms/Map.svelte';
 export { default as PostersCarousel } from '$lib/organisms/PostersCarousel.svelte';
 export { default as PostersOverview } from '$lib/organisms/PostersOverview.svelte';
 export { default as SideFilter } from '$lib/organisms/SideFilter.svelte';
+export { default as SuggestedPosters } from '$lib/organisms/SuggestedPosters.svelte';
