@@ -27,7 +27,7 @@
 			type="submit"
 		>
 			Filter toepassen
-		</Buttonas>
+		</Button>
 	</form>
 </aside>
 
