@@ -59,7 +59,7 @@
 ![Main page screenshot](https://github.com/user-attachments/assets/dd64e362-cb19-4d18-939d-2ba46aa7345e)
 ![Overview page screenshot](https://github.com/user-attachments/assets/a53830e2-51a8-4e02-8eba-1fbfbcb5353d)
 
-This website functions as a supplement to the Gedenkposters campaign of the 4 Mei Comité Oosterparkbuurt. Users can see an overview of all posters on display in the campaign, and see their location on a map. Features such as a filter function, and highlighted poster suggestions on the main page allow users to discover new stories and posters from the Oosterparkbuurt, and easily save or share these stories with others. 
+This website functions as a supplement to the 'Gedenkposters' campaign of the 4 Mei Comité Oosterparkbuurt. Users can see an overview of all posters on display in the campaign, and see their location on a map. Features such as a filter function, and highlighted poster suggestions on the main page allow users to discover new stories and posters from the Oosterparkbuurt, and easily save or share these stories with others. 
 
 In the future, this website will house the stories of thousands of Jewish people from the Oosterparkbuurt who fell victim to the Holocaust, and allow people to discover their stories through an intuitive interface.
 
@@ -149,6 +149,15 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- IMPORTEND DATA -->
+## Importend data
+* Figma prototype · <a href="https://www.figma.com/design/bHh40tuxL1RjtEcWVJpZjF/Atlas-40-45?node-id=0-1&t=EaUPwnSQPBKCCWbI-1"><strong>File »</strong></a>
+<!-- 
+  * Design rationale · *insert design rationale » * 
+  * Deskresearch · *insert deskresearch » * 
+  * Fieldresearch · *insert fieldresearch » * 
+--> 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -161,7 +170,6 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 * FDND Conventions · <a href="https://github.com/fdnd-agency/.github/wiki/Conventions"><strong>Link »</strong></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
