@@ -1,12 +1,13 @@
 <script>
 	import FilterChip from '$lib/atoms/FilterChip.svelte';
+  import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import { page } from '$app/state';
 
 	let activeFilters = $derived(page.url.searchParams);
 	let form;
 </script>
 
-<form bind:this={form} action="/adressen" data-sveltekit-noscroll>
+<form class={[!javascript.enabled && "hidden"]} bind:this={form} action="/adressen" data-sveltekit-noscroll>
 	{#key activeFilters}
 		{#each activeFilters as [key, value]}
 			<FilterChip id={value} name={key} onchange={() => form.requestSubmit()}>
