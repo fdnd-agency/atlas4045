@@ -140,11 +140,10 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 <!-- TEAM MEMBERS -->
 ## Team
-
 - Anna-Kyra Strik · <i>Developer</i> · <a href="https://github.com/Anna-Kyra"><strong>Github »</strong></a>
-- Robin van der Heijden · <i>Developer</i> · <a href="https://github.com/Robin1224"><strong>Github »</strong></a>
-- Sarah Bouziane Bouziane · <i>Designer</i>
-- Cassidy Starke · <i>Designer</i>
+- Robin van der Heijden · <i>Developer</i> · <a href="https://github.com/Robin1224"><strong>Github »</strong></a> 
+- Sarah Bouziane Bouziane · <i>Designer</i> · <a href="https://github.com/saarrxb"><strong>Github »</strong></a>
+- Cassidy Starke · <i>Designer</i> · <a href="https://github.com/CassidyStarke"><strong>Github »</strong></a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
