@@ -72,6 +72,13 @@ In the future, this website will house the stories of thousands of Jewish people
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Directus][Directus.io]][Directus-url]
 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
+[Directus.io]: https://img.shields.io/badge/Directus-6644FF?style=for-the-badge&logo=directus&logoColor=white
+[Directus-url]: https://directus.io
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -169,11 +176,3 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 * FDND Conventions · <a href="https://github.com/fdnd-agency/.github/wiki/Conventions"><strong>Link »</strong></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Directus.io]: https://img.shields.io/badge/Directus-6644FF?style=for-the-badge&logo=directus&logoColor=white
-[Directus-url]: https://directus.io
