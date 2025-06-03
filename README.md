@@ -46,6 +46,7 @@
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
+    <li><a href="#importend-data">Importend data</a></li>
     <li><a href="#team">Team</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -136,6 +137,15 @@ Want to contribute as someone outside of the FDND organisation? Follow these ste
 
 When contributing, make sure to follow the <a href="https://github.com/fdnd-agency/.github/wiki/Conventions"><strong>FDND Conventions »</strong></a>
 
+<!-- IMPORTEND DATA -->
+## Importend data
+* Figma prototype · <a href="https://www.figma.com/design/bHh40tuxL1RjtEcWVJpZjF/Atlas-40-45?node-id=0-1&t=EaUPwnSQPBKCCWbI-1"><strong>File »</strong></a>
+<!-- 
+  * Design rationale · *insert design rationale » * 
+  * Deskresearch · *insert deskresearch » * 
+  * Fieldresearch · *insert fieldresearch » * 
+--> 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
@@ -153,16 +163,6 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 - Cassidy Starke · <i>Designer</i> · <a href="https://github.com/CassidyStarke"><strong>Github »</strong></a>
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- IMPORTEND DATA -->
-## Importend data
-* Figma prototype · <a href="https://www.figma.com/design/bHh40tuxL1RjtEcWVJpZjF/Atlas-40-45?node-id=0-1&t=EaUPwnSQPBKCCWbI-1"><strong>File »</strong></a>
-<!-- 
-  * Design rationale · *insert design rationale » * 
-  * Deskresearch · *insert deskresearch » * 
-  * Fieldresearch · *insert fieldresearch » * 
---> 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
