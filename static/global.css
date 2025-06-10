@@ -74,7 +74,6 @@
 	--neutral-200: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-200));
 	--neutral-100: hsl(var(--neutral-hue) var(--neutral-saturation) var(--lightness-100));
 
-
 	/*-----------------
           Fonts
     -----------------*/
@@ -199,7 +198,7 @@ div.query-container {
 
 	&:focus-visible,
 	&:focus-within {
-		/* outline: 3px solid var(--brown-400); */
+		outline: 3px solid var(--brown-400);
 	}
 }
 
