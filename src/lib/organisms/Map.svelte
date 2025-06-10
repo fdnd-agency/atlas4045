@@ -105,7 +105,7 @@
 	});
 </script>
 
-<section class={{ 'js-enabled': javascript.enabled, map: true }}>
+<section class={[javascript.enabled && 'js-enabled', 'map']}>
 	<h2 class="sr-only">Adressen op de kaart</h2>
 
 	<div bind:this={mapElement} class={mapClass}></div>
