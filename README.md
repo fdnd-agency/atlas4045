@@ -138,7 +138,7 @@ Want to contribute as someone outside of the FDND organisation? Follow these ste
 When contributing, make sure to follow the <a href="https://github.com/fdnd-agency/.github/wiki/Conventions"><strong>FDND Conventions »</strong></a>
 
 <!-- IMPORTEND DATA -->
-## Importend data
+## Important data
 * Figma prototype · <a href="https://www.figma.com/design/bHh40tuxL1RjtEcWVJpZjF/Atlas-40-45?node-id=0-1&t=EaUPwnSQPBKCCWbI-1"><strong>File »</strong></a>
 <!-- 
   * Design rationale · *insert design rationale » * 
