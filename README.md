@@ -107,16 +107,12 @@ To get a local copy up and running follow these simple example steps.
    npm install
    ```
 3. Create a `.env` file using `example.env` as a guide.
-4. `PROTECTED_PASSWORD` will be the password required to see the site. This is to protect the preview branch
-   ```env
-   PROTECTED_PASSWORD = ""
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+4. Change git remote url to avoid accidental pushes to base project
    ```sh
    git remote set-url origin github_username/repo_name
    git remote -v # confirm the changes
    ```
-6. Run local dev server
+5. Run local dev server
    ```sh
    npm run dev
    ```
