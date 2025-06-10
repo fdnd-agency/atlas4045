@@ -7,6 +7,7 @@ export { default as NavItem } from '$lib/atoms/NavItem.svelte';
 export { default as TextInput } from '$lib/atoms/TextInput.svelte';
 
 // MOLECULES
+export { default as AddressDetailInfo } from '$lib/molecules/AddressDetailInfo.svelte';
 export { default as FilterSearchbar } from '$lib/molecules/FilterSearchbar.svelte';
 export { default as FilterListSelect } from '$lib/molecules/FilterListSelect.svelte';
 export { default as Nav } from '$lib/molecules/Nav.svelte';
