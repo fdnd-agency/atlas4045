@@ -9,6 +9,7 @@
 		data.address[0].map.coordinates[1],
 		data.address[0].map.coordinates[0]
 	]);
+  
 	let allCoordinates = $derived(
 		data.coordinates.filter((currentArray) => {
 			return !(
@@ -95,7 +96,7 @@
 	}
 
 	.map {
-		max-height: 50vh !important;
+		max-height: 50vh;
 		border-radius: var(--border-radius-md);
 		border: 5px solid var(--blue-300);
 	}
@@ -121,7 +122,7 @@
 			}
 
 			.map {
-				max-height: 30vh !important;
+				max-height: 30vh;
 			}
 		}
 
