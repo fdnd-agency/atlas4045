@@ -59,5 +59,6 @@ insert welke branches goed zijn om naar te kijken
 ### Handige issues om naar te kijken:
 - [FEATURE]: Show submit button when focused · <a href="https://github.com/fdnd-agency/atlas4045/issues/299"><strong>Link »</strong></a>
 - [FEATURE]: Add subtle gradient to filter mobile layout, to better convey to user that filters are scrollable · <a href="https://github.com/fdnd-agency/atlas4045/issues/298"><strong>Link »</strong></a>
+- [FEATURE]: Add breadcrumb or go back button to detail page · <a href="https://github.com/fdnd-agency/atlas4045/issues/247"><strong>Link »</strong></a>
 - [FEATURE]: Go to top button · <a href="https://github.com/fdnd-agency/atlas4045/issues/297"><strong>Link »</strong></a>
 
