@@ -1,5 +1,6 @@
 <script>
-	import DirectusImage from '$lib/atoms/DirectusImage.svelte';
+	import { DirectusImage  } from '$lib/index';
+
 	import toRomanNumerals from '$lib/utils/toRomanNumerals';
 
 	let {
@@ -38,7 +39,7 @@
 		
 		<div>
 			<p class="name">Familie {name}</p>
-			<p>{street} {house_number} {floor} {addition}</p>
+			<p>{street} {house_number} {floor ? '-' : ''} {floor} {addition}</p>
 		</div>
 	</a>
 </li>

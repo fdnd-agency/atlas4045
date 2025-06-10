@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.17.0] - 2025-03-12
+### Added
+- Improved map display on detail page
+- Improved filter styling
+- Improved user experience on the filter search
+
+
 ## [0.16.0] - 2025-03-12
 ### Added
 - Linked PosterCard to detail pages

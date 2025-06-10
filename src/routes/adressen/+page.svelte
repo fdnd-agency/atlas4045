@@ -1,7 +1,5 @@
 <script>
-	import PostersOverview from '$lib/organisms/PostersOverview.svelte';
-	import Map from '$lib/organisms/Map.svelte';
-	import SideFilter from '$lib/organisms/SideFilter.svelte';
+	import { PostersOverview, Map, SideFilter } from '$lib/index';
 
 	let { data } = $props();
 	let mapAddresses = $derived(data.addresses.filter((address) => address.map?.coordinates));
@@ -11,6 +9,12 @@
 		Array.from(new Set(data.streets.map((item) => item.street.trim()))).sort()
 	);
 </script>
+
+<svelte:head>
+  <title>Atlas Oosterparkbuurt - Adressen</title>
+  <meta name="description" content="Atlas Oosterparkbuurt is een website die gedenkposters van de Oosterparkbuurt in Amsterdam bevat. Deze posters zijn gemaakt door vrijwilligers en zijn bedoeld om de joodse slachtoffers van de oorlog in de Oosterparkbuurt te herdenken." />
+</svelte:head>
+
 
 <main class="posters-overview">
 	<Map {mapAddresses} mapClass={$css('map')}/>
@@ -27,7 +31,7 @@
 	border-bottom: 5px solid var(--blue-300);
   }
 
-	@media screen and (min-width: 460px) {
+	@media screen and (min-width: 800px) {
 		main {
 			margin: 0 auto;
 			display: grid;

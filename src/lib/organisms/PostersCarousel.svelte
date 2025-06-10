@@ -1,5 +1,5 @@
 <script>
-	import PosterCard from '$lib/molecules/PosterCard.svelte';
+	import { PosterCard  } from '$lib/index';
 
 	let { addresses = [] } = $props();
 </script>
@@ -7,14 +7,14 @@
 <ul>
 	{#each addresses as address (address.id)}
 		<PosterCard
-			name={address.person?.[0]?.last_name ?? 'Onbekend'}
-			street={address.street ?? 'Onbekend'}
-			house_number={address.house_number ?? 'Onbekend'}
+			name={address?.person?.[0]?.last_name ?? 'Onbekend'}
+			street={address?.street ?? 'Onbekend'}
+			house_number={address?.house_number ?? 'Onbekend'}
 			floor={address?.floor}
 			addition={address?.addition}
 			image={address.poster?.covers?.[0]?.directus_files_id?.id ?? ''}
-			width={address.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
-			height={address.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
+			width={address?.poster?.covers?.[0]?.directus_files_id?.width ?? 419}
+			height={address?.poster?.covers?.[0]?.directus_files_id?.height ?? 585}
 			cardClass={$css('carousel-item')}
       id={address?.id ?? ''}
 		/>
@@ -29,6 +29,28 @@
 		gap: var(--spacing-sm);
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
+    width: 100%;
+
+		/* SCROLLING */
+		scroll-snap-type: x mandatory;		
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+
+		/* SCROLLBAR */
+		scrollbar-width: 0;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: transparent;
+			border: none;
+		}
 	}
 
 	.carousel-item {

@@ -1,182 +1,119 @@
 <script>
 	import FilterSearchbar from '$lib/molecules/FilterSearchbar.svelte';
-  import ActiveFilters from '$lib/molecules/ActiveFilters.svelte';
-	import FilterSectionList from '$lib/molecules/FilterSectionList.svelte';
-	import FilterSectionSearch from '$lib/molecules/FilterSectionSearch.svelte';
+	import FilterListSelect from "$lib/molecules/FilterListSelect.svelte";
+  import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
 	import Button from '$lib/atoms/Button.svelte';
-	import { javascript } from '$lib/utils/javascriptEnabled.svelte.js';
-	import { page } from '$app/state';
 
 	let { streets } = $props();
 
-	let filterOpen = $state(false);
-
-	// Derive the list of streets from the posters
-	let streetsList = $derived(
-		Array.from(
-			// Remove duplicates
-			new Set(
-				// Get all streets from posters
-				page.data.addresses.map((address) => address.street.trim())
-			)
-		).sort() // Sort alphabetically
-	);
-
-	let formAside;
-	let formDetails;
+	let form;
 </script>
 
-<!-- IF JS ENABLED SHOW ASIDE VERSION -->
-<aside class={[filterOpen && 'open', !javascript.enabled && $css('hide-mobile')]}>
-	<h3>Vind personen, adressen, verhalen en stolpensteiners</h3>
-  <ActiveFilters />
-	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll>
-		<Button
-			class={{ 'sr-only': javascript.enabled, highlight: true }}
-			buttonClass={$css('show-on-focus')}
-			type="submit"
-		>
-			Toepassen
-		</Button>
+<aside>
+	<h3>Filters</h3>
+	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
+	<form bind:this={form} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
-      <FilterSearchbar title="Straat" onchange={() => formAside.requestSubmit()} />
-			<FilterSectionList
-				title="Straat"
+			<FilterSearchbar title="Zoek op naam" name="n" />
+			<FilterListSelect
+				title="Filter op straat"
 				name="s"
 				items={streets}
-				onchange={() => formAside.requestSubmit()}
+				onchange={() => form.requestSubmit()}
 			/>
-			<FilterSectionSearch title="Naam" name="n" onchange={() => formAside.requestSubmit()} />
-			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
-			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
+		<Button
+			class={[ javascript.enabled && 'sr-only', 'highlight' ]}
+			buttonClass={$css('submit-button')}
+			type="submit"
+		>
+			Filter toepassen
+		</Button>
 	</form>
 </aside>
-
-<Button
-	onclick={() => (filterOpen = !filterOpen)}
-	class="highlight"
-	buttonClass={[$css('filter-button'), !javascript.enabled && $css('hide-mobile')]}>Filters</Button
->
-
-<!-- IF JS DISABLED SHOW DETAILS VERSION -->
-<details class={{ hidden: javascript.enabled, 'hide-desktop': !javascript.enabled }}>
-	<summary>
-		<h3>Filters</h3>
-	</summary>
-	<form bind:this={formDetails} action="/adressen" data-sveltekit-noscroll>
-		<Button
-			class={{ 'sr-only': javascript.enabled, highlight: true }}
-			buttonClass={$css('show-on-focus')}
-			type="submit"
-		>
-			Toepassen
-		</Button>
-		<div>
-			<FilterSectionList
-				title="Straat"
-				name="s"
-				items={streets}
-				onchange={() => formDetails.requestSubmit()}
-			/>
-			<FilterSectionSearch title="Naam" name="n" onchange={() => formDetails.requestSubmit()} />
-			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
-			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
-		</div>
-	</form>
-</details>
 
 <style>
 	aside {
 		display: block;
-		position: fixed;
-		top: 6rem;
+		position: sticky;
+		top: -8rem;
 		left: 0;
 		background-color: var(--blue-500);
 		color: var(--white);
-		padding: var(--spacing-lg) var(--spacing-md);
-		height: calc(100vh - 6rem);
-		width: 100vw;
-		overflow-y: auto;
-		z-index: 100;
-		transform: translateX(-100%);
+		padding: var(--spacing-md) var(--spacing-md);
+		padding-bottom: var(--spacing-sm);
 		transition: transform 0.3s ease-in-out;
+		overflow-y: scroll;
+		overflow-x: hidden;
+
+		/* SCROLLING */
+		scroll-snap-type: x mandatory;		
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+
+		/* SCROLLBAR */
+		scrollbar-width: 0;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: transparent;
+			border: none;
+		}
 	}
 
 	aside h3 {
 		color: var(--white);
 		font-size: var(--font-size-xxl);
 		font-weight: var(--font-weight-regular);
+		margin-bottom: var(--spacing-sm);
 	}
 
-	.filter-button {
-		position: fixed;
-		top: calc(6rem + var(--spacing-md));
-		left: var(--page-padding);
-		z-index: 100;
-		transition: all 0.3s ease-in-out !important;
-	}
-
-	aside.open + .filter-button {
-		/* Move button to right of screen */
-		transform: translateX(calc(100vw - 100% - var(--page-padding) * 2));
-	}
-
-	aside.open {
-		transform: translateX(0);
+	aside h4 {
+		color: var(--white);
+		font-size: var(--font-size-md);
+		font-weight: var(--font-weight-light);
 	}
 
 	form {
-		display: grid !important;
-		grid-template-columns: 1fr auto;
-		grid-template-rows: auto auto;
-		gap: var(--spacing-md);
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+		margin-top: var(--spacing-md);
 	}
 
-	form > div {
-		grid-column: 1 / 3;
-		grid-row: 2;
-	}
+  .submit-button {
+    background-color: var(--blue-200) !important;
+    color: var(--black) !important;
+  }
 
-	.show-on-focus:focus-visible {
-		position: static;
-		display: inline-block;
-		width: fit-content;
-		height: fit-content;
-		padding: var(--spacing-xxs) var(--spacing-sm);
-		overflow: visible;
-		clip: auto;
-		white-space: normal;
-		border-width: 0;
-	}
-
-	.hide-mobile {
-		display: none !important;
-	}
-
-	.hide-desktop {
-		display: block !important;
-	}
+  .submit-button:hover {
+    background-color: var(--blue-300) !important;
+    color: var(--black) !important;
+  }
 
 	@media screen and (min-width: 800px) {
 		aside {
-			position: sticky;
+			display: flex;
+			flex-direction: column;
+			top: 6rem;
 			height: calc(100vh - 6rem);
 			width: 20rem;
 			transform: translateX(0);
 			z-index: 0;
+			padding: var(--spacing-lg) var(--spacing-md);
 		}
 
-    .hide-mobile {
-			display: block !important;
-		}
-
-		.hide-desktop {
-			display: none !important;
-		}
-
-		.filter-button {
-			display: none !important;
+		form {
+			margin-top: var(--spacing-lg);
+			gap: var(--spacing-lg);
+			height: 100%;
 		}
 	}
 </style>
