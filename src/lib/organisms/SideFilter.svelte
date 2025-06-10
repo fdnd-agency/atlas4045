@@ -9,18 +9,22 @@
 	let form;
 </script>
 
+<!-- IF JS ENABLED SHOW ASIDE VERSION -->
 <aside>
 	<h3>Filters</h3>
 	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
-	<form bind:this={form} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
+  <ActiveFilters />
+	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
-			<FilterSearchbar title="Zoek op naam" name="n" />
 			<FilterListSelect
 				title="Filter op straat"
 				name="s"
 				items={streets}
 				onchange={() => form.requestSubmit()}
 			/>
+			<FilterSectionSearch title="Naam" name="n" onchange={() => formAside.requestSubmit()} />
+			<!-- <FilterSection title="Thema" name="t" items={['Thema 1', 'Thema 2', 'Thema 3', 'Thema 4']} onchange={filterHandler} /> -->
+			<!-- <FilterSection title="Stolpesteiner" name="p" items={['Stolpesteiner']} onchange={filterHandler} /> -->
 		</div>
 		<Button
 			class={[ javascript.enabled && 'sr-only', 'highlight' ]}
