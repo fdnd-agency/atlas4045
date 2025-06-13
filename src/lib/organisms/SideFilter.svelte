@@ -16,7 +16,7 @@
 	<h3>Filters</h3>
 	<h4>Vind posters door te zoeken op naam, of filter op straatnaam.</h4>
   <ActiveFilters />
-	<form bind:this={formAside} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
+	<form bind:this={form} action="/adressen" data-sveltekit-noscroll data-sveltekit-keepfocus>
 		<div>
       <FilterSearchbar title="Zoeken" name="q" />
 			<FilterListSelect
