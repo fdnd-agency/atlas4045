@@ -62,3 +62,13 @@ insert welke branches goed zijn om naar te kijken
 - [FEATURE]: Add breadcrumb or go back button to detail page · <a href="https://github.com/fdnd-agency/atlas4045/issues/247"><strong>Link »</strong></a>
 - [FEATURE]: Go to top button · <a href="https://github.com/fdnd-agency/atlas4045/issues/297"><strong>Link »</strong></a>
 
+
+# What Still Needs Work (Redesign wise)
+
+## General
+- Pitch the new color palette and layout to the client
+- Ask follow-up questions about new content and pages
+- Request additional information for a possible "About Us" page
+
+[Design]: Redesign - Design Rationale · <a href="https://drive.google.com/drive/folders/1i0p20Qo49K7KSzdiipvAw-hiTpzJVOH8"><strong>Link »</strong></a>
+
