@@ -136,7 +136,7 @@ When contributing, make sure to follow the <a href="https://github.com/fdnd-agen
 <!-- IMPORTEND DATA -->
 ## Important data
 * Figma prototype · <a href="https://www.figma.com/design/bHh40tuxL1RjtEcWVJpZjF/Atlas-40-45?node-id=0-1&t=EaUPwnSQPBKCCWbI-1"><strong>File »</strong></a>
-* Design Rationale · <a href="https://drive.google.com/drive/folders/1i0p20Qo49K7KSzdiipvAw-hiTpzJVOH8"><strong>File »</strong></a>
+* Design Rationale (Redesign) · <a href="https://drive.google.com/drive/folders/1i0p20Qo49K7KSzdiipvAw-hiTpzJVOH8"><strong>File »</strong></a>
 <!-- 
   * Design rationale · *insert design rationale » * 
   * Deskresearch · *insert deskresearch » * 
